@@ -14,6 +14,8 @@
 @import 'footer/footer.scss';
 @import 'footer/f-menu/f-menu.scss';
 @import 'footer/social/social.scss';
+@import 'quick-dev/quick-dev.scss';
+@import 'buttons/half-round.scss';
 
 *{
     margin: 0;
@@ -23,7 +25,8 @@
 
 html{
     font-size: 10px;
-    
+    display: flex;
+    justify-content: center;
 }
 
 body{
@@ -32,7 +35,8 @@ body{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-
+    width: 100%;
+    max-width: 1920px;
 }
 
 .white{

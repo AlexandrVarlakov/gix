@@ -1,0 +1,20 @@
+.half-round{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.half-round__img{
+   transition: .3s;
+
+    @media (max-width: 1024px){
+        transform: scale(.9);
+    }
+    @media (max-width: 768px){
+        transform: scale(.7);
+    }
+}
+.half-round__text{
+    margin-left: -20px;
+}
+
