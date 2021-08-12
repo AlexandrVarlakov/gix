@@ -1,0 +1,54 @@
+.h-nav{
+    background: #0D1014;
+    border-radius: 0px 0px 10px 10px;
+    margin-left: 55px;
+    @media (max-width: 992px){
+        margin-left: 0;
+    }
+    @media (max-width: 680px){
+        background-color: transparent;
+    }
+}
+
+.h-nav__search{
+    width: 100%;
+    height: 44px;
+
+    @media (max-width: 1100px){
+        height: 34px;
+    }
+
+    @media (max-width: 680px){
+        display: none;
+    }
+}
+
+.h-nav__search-inp-wrap{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.h-nav__search-inp{
+    font-family: $font-family;
+    width: 100%;
+    height: 100%;
+    color: #8E99AB;
+    padding-left: 50px;
+    opacity: 0.9;
+    &::placeholder{
+        color: #8E99AB;
+    }
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+.h-nav__search-ico{
+    position: absolute;
+    left: 17px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+
+

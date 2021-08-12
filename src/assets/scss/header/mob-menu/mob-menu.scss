@@ -1,0 +1,41 @@
+.mob-menu{
+    display: none;
+
+    width: 130px;
+    height: 40px;
+    background-color: #C5FA2D;
+    border-radius: 0 0 10px 10px;
+    justify-content: center;
+    align-items: center;
+
+
+    @media (max-width: 680px){
+        display: flex;
+    }
+
+    .mob-menu__text{
+        font-size: 12px;
+        line-height: 14px;
+        font-weight: bold;
+        color: #0D1014;
+        position: relative;
+        padding-left: 5px;
+
+        &::after, &::before{
+            content: "";
+            position: absolute;
+            width: 12px;
+            height: 2px;
+            background-color: #000;
+            left: -25px;
+        }
+        &::after{
+            top: 3px;
+        }
+        &::before{
+            bottom: 3px;
+        }
+        
+        
+    }
+}

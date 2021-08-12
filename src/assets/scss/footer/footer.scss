@@ -1,0 +1,209 @@
+.footer{
+    background: #2A323E;
+    width: 100%;
+    border-radius: 16px 16px 0 0;
+    height: 345px;
+    display: flex;
+    
+
+    @media (max-width: 992px){
+        flex-direction: column;
+        height: auto;
+    }
+}
+
+.footer__left-bar, .footer__right-bar{
+    width: 50%;
+    height: 100%;
+}
+
+.footer__left-bar{
+    border-right: 2px solid #000;
+    padding: 85px  0 0 100px;
+    display: flex;
+
+
+
+    @media (max-width: 1900px){
+        padding: calc(8vw - 67px)  0 0 calc(20vw - 280px);
+    }
+    @media (max-width: 1500px){
+        padding: calc(8vw - 67px)  20px 0 20px;
+        justify-content: space-between;
+        padding-right: 20px;
+    }
+
+    @media (max-width: 1366px){
+        justify-content: flex-start;
+    }
+
+    @media (max-width: 1338px){
+        padding: 40px  20px 0 20px;
+    }
+
+    @media (max-width: 992px){
+        width: 100%;
+        justify-content: space-between;
+        border-right: none;
+        
+        padding: 30px  20px 20px 20px;
+        position: relative;
+
+        &::after{
+            content: "";
+            position: absolute;
+            bottom: 0;
+            width: calc(100% - 40px);
+            height: 2px;
+            background-color: #000;
+        }
+    }
+
+    @media(max-width: 600px){
+        flex-direction: column;
+    }
+}
+.footer__right-bar{
+    
+    padding: 85px 75px 0 95px;
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: 1900px){
+        padding: calc(8vw - 67px)  0 0 calc(12vw - 133px);
+    }
+    @media (max-width: 1525px){
+        padding: calc(8vw - 67px)  0 0 50px;
+    }
+    @media (max-width: 1338px){
+        padding: 40px  0 0 50px;
+    }
+
+    @media (max-width: 992px){
+        width: 100%;
+
+        padding: 45px  20px 0px 20px;
+    }
+
+    @media (max-width: 600px){
+        flex-direction: column;
+    }
+}
+.footer__logo-col{
+    width: 250px;
+    height: 100%;
+    position: relative;
+
+    @media (max-width: 992px){
+        width: auto;
+        position: initial;
+    }
+}
+
+.footer__copyright{
+    position: absolute;
+    bottom: 60px;
+    @media (max-width: 992px){
+        bottom: 20px;
+    }
+    @media(max-width: 600px){
+        right: 20px;
+    }
+}
+
+.footer__navs{
+    display: flex;
+    padding-left: 65px;
+
+    @media (max-width: 1500px){
+        padding-left: 0px;
+        flex-flow: wrap;
+        justify-content: flex-end;
+        align-items: flex-start;
+    }
+    @media(max-width: 600px){
+        margin-top: 25px;
+        justify-content: flex-start;
+    }
+}
+
+.footer__contact-col{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    max-width: 368px;
+    min-width: 183px;
+    width: 100%;
+
+    @media (max-width: 600px){
+        max-width: 100%;
+    }
+}
+.footer__c-link{
+    display: block;
+    text-decoration: none;
+}
+.footer__btn-gr{
+    display: flex;
+    justify-content: space-between;
+}
+.footer__btn{
+    width: calc(50% - 1.5px);
+    height: 60px;
+    background-color: #C5FA2D;
+    border: none;
+    color: #2A323E;
+    cursor: pointer;
+    font-family: $font-family;
+
+    @media (max-width: 1900px){
+        height: calc(3px + 3vw);
+        min-height: 40px;
+    }
+}
+
+.footer__btn-call{
+    border-radius: 10px 0 0 0 ;
+}
+
+.footer__btn-question{
+    border-radius: 0 10px  0 0 ;
+}
+.footer__address-col{
+    width: 100%;
+    max-width: 315px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @media (max-width: 1500px){
+        margin-left: 20px;
+    }
+    @media (max-width: 992px){
+        width: 200px;
+    }
+
+    @media (max-width: 600px){
+        max-width: 100%;
+        width: 100%;
+        margin-left: 0px;
+        position: relative;
+    }
+}
+
+.footer__address{
+    font-style: normal;
+    @media (max-width: 600px){
+        position: absolute;
+        top: -110px;
+    }
+}
+
+.footer__c-links{
+    @media (max-width: 992px){
+        margin: 40px 0;
+    }
+    @media (max-width: 600px){
+        margin: 40px 0 90px;
+    }
+}
