@@ -1,0 +1,49 @@
+.checkbox-l{
+    display: flex;
+    position: relative;
+    
+
+
+    &::after{
+        content: "";
+        position: absolute;
+        left: -30px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 20px;
+        border-radius: 3px;
+        background-color: #E5EFFE;
+        cursor: pointer;
+    }
+}
+.checkbox-l__checkbox{
+    display: block;
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+}
+.checkbox-l_checked{
+    &::before{
+        content: "";
+        position: absolute;
+        display: block;
+        width: 14px;
+        height: 11px;
+        background-image: url('../img/buttons/checkbox-l.png');
+        background-repeat: no-repeat;
+        left: -27px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 5;
+        cursor: pointer;
+    }
+}
+
+.checkbox-l__label{
+    color: #CADCF8;
+    cursor: pointer;
+    a{
+        color: #CADCF8;
+    }
+}
