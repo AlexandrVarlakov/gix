@@ -24,6 +24,8 @@
 
 @import 'forms/checkbox.scss';
 
+@import 'modals/modals.scss';
+
 *{
     margin: 0;
     padding: 0;
@@ -44,6 +46,8 @@ body{
     min-height: 100vh;
     width: 100%;
     max-width: 1920px;
+
+    //background-color: #0D1014;
 }
 
 .white{

@@ -21,3 +21,75 @@ checkboxes_l.forEach( (cb) => {
 })
 
 /*****КОНЕЦ: Обработка светлых чекбоксов******/
+
+/* Обработка переходов по форме регистрация / авторизация */
+
+let auth_items = document.querySelectorAll('.auth-v__item');
+
+function clearAuthSelect(itemsList){
+    itemsList.forEach( (item) => {
+        item.classList.remove('auth-v__item_active');
+    })
+}
+
+
+auth_items.forEach( (item) => {
+    item.onclick = function(){
+        clearAuthSelect(auth_items);
+        this.classList.add('auth-v__item_active');
+
+        let form_container = this.parentElement.parentElement.parentElement.querySelector('.form-container');
+
+        
+        if ( this.getAttribute('data-item') == 'sing-in'){
+            form_container.classList.remove('form-container_singup');
+        } else{
+            form_container.classList.add('form-container_singup');
+        }
+    }
+})
+
+/***** КОНЕЦ: Обработка переходов по форме регистрация / авторизация *******/
+
+/**/
+
+let cart_btn = document.querySelector('.cart-btn');
+
+cart_btn.onclick = function(){
+    $('.modalcart').bPopup({
+        closeClass: 'modal__close',
+    });
+}
+
+
+
+let auth_btn = document.querySelector('.auth-btn');
+
+auth_btn.onclick = function(){
+    $('.modal-auth').bPopup({
+        closeClass: 'modal__close',
+    });
+}
+
+
+let btn_call = document.querySelector('.footer__btn-call');
+btn_call.onclick = function(){
+    $('.callback').bPopup({
+        closeClass: 'modal__close',
+    });
+}
+
+
+
+
+
+
+let btn_question = document.querySelector('.footer__btn-question');
+
+btn_question.onclick = function(){
+    $('.write-us').bPopup({
+        closeClass: 'modal__close',
+    });
+}
+
+/**/

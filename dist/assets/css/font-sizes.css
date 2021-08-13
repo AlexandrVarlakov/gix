@@ -41,11 +41,23 @@
   @media (max-width: 1300px) {
     .h4 {
       font-size: 16px; } }
+  @media (max-width: 768px) {
+    .h4 {
+      font-size: 14px; } }
 
 .text {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5; }
+  @media (max-width: 1600px) {
+    .text {
+      font-size: 15px; } }
+  @media (max-width: 1300px) {
+    .text {
+      font-size: 14px; } }
+  @media (max-width: 768px) {
+    .text {
+      font-size: 12px; } }
 
 .h5 {
   font-weight: 600;
@@ -92,7 +104,23 @@
   font-weight: 500;
   font-size: 12px;
   line-height: 1.5; }
+  @media (max-width: 1366px) {
+    .subtitle {
+      font-size: 11px; } }
+  @media (max-width: 1024px) {
+    .subtitle {
+      font-size: 10px; } }
 
 @media (max-width: 768px) {
   .h5-sm {
     font-size: 12px; } }
+
+.h4-md {
+  font-weight: 600;
+  line-height: 1.33; }
+  @media (max-width: 1024px) {
+    .h4-md {
+      font-size: 16px; } }
+  @media (max-width: 768px) {
+    .h4-md {
+      font-size: 14px; } }
