@@ -51,28 +51,37 @@ auth_items.forEach( (item) => {
 
 /***** КОНЕЦ: Обработка переходов по форме регистрация / авторизация *******/
 
-/**/
+/*Открываем pop-up*/
 
-let cart_btn = document.querySelector('.cart-btn');
+let cart_btn = document.querySelectorAll('.cart-btn');
 
-cart_btn.onclick = function(){
-    $('.modalcart').bPopup({
-        closeClass: 'modal__close',
-    });
-}
+cart_btn.forEach((item)=>{
+    item.onclick = function(){
+        $('.modalcart').bPopup({
+            closeClass: 'modal__close',
+        });
+    }
+})
 
 
 
-let auth_btn = document.querySelector('.auth-btn');
 
-auth_btn.onclick = function(){
-    $('.modal-auth').bPopup({
-        closeClass: 'modal__close',
-    });
-}
+
+let auth_btn = document.querySelectorAll('.auth-btn');
+
+auth_btn.forEach( (item)=>{
+    item.onclick = function(){
+        $('.modal-auth').bPopup({
+            closeClass: 'modal__close',
+        });
+    }
+})
+
+
 
 
 let btn_call = document.querySelector('.footer__btn-call');
+
 btn_call.onclick = function(){
     $('.callback').bPopup({
         closeClass: 'modal__close',
@@ -92,4 +101,66 @@ btn_question.onclick = function(){
     });
 }
 
-/**/
+/********КОНЕЦ: Открываем pop-up************/
+
+/*Открываем дроп-меню*/
+
+let openDrop = document.querySelector('.open-drop');
+
+openDrop.onclick = function(){
+    
+}
+
+/********КОНЕЦ: Открываем дроп-меню********/
+
+
+/*Открываем выпадающее меню*/
+
+    $('.has-child').hover(
+        function(){
+            $(this).addClass('open-child');
+        }, 
+
+        function(){
+            $(this).removeClass('open-child');
+        }
+    );
+
+
+
+
+    $('.has-child').on('click', function(e){
+        
+        if ( $(this).hasClass('open-child') ) {
+            e.stopPropagation();
+            $(this).removeClass('open-child');
+            $(this).find('.open-child').removeClass('open-child');
+            
+        } else {
+            e.stopPropagation();
+            
+            if (  $(this).siblings('.open-child').length > 0 ) {
+                $(this).siblings('.open-child').find('.open-child').removeClass('open-child');
+                $(this).siblings('.open-child').removeClass('open-child');
+            }
+
+            $(this).addClass('open-child');
+        }
+        
+
+
+    });
+/*КОНЕЦ: Открываем выпадающее меню*/
+
+
+/*Открываем закрываем drop*/
+
+$('.close-drop').on('click', function(){
+    $('.drop-box').hide(300);
+}) ; 
+$('.open-drop').on('click', function(){
+    $('.drop-box').show(300);
+    $('.drop-box').css('display', 'flex');
+}) ; 
+
+/*КОНЕЦ: Открываем закрываем drop*/
