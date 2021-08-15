@@ -261,6 +261,10 @@
     .h5-md-o {
       font-size: 14px; } }
 
+@media (max-width: 1024px) {
+  .button-md-o {
+    font-size: 14px; } }
+
 .logo {
   display: -webkit-box;
   display: -webkit-flex;
@@ -719,6 +723,13 @@
   @media (max-width: 992px) {
     .drop-box__body {
       padding: 15vh 20px; } }
+  @media (max-width: 900px) {
+    .drop-box__body {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
 
 .drop-menu {
   width: 360px;
@@ -964,8 +975,7 @@
   border: 1px solid #8E99AB;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border-radius: 8px;
-  overflow: hidden; }
+  border-radius: 8px; }
   @media (max-width: 1366px) {
     .grid-menu {
       max-width: 320px; } }
@@ -1014,6 +1024,21 @@
   @media (max-width: 900px) {
     .grid-menu__item_mob {
       display: block; } }
+
+.drop-box__phone {
+  display: none;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin-bottom: 20px; }
+  @media (max-width: 900px) {
+    .drop-box__phone {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex; } }
 
 .footer {
   background: #2A323E;

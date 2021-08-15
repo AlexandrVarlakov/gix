@@ -132,3 +132,7 @@
   @media (max-width: 1024px) {
     .h5-md-o {
       font-size: 14px; } }
+
+@media (max-width: 1024px) {
+  .button-md-o {
+    font-size: 14px; } }

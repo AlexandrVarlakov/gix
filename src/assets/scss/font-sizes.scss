@@ -160,3 +160,9 @@
     }
     
 }
+
+.button-md-o{
+    @media(max-width: 1024px){
+        font-size: 14px;
+    }
+}

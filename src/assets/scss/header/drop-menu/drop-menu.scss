@@ -43,6 +43,10 @@
     @media (max-width: 992px){
         padding: 15vh 20px;
     }
+
+    @media (max-width: 900px){
+        flex-direction: column;
+    }
 }
 
 .drop-menu{
@@ -281,7 +285,7 @@
     border: 1px solid #8E99AB;
     box-sizing: border-box;
     border-radius: 8px;
-    overflow: hidden;
+    
 
     @media (max-width: 1366px){
         max-width: 320px;
@@ -334,5 +338,19 @@
 
     @media (max-width: 900px){
         display: block;
+    }
+}
+
+.drop-box__phone{
+
+
+    display: none;
+    
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
+
+    @media (max-width: 900px ){
+        display: flex;
     }
 }
