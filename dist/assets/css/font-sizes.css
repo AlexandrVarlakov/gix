@@ -136,3 +136,7 @@
 @media (max-width: 1024px) {
   .button-md-o {
     font-size: 14px; } }
+
+@media (max-width: 1024px) {
+  .smalltext-md-o {
+    font-size: 12px; } }

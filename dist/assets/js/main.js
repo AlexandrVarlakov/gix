@@ -164,3 +164,15 @@ $('.open-drop').on('click', function(){
 }) ; 
 
 /*КОНЕЦ: Открываем закрываем drop*/
+
+
+$(document).ready(function(){
+    if (  $(window).width() <= 768) {
+        $( '.b-filter-container' ).slick({
+            variableWidth: true,
+            dots: false,
+            arrows: false,
+            infinite: false,
+        }) ;
+    }
+})

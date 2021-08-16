@@ -27,6 +27,13 @@
 
 @import 'modals/modals.scss';
 
+@import 'breadcrumbs/breadcrumbs.scss';
+
+@import 'pagination/pagination.scss';
+
+@import 'pages/blog/blog.scss';
+
+
 *{
     margin: 0;
     padding: 0;
@@ -73,4 +80,65 @@ body{
 
 .content__inner{
     flex-grow: 1;
+    padding-bottom: 120px;
+
+    
+}
+
+
+.flex-row-container{
+    display: flex;
+    padding-left: 100px;
+    padding-right: 100px;
+
+    @media ( max-width: 1900px) {
+        padding-left: calc(6vw - 14px);
+        padding-right: calc(6vw - 14px);
+    }
+    
+    @media ( max-width: 1234px ){
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+    @media ( max-width: 992px ){
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+
+.column-md{
+    @media ( max-width: 1024px ){
+        flex-direction: column;
+    }
+}
+
+.col-3{
+    width: 25%;
+}
+
+
+.col-4{
+    width: 33.33%;
+}
+
+.col-9{
+    width: 75%;
+}
+
+
+.col-8{
+    width: 66.66%;
+}
+
+.col-md-4{
+    @media (max-width: 1024px){
+        width: 33.33%;
+    }
+}
+
+.col-md-12{
+    @media (max-width: 1024px){
+        width: 100%;
+    }
 }

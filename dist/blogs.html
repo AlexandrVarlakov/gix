@@ -6,7 +6,9 @@
     <meta name="description" content="Краткое описание страницы"/>
     <title>Сайт</title>
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="assets/css/main.min.css">     
+    <link rel="stylesheet" href="assets/css/main.min.css">  
+    <link rel="stylesheet" href="assets/css/slick.min.css">
+    <link rel="stylesheet" href="assets/css/slick-theme.min.css">   
     
 </head>
 <body>
@@ -80,7 +82,143 @@
     
     <main class="content">
         <div class="content__inner">
+            <div class="flex-row-container breadcrumbs">
+                <a href="#" class="smalltext breadcrumbs__link">Блоги ></a>
+            </div>
+
+            <div class="flex-row-container column-md b-1st-row">
+                <div class="col-3 blog-title-col">
+                    <h2 class="h2 black blog-title">Разбираемся в новинках, делаем тесты, советум, информируем, пишем</h2>
+                </div>
+
+                <div class="col-9 news-r-col col-md-12">
+                    <div class="b-filter-container">
+                        <button class="filter-btn smalltext black">С квадрокамерой <span class="filter-btn__qty">56</span></button>
+                        <button class="filter-btn smalltext black">С гарантией от производителя<span class="filter-btn__qty">156</span></button>
+                        <button class="filter-btn smalltext black">С большим экраном<span class="filter-btn__qty">33</span></button>
+                        <button class="filter-btn smalltext black">С гарантией от магазина<span class="filter-btn__qty">44</span></button>
+                        <button class="filter-btn smalltext black"> Поддерживает NFC<span class="filter-btn__qty">76</span></button>
+                        <button class="filter-btn smalltext black">С большим экраном<span class="filter-btn__qty">66</span></button>
+                        <button class="filter-btn smalltext black">С 3D камерой<span class="filter-btn__qty">16</span></button>
+                    </div>
+                    <div class="b-news-container">
+                    
+                        <a class="news-block" href="#">
+                            <div class="news-block__img-outer">
+                                <div class="news-block__img-inner">
+                                    <img class="news-block__img" src="assets/img/news/1.png" alt="Новость">
+                                </div>                            
+                            </div>
+
+                            <div class="news-block__views">
+                                <img src="assets/img/icons/view.svg" class="news-block__views-img">
+                                <p class="smalltext smalltext-md-o">124</p>
+                            </div>
+
+                            <p class="h3 news-block__title">На что обратить внимание при выборе смартфона</p>
+                        </a>
+                        <a class="news-block" href="#">
+                            <div class="news-block__img-outer">
+                                <div class="news-block__img-inner">
+                                    <img class="news-block__img" src="assets/img/news/2.png" alt="Новость">
+                                </div>                            
+                            </div>
+
+                            <div class="news-block__views">
+                                <img src="assets/img/icons/view.svg" class="news-block__views-img">
+                                <p class="smalltext smalltext-md-o">124</p>
+                            </div>
+
+                            <p class="h3 news-block__title">Стресс-тест зарядки Airpods</p>
+                        </a>
+                        <a class="news-block" href="#">
+                            <div class="news-block__img-outer">
+                                <div class="news-block__img-inner">
+                                    <img class="news-block__img" src="assets/img/news/3.png" alt="Новость">
+                                </div>                            
+                            </div>
+
+                            <div class="news-block__views">
+                                <img src="assets/img/icons/view.svg" class="news-block__views-img">
+                                <p class="smalltext smalltext-md-o">124</p>
+                            </div>
+
+                            <p class="h3 news-block__title">Три новых планшета, способных вскружить голову</p>
+                        </a>
+                        
+                        <a class="news-block" href="#">
+                            <div class="news-block__img-outer">
+                                <div class="news-block__img-inner">
+                                    <img class="news-block__img" src="assets/img/news/1.png" alt="Новость">
+                                </div>                            
+                            </div>
+
+                            <div class="news-block__views">
+                                <img src="assets/img/icons/view.svg" class="news-block__views-img">
+                                <p class="smalltext smalltext-md-o">124</p>
+                            </div>
+
+                            <p class="h3 news-block__title">На что обратить внимание при выборе смартфона</p>
+                        </a>
+                        <a class="news-block" href="#">
+                            <div class="news-block__img-outer">
+                                <div class="news-block__img-inner">
+                                    <img class="news-block__img" src="assets/img/news/2.png" alt="Новость">
+                                </div>                            
+                            </div>
+
+                            <div class="news-block__views">
+                                <img src="assets/img/icons/view.svg" class="news-block__views-img">
+                                <p class="smalltext smalltext-md-o">124</p>
+                            </div>
+
+                            <p class="h3 news-block__title">Стресс-тест зарядки Airpods</p>
+                        </a>
+                        <a class="news-block" href="#">
+                            <div class="news-block__img-outer">
+                                <div class="news-block__img-inner">
+                                    <img class="news-block__img" src="assets/img/news/3.png" alt="Новость">
+                                </div>                            
+                            </div>
+
+                            <div class="news-block__views">
+                                <img src="assets/img/icons/view.svg" class="news-block__views-img">
+                                <p class="smalltext smalltext-md-o">124</p>
+                            </div>
+
+                            <p class="h3 news-block__title">Три новых планшета, способных вскружить голову</p>
+                        </a>
+
+                        
+                    </div>
+
+
+                    <div class="pagination">
+                        <div class="pagination__nav">
+                            <div class="pagination__line"></div>
+                            <div class="pagination__nav-btn-block">
+                                <button class="pagination__btn pagination__btn_prev pagination__btn_end">
+                                    <img src="assets/img/buttons/arrow.png">
+                                </button>
+                                <button class="pagination__btn pagination__btn_next">
+                                    <img src="assets/img/buttons/arrow.png">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="pagnation__links-block">
+                            <a href="#" class="pagination__link pagination__link_active text">1</a>
+                            <a href="#" class="pagination__link text">2</a>
+                            <a href="#" class="pagination__link text">3</a>
+                            <a href="#" class="pagination__link text">4</a>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+
             
+
         </div>
         <section class="subscribe">
     <div class="subscribe__inner">
@@ -757,6 +895,7 @@
 
 
 <script src="assets/js/jquery-3.5.1.min.js"></script>
+<script src="assets/js/slick.min.js"></script>
 <script src="assets/js/jquery.bpopup.min.js"></script>
 <script src="assets/js/main.js"></script>
 </body>
