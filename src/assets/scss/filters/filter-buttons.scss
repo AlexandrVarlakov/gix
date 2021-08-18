@@ -1,0 +1,238 @@
+.show-all-filter-btn{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    font-family: $pt-sans;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    color: #8E99AB;
+
+    margin-top: -10px;
+    margin-bottom: 15px;
+}
+
+.show-all-filter-btn-wrap{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -15px;
+
+    @media (max-width: 768px){
+        display: none;
+    }
+}
+
+.filter-btn-wrap{
+    border-bottom: 1px solid #8E99AB;
+
+    @media (max-width: 1300px){
+        border-bottom: none;
+    }
+
+    @media (max-width: 768px){
+        display: block !important;
+    }
+}
+
+
+.sort-btn-wrap{
+    padding: 30px 0 35px;
+    border-bottom: 1px solid #8E99AB;
+    justify-content: space-between;
+
+    @media (max-width: 1024px){
+        padding: 20px 0 20px;
+    }
+
+    @media (max-width: 768px){
+        padding: 15px 0 15px;
+    }
+    
+}
+
+.sort-btn-wrap_sp{
+    border-top: 1px solid #8E99AB;
+}
+
+.type-sort, .type-sort_item {
+    background-color: transparent;
+    border: none;
+    margin-left: 28px;
+
+    &:first-of-type{
+        margin-left: 10px;
+    }
+}
+.type-sort_item {
+    &:first-of-type{
+        margin-left: 0px;
+    }
+}
+
+.sort-group{
+    color: #8E99AB;
+
+    @media (max-width: 768px){
+        display: none;
+    }
+
+
+}
+
+.sort-group-mob{
+    display: none;
+    @media (max-width: 768px){
+        display: block;
+    }
+}
+
+
+.type-sort, .type-sort_item{
+    color: #8E99AB;
+    cursor: pointer;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+
+    position: relative;
+}
+
+.sort-arrows{
+    font-size: 8px;
+    
+    display: inline-flex;
+    align-items: center;
+    padding-top: 1px;
+    position: absolute;
+    right: -7px;
+}
+
+.sort-name{
+    letter-spacing: 1px;
+    padding-right: 7px;
+}
+.sort-arrow-down{
+    letter-spacing: 3px;
+}
+.type-sort[ data-sort-state = '0'], .type-sort_item[ data-sort-state = '0']{
+    color: #8E99AB;
+
+    .sort-arrows{
+        display: none;
+    }
+}
+
+.type-sort[ data-sort-state = '1'], .type-sort_item[ data-sort-state = '1'] {
+    color: #000;
+    
+    .sort-name{
+        text-decoration: underline;
+    }
+    .sort-arrows{
+        display: inline-block;
+    }
+    
+}
+.type-sort[ data-sort-state = '2'], .type-sort_item[ data-sort-state = '2']{
+    color: #000;
+    
+    .sort-name{
+        text-decoration: underline;
+    }
+    .sort-arrows{
+        display: inline-block;
+        transform: rotate(180deg);
+        padding-top: 0;
+        padding-bottom: 3px;
+    }
+    
+}
+
+.appearance__btn{
+    opacity: .3;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    &:first-of-type{
+        margin-right: 15px;
+    }
+}
+
+.appearance__btn_active{
+    opacity: 1;
+}
+
+.hidden-filter-btn{
+    display: none;
+}
+
+.favourites-title-row{
+   display: flex;
+    width: 100%;
+   @media (max-width: 1300px){
+        border-bottom: 1px solid #8E99AB;  
+   }
+
+   @media (max-width: 768px){
+        flex-direction: column;
+
+        .page-title-block{
+            margin-bottom: 15px;
+        }
+   }
+}
+
+.search-title-row{
+    display: flex;
+    width: 100%;
+    
+ 
+    @media (max-width: 768px){
+         flex-direction: column;
+ 
+         .page-title-block{
+             margin-bottom: 15px;
+         }
+    }
+ }
+
+.drop-sort{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    cursor: pointer;
+}
+.drop-sort__current-wrap{
+    display: flex;
+    align-items: center;
+    color: #8E99AB;
+}
+.drop-sort__sort-list{
+    list-style: none;
+    position: absolute;
+    z-index: 5;
+    background-color: #fff;
+    top: 20px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #8E99AB;  
+    padding: 5px 0;
+    display: none;
+    min-width: 180px;
+}
+
+.drop-sort__current-sort{
+    display: flex;
+    align-items: center;
+    height: 17px;
+    margin-left: 6px;
+}
+.drop-sort__sort-item{
+    padding: 5px;
+    padding-left: 20px;
+}

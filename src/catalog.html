@@ -1,9 +1,77 @@
-@@include('part-templates/light-header.html')
+@@include('part-templates/blue-page.html')
 
     
     <main class="content">
-        <div class="content__inner">
-            
+        <div class="content__inner content__inner_blue-page">
+            <div class="flex-row-container breadcrumbs">
+                <a href="#" class="smalltext breadcrumbs__link">Каталог ></a>
+            </div>
+
+
+            <div class="catalog-container flex-row-container">
+                <h2 class="h2 catalog-title-col">
+                    Мы продаем смартфоны, планшеты, ноутбуки.<br /><br /> Помогаем разобраться <br />в важных характеристиках, подбрать защиту и аксессуары к вашему устройству.
+                </h2>
+
+                <div class="catalog-list">
+                    <a href ="#" class="catalog-card-wrap">
+                        <div class="catalog-card">
+                            <h3 class="catalog-card__title h3 black">Телефоны <br />и связь</h3>
+
+                            <img class="catalog-card__img" src="assets/img/catalog/phone.png">
+
+                            <div class="catalog-card__btn-wrap hidden-o">
+                                <a href="#" class="round ">
+                                    <img src="assets/img/buttons/round.png" class="round__img">
+                                    <p class="round__text smalltext black">все</p>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        
+                    </a>
+                    <a href ="#" class="catalog-card-wrap">
+                        <div class="catalog-card">
+                            <h3 class="catalog-card__title h3 black">Ноутбуки</h3>
+                            <img class="catalog-card__img" src="assets/img/catalog/laptop.png">
+                            <div class="catalog-card__btn-wrap hidden-o">
+                                <a href="#" class="round ">
+                                    <img src="assets/img/buttons/round.png" class="round__img">
+                                    <p class="round__text smalltext black">все</p>
+                                </a>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href ="#" class="catalog-card-wrap">
+                        <div class="catalog-card">
+                            <h3 class="catalog-card__title h3 black">Планшеты</h3>
+                            <img class="catalog-card__img" src="assets/img/catalog/tablet.png">
+                            <div class="catalog-card__btn-wrap hidden-o">
+                                <a href="#" class="round ">
+                                    <img src="assets/img/buttons/round.png" class="round__img">
+                                    <p class="round__text smalltext black">все</p>
+                                </a>
+                            </div>
+                        </div>
+                    </a>
+                    <a href ="#" class="catalog-card-wrap">
+                        <div class="catalog-card">
+                            <h3 class="catalog-card__title h3 black">Носимые <br />устройства</h3>
+                            <img class="catalog-card__img" src="assets/img/catalog/watch.png">
+                            <div class="catalog-card__btn-wrap hidden-o">
+                                <a href="#" class="round ">
+                                    <img src="assets/img/buttons/round.png" class="round__img">
+                                    <p class="round__text smalltext black">все</p>
+                                </a>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+
+            @@include('part-templates/brands.html')
         </div>
         @@include('part-templates/subscribe.html')
     </main>

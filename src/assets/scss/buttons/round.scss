@@ -1,0 +1,28 @@
+.round{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+}
+
+.round__img{
+   transition: .3s;
+
+    @media (max-width: 1024px){
+        transform: scale(.8);
+    }
+    @media (max-width: 768px){
+        transform: scale(.7);
+    }
+}
+.round__text{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    transform: translateX(-50%) translateY(-50%);
+}

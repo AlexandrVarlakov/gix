@@ -174,5 +174,97 @@ $(document).ready(function(){
             arrows: false,
             infinite: false,
         }) ;
+
+        if (  $(window).width() <= 768) {
+           let t = $( '.brands__list' ).slick({
+                variableWidth: true,
+                dots: false,
+                arrows: false,
+                infinite: true,
+            }) ;
+
+            $('.brand-slick-nav__prev').on('click', function(){
+                $( '.brands__list' ).slick('slickPrev');
+               
+            });
+            $('.brand-slick-nav__next').on('click', function(){
+                
+                $( '.brands__list' ).slick('slickNext');
+            })
+        }
+        
+
     }
+})
+
+$('.news-photo-slider').slick({
+    variableWidth: false,
+    variableHeight: false,
+    dots: false,
+    arrows: true,
+    infinite: false,
+});
+
+$('.news-slider__inner').slick({
+    variableWidth: true,
+    variableHeight: false,
+    dots: false,
+    arrows: true,
+    infinite: false,
+    slidesToScroll: 1,
+    slidesToShow: 3,
+
+    responsive: [
+        {
+          breakpoint: 1025,
+          settings: {
+            variableWidth: true,
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            
+          }
+        },
+    ]
+
+
+});
+
+
+//Обработка клика по кнопки сортировки
+
+$('.type-sort').on('click', function(){
+    let sort = +( $(this).attr('data-sort-state'));
+    sort++;
+    if (sort > 2) sort = 0;
+
+    $(this).attr('data-sort-state', sort);
+})
+
+
+//Клик по выбору внешнего вида карточек товара
+$('.appearance__btn').on('click', function(){
+
+    if ( $(this).hasClass('appearance__btn_active') === false ) {
+        $('.appearance__btn').removeClass('appearance__btn_active');
+        $(this).addClass('appearance__btn_active');
+    }
+
+})
+
+$('.drop-sort').on('click', function(){
+    if ( $(this).attr('data-state') == 'rolled' ){
+        $('.drop-sort__sort-list').show(400);
+        $(this).attr('data-state', 'deploy');
+    } else{
+        $('.drop-sort__sort-list').hide(400);
+        $(this).attr('data-state', 'rolled');
+    }
+
+})
+
+$('.drop-sort__sort-item').on('click', function(e){
+    e.stopPropagation();
+    $('.drop-sort__current-sort').html( $(this).html() );
+    $('.drop-sort__sort-list').hide(400);
+    $('.drop-sort').attr('data-state', 'rolled');
 })

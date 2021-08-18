@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru_RU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Краткое описание страницы"/>
+    <title>Сайт</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/main.min.css">  
+    <link rel="stylesheet" href="assets/css/slick.min.css">
+    <link rel="stylesheet" href="assets/css/slick-theme.min.css">   
+    
+</head>
+<body>
+    
+    <header class="header header_blue-bg">
+        <a class="logo" href="index.html">
+            <div class="logo__img-block">
+                <img class ="logo__img" src="assets/img/logo/dark-logo.png" alt="GIX">
+            </div>
+            <p class="logo__text button black">магазин <br />электроники</p>
+        </a>
+
+        <nav class="h-nav">
+            <ul class="h-menu">
+                <li class="h-menu__item open-drop"><a class="h-menu__link h5 " >Каталог</a></li>
+                <li class="h-menu__item"><a class="h-menu__link h5 white" href="#">Доставка</a></li>
+                <li class="h-menu__item"><a class="h-menu__link h5 white" href="#">Оплата</a></li>
+                <li class="h-menu__item"><a class="h-menu__link h5 white" href="#">Trade in</a></li>
+            </ul>
+            <form action="POST" class="h-nav__search">
+                <div class="h-nav__search-inp-wrap">
+                    <input type="text" class="h-nav__search-inp text" placeholder="Поиск товаров">
+                    <img class="h-nav__search-ico" src="assets/img/icons/search.svg">
+                </div>                
+            </form>
+
+            <div class="mob-menu open-drop">
+                <p class="mob-menu__text">Меню</p>
+            </div>
+        </nav>
+
+        <ul class="h-contacts h-contacts_dark">
+            <li class="h-contacts__item"><a class ="h5 black" href="tel:+74950555055">+7 495 055-50-55</a></li>
+            <li class="h-contacts__item"><a class ="h5 black" href="mailto:zakaz@gix.ru">zakaz@gix.ru</a></li>
+        </ul>
+
+        <ul class="nav-acc">
+            <li class="nav-acc__item">
+                <a class="nav-acc__link auth-btn" >
+                    <img src="assets/img/icons/sign.svg" alt="">
+                    <p class="nav-acc__link-text subtitle">войти</p>
+                </a>
+            </li>
+            <li class="nav-acc__item">
+                <a class="nav-acc__link" href="#">
+                    <img src="assets/img/icons/comprasion.svg" alt="">
+                    <p class="nav-acc__link-text subtitle">сравнение</p>
+                </a>
+            </li>
+            <li class="nav-acc__item">
+                <a class="nav-acc__link" href="#">
+                    <img src="assets/img/icons/favorites.svg" alt="">
+                    <p class="nav-acc__link-text subtitle">избранное</p>
+                </a>
+            </li>
+            <li class="nav-acc__item">
+                <a class="nav-acc__link cart-btn">
+                    <div class="nav-acc__ico-block">
+                        <p class="nav-acc__cart-qty">3</p>
+                        <img src="assets/img/icons/cart.svg" alt="">
+                    </div>
+                    
+                    <p class="nav-acc__link-text subtitle">корзина</p>
+                </a>
+            </li>
+        </ul>
+    </header>
+
+    
