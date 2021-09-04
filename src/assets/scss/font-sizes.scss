@@ -2,6 +2,18 @@
     font-weight: 600;
     font-size: 42px;
     line-height: 1.14;
+
+    @media (max-width: 1900px){
+        font-size: calc(11.6px + 1.6vw);
+    }
+    @media (max-width: 1024px){
+        font-size: 28px;
+    }
+
+    @media (max-width: 768px){
+        font-size: 24px;
+    }
+
 }
 .h2{
     font-weight: 600;
@@ -78,7 +90,12 @@
     @media(max-width: 1238px){
         font-size: 14px;
     }
-    
+    @media(max-width: 992px){
+        font-size: 13px;
+    }
+    @media(max-width: 768px){
+        font-size: 12px;
+    }
 }
 
 .smalltext{
@@ -96,6 +113,12 @@
     @media (max-width: 768px){
         font-size: 11px;
     }
+}
+
+.smalltext-lg{
+    font-size: 14px;
+    line-height: 1.43;
+    font-weight: 500;
 }
 
 .button{
@@ -145,6 +168,13 @@
         
     }
     @media (max-width: 768px){
+        font-size: 14px;
+    }
+}
+
+.h4-sm{
+    @media (max-width: 768px){
+        line-height: 1.33;
         font-size: 14px;
     }
 }

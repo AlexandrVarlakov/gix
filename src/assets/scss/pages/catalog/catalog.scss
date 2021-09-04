@@ -297,3 +297,85 @@
     background-size: cover;
     cursor: pointer;
 }
+
+.catalog-card-fs{
+    
+    
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    text-decoration: none;
+    background: linear-gradient(180deg, #F6F9FD 0%, rgba(245, 249, 253, 0) 100%), #ECF3FA;
+    
+    
+    
+    transition: .3s;
+    
+
+    position: relative;
+
+
+
+
+    &:hover{
+        background-color: #fff;
+        box-shadow: 0px 0px 18px #EBF2FA, 0px 49px 32px -26px rgba(145, 178, 241, 0.37);
+
+        .hidden-o{
+            opacity: 1;
+        }
+    }
+}
+
+.catalog-card-fs__img{
+    position: absolute;
+    width: 100%;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.catalog-card-fs__title{
+    padding: 50px 0 0 50px;
+
+    @media (max-width: 1024px){
+        padding: 35px 0 0 35px;
+    }
+}
+.catalog-card-wrap-fs{
+    display: block;
+    height: 460px;
+    width: 25%;
+    min-width: 200px;
+    max-width: 310px;
+    &:not(:last-of-type){
+        padding-right: 3px;
+        background-color: #fff;
+    }
+    @media (max-width: 1024px){
+        height: 340px;
+    }
+
+    @media (max-width: 992px){
+        
+        max-width: initial;
+        width: 340px !important;
+        height: 460px !important;
+    }
+
+    @media (max-width: 768px){
+        width: 200px !important;
+        height: 300px !important;
+    }
+}
+.catalog-card-fs__btn-wrap{
+    position: absolute;
+    left: 40px;
+    bottom: 40px;
+
+    @media (max-width: 1024px){
+        left: 15px;
+        bottom: 15px;
+    }
+}

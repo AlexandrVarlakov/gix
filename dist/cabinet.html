@@ -81,7 +81,639 @@
 
     
     <main class="content">
+        <div class="content__inner">
+            <div class="cab-content-container  flex-row-container mt-150 mt-md-90 mt-sm-60">
+                <div class="cab-left-col">
+                    <h2 class="h2 mb-40 ">Личный кабинет</h2>
 
+                    <ul class="cab-menu">
+                        <li class="cab-menu__item smalltext cab-menu__item_active" data-sheet="cab-personal-data">Личный данные</li>
+                        <li class="cab-menu__item smalltext" data-sheet="cab-subscribe">Мои заказы</li>
+                        <li class="cab-menu__item smalltext" data-sheet="cab-bonus">Бонусная программа</li>
+                        <li class="cab-menu__item smalltext" data-sheet="cab-history">Подписка</li>
+                    </ul>
+                    <a class ="button cab-logout-btn black" href="#">Выйти из аккаунта</a>
+                </div>
+
+                <div class="cab-right-col">
+                    <div class="cab-personal-data cab-sheet">
+                        <form action="post" class="cab-p-data">
+                            <div class="cab-input-wrap">
+                                <p class="cab-input-label input-label">Имя</p>
+                                <input type="text" class="cab-input-text cab-input h4 form-input" name="name" placeholder="Имя">
+                            </div>
+    
+                            <div class="cab-input-wrap">
+                                <p class="cab-input-label input-label">Телефон</p>
+                                <input type="text" class="cab-input-text cab-input h4 form-input" name="phone" placeholder="Телефон">
+                            </div>
+                            <div class="cab-input-wrap">
+                                <p class="cab-input-label input-label">E-mail</p>
+                                <input type="email" class="cab-input-text cab-input h4 form-input" name="email" placeholder="E-mail">
+                            </div>
+                            <div class="cab-input-wrap ">
+                                <p class="cab-input-label input-label">Пароль</p>
+                                <div class="cab-input-wrap_password">
+                                    <input type="password" class="cab-input-text cab-input h4 form-password" name="name" placeholder="Пароль">
+                                    <div class="cab-show-hide-p">
+                                        <img src="assets/img/buttons/view.png">
+                                    </div>
+                                </div>
+                                
+                                
+                            </div>
+    
+                            <div  class="cab-input-wrap mt-60 mt-md-50">
+                                <div class="a-c-f-city cab-city" data-state="rolled">
+                                    <p class="cab-input-label input-label mb-10" style="display: block;">Город</p>
+                                    <div class="a-c-f-city__cur-city">
+                                        <div class="a-c-f-city__value h4">Москва</div>
+                                        <img class="a-c-f-city__arrow" src="assets/img/buttons/drop-arrow-blue.png">
+                                        <input type="hidden" class="city-hidden" value="Москва">
+                                    </div>
+                                    <ul class="a-c-f-city__list ">
+                                        <li class="a-c-f-city__list--i h4">Москва</li>
+                                        <li class="a-c-f-city__list--i h4">Санкт-Петкрбург</li>
+                                        <li class="a-c-f-city__list--i h4">Воронеж</li>
+                                    </ul>
+                                </div>
+                            </div>
+    
+                            <div class="cab-input-wrap">
+                                <p class="cab-input-label input-label">Улица</p>
+                                <input type="text" class="cab-input-text cab-input h4 form-input" name="street" placeholder="Улица">
+                            </div>
+    
+                            <div class="cab-input-row">
+                                <div class="cab-input-wrap-50">
+                                    <p class="cab-input-label input-label">Дом</p>
+                                    <input type="text" class="cab-input-text cab-input h4 form-input" name="build" placeholder="Дом">
+                                </div>
+                                <div class="cab-input-wrap-50">
+                                    <p class="cab-input-label input-label">Квартира/офис</p>
+                                    <input type="text" class="cab-input-text cab-input h4 form-input" name="flat" placeholder="Квартира/офис">
+                                </div>
+                            </div>
+                            <button class="cab-save-btn button">Сохранить</button>
+                        </form>
+    
+                        <div class="cab-bonus-block">
+                            <div class="cab-bonus-qty">
+                                <p class="cab-bonus-text">Вам начислено: <br /><span>456 баллов</span></p>
+                            </div>
+    
+                            <div class="cab-bonus-deep-info">
+                                <p class="smalltext">С помощью баллов можно оплатить</p>
+    
+                                <div class="cab-bonus-percents">
+                                    <p class="smalltext">Техника - 2%</p>
+                                    <p class="smalltext">Аксессуары - 5%</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="cab-subscribe cab-sheet">
+                        <form action="post" class="cab-p-data">
+                            <div class="cab-input-wrap">
+                                <p class="cab-input-label input-label">Имя</p>
+                                <input type="text" class="cab-input-text cab-input h4 form-input" name="name" placeholder="Имя">
+                            </div>
+    
+                            <div class="cab-input-wrap">
+                                <p class="cab-input-label input-label">Телефон</p>
+                                <input type="text" class="cab-input-text cab-input h4 form-input" name="phone" placeholder="Телефон">
+                            </div>
+                            <div class="cab-input-wrap">
+                                <p class="cab-input-label input-label">E-mail</p>
+                                <input type="email" class="cab-input-text cab-input h4 form-input" name="email" placeholder="E-mail">
+                            </div>
+
+                            <div class="cab-approve-block">
+                                <label for="approve__p-d" class="checkbox-d ">
+                                    <input type="checkbox"  name="approve__p-d" id="approve__p-d" class="checkbox-d__checkbox" checked>
+                                    <label for="approve__p-d" class="checkbox-d__label button">Согласие на обработку персональных данных</label>
+                                </label>
+
+                                <label for="approve__sms" class="checkbox-d ">
+                                    <input type="checkbox"  name="approve__sms" id="approve__sms" class="checkbox-d__checkbox" checked>
+                                    <label for="approve__sms" class="checkbox-d__label button">Согласие на получение коммерческих предложений по SMS</label>
+                                </label>
+
+                                <label for="approve__a" class="checkbox-d ">
+                                    <input type="checkbox"  name="approve__a" id="approve__a" class="checkbox-d__checkbox" checked>
+                                    <label for="approve__a" class="checkbox-d__label button">Согласие на проведение мероприятий для анализа поведенческих факторов</label>
+                                </label>
+                            </div>
+
+
+                            <button class="cab-save-btn button">Сохранить</button>
+                        </form>
+                    </div>
+
+
+                    <div class="cab-bonus cab-sheet">
+                        <div class="cab-bonus-views">
+                            <div class="cab-bonus--view-block">
+                                <h3 class="h3 mb-30">Как получать бонусы</h3>
+                                <p class="smalltext">Здесь мог бы быть специальный текст, который описывал бы правила получения бонусов при покупке товаров и услуг. Описание как с помощью баллов можно было бы оплатить часть покупки или обменять на новый, прекрасный, чарующий восхитительный, превосходный, абсолютно всем необходимый пакет, в котором бы ждал подарок – целый год подписки на новостную ленту Gix.</p>
+                            </div>
+
+                            <div class="cab-bonus--view-block">
+                                <h3 class="h3 mb-30">Как потратить бонусы</h3>
+                                <p class="smalltext">Здесь мог бы быть специальный текст, который опсиывал бы правила получения бонусов при покупке товаров и услуг. Описание как с помощью баллов можно было бы оплатить часть покупки или обменять на новый, прекрасный, чарующий восхитительный, превосходный, абсолютно всем необходимый пакет, в котором бы ждал подарок – целый год подписки на новостную ленту Gix.</p>
+                            </div>
+                        </div>
+
+                        <div class="cab-bonus-block">
+                            <div class="cab-bonus-qty">
+                                <p class="cab-bonus-text">Вам начислено: <br /><span>456 баллов</span></p>
+                            </div>
+    
+                            <div class="cab-bonus-deep-info">
+                                <p class="smalltext">С помощью баллов можно оплатить</p>
+    
+                                <div class="cab-bonus-percents">
+                                    <p class="smalltext">Техника - 2%</p>
+                                    <p class="smalltext">Аксессуары - 5%</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="cab-history cab-sheet">
+                        <div class="cab-cur-order--block">
+                            <h3 class="h3">Текущие заказы</h3>
+
+                            <div class="cab-cur-order cab-order_active">
+                                <div class="cab-order">
+                                    <div class="cab-order__header">
+                                        <p class="smalltext ">Заказ № 16578</p>
+                                        <p class="smalltext ">от 18.12.2020<span class="cab-order__delimetr">/</span>19:50:17</p>
+                                        <div class="cab-order__arrow">
+                                            <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0.5 15L7.5 8L0.5 1" stroke="#1E242E"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+
+                                    <div class="cab-order__body">
+                                        <div class="cab-order__main-info">
+                                            <div class="cab-order__row">
+                                                <p class="cab-order__mi-col smalltext">Способ оплаты:</p>
+                                                <p class="cab-order__mi-col subtitle">Наличными курьеру</p>
+                                            </div>
+                                            <div class="cab-order__row">
+                                                <p class="cab-order__mi-col smalltext">Доставка:</p>
+                                                <p class="cab-order__mi-col subtitle">Курьером, <br />Москва, ул. Баррикадная 27 стр 61,<br /> подъезд 1, кв 26</p>
+                                            </div>
+
+                                            <div class="cab-order__row">
+                                                <p class="cab-order__mi-col smalltext">Сумма:</p>
+                                                <p class="cab-order__mi-col subtitle">5365 Р</p>
+                                            </div>
+
+                                            <div class="cab-order__products">
+                                                <div class="cab-order__products-h">
+                                                    <p class="cab-order__mi-col smalltext">Товары</p>
+                                                    <p class="cab-order__mi-col subtitle cab-prod-arrow">3 товара 
+                                                        <svg class ="cab-svg-arrow" width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M0.5 14.5L7.5 7.5L0.5 0.5" stroke="#457EAF"/>
+                                                        </svg>
+                                                    </p>
+                                                </div>
+                                                
+
+                                                <div class="cab-order__products-list">
+                                                    <div class="m-c-product">
+                                                        <div class="m-c-product__img-wrap">
+                                                            <img class="m-c-product__img" src="assets/img/products/product-mini-1.png" alt="product">
+                                                        </div>
+                                                        <div class="m-c-product__info">
+                                                            <div class="m-c-product__nums">
+                                                                <div class="m-c-product__left-p">
+                                                                    <p class="m-c-product__cost">35 890 Р</p>
+                                                                    <p class="m-c-product__qty m-c-product__blue-text">1 шт</p>
+                                                                </div>
+                                                                <p class="m-c-product__blue-text">+ 475 баллов</p>
+                                                            </div>
+                                                            <p class="m-c-product__view subtitle">Планшет Apple iPad Pro 12.9 (2020) 256Gb Wi-Fi + Cellular (серебристый)</p>
+                                                        </div>
+                                                    </div>
+    
+                                                    <div class="m-c-product">
+                                                        <div class="m-c-product__img-wrap">
+                                                            <img class="m-c-product__img" src="assets/img/products/product-mini-1.png" alt="product">
+                                                        </div>
+                                                        <div class="m-c-product__info">
+                                                            <div class="m-c-product__nums">
+                                                                <div class="m-c-product__left-p">
+                                                                    <p class="m-c-product__cost">35 890 Р</p>
+                                                                    <p class="m-c-product__qty m-c-product__blue-text">1 шт</p>
+                                                                </div>
+                                                                <p class="m-c-product__blue-text">+ 475 баллов</p>
+                                                            </div>
+                                                            <p class="m-c-product__view subtitle">Планшет Apple iPad Pro 12.9 (2020) 256Gb Wi-Fi + Cellular (серебристый)</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="m-c-product">
+                                                        <div class="m-c-product__img-wrap">
+                                                            <img class="m-c-product__img" src="assets/img/products/product-mini-1.png" alt="product">
+                                                        </div>
+                                                        <div class="m-c-product__info">
+                                                            <div class="m-c-product__nums">
+                                                                <div class="m-c-product__left-p">
+                                                                    <p class="m-c-product__cost">35 890 Р</p>
+                                                                    <p class="m-c-product__qty m-c-product__blue-text">1 шт</p>
+                                                                </div>
+                                                                <p class="m-c-product__blue-text">+ 475 баллов</p>
+                                                            </div>
+                                                            <p class="m-c-product__view subtitle">Планшет Apple iPad Pro 12.9 (2020) 256Gb Wi-Fi + Cellular (серебристый)</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="cab-order__state-info">
+                                            <p class="smalltext cab-order__si-title">Статус: </p>
+
+                                            <ul class="cab-os-list">
+                                                <li class="cab-os-list__item cab-os-list__item_active">
+                                                    <p class="subtitle">Передан в службу доставки</p>
+                                                    <p class="subtitle">18.12.2020  /  21:50:17</p>
+                                                </li>
+                                                <li class="cab-os-list__item">
+                                                    <p class="subtitle">Ожидает обработки</p>
+                                                    <p class="subtitle">18.12.2020  /  21:50:17</p>
+                                                </li>
+                                                <li class="cab-os-list__item">
+                                                    <p class="subtitle">Ожиждает обработки</p>
+                                                    <p class="subtitle">18.12.2020  /  21:50:17</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cab-order-list--block">
+                            <h3 class="h3">История заказов</h3>
+                                
+                            <div class="cab-cur-order">
+                                <div class="cab-order">
+                                    <div class="cab-order__header">
+                                        <p class="smalltext ">Заказ № 16578</p>
+                                        <p class="smalltext ">от 18.12.2020<span class="cab-order__delimetr">/</span>19:50:17</p>
+                                        <div class="cab-order__arrow">
+                                            <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0.5 15L7.5 8L0.5 1" stroke="#1E242E"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+
+                                    <div class="cab-order__body">
+                                        <div class="cab-order__main-info">
+                                            <div class="cab-order__row">
+                                                <p class="cab-order__mi-col smalltext">Способ оплаты:</p>
+                                                <p class="cab-order__mi-col subtitle">Наличными курьеру</p>
+                                            </div>
+                                            <div class="cab-order__row">
+                                                <p class="cab-order__mi-col smalltext">Доставка:</p>
+                                                <p class="cab-order__mi-col subtitle">Курьером, <br />Москва, ул. Баррикадная 27 стр 61,<br /> подъезд 1, кв 26</p>
+                                            </div>
+
+                                            <div class="cab-order__row">
+                                                <p class="cab-order__mi-col smalltext">Сумма:</p>
+                                                <p class="cab-order__mi-col subtitle">5365 Р</p>
+                                            </div>
+
+                                            <div class="cab-order__products">
+                                                <div class="cab-order__products-h">
+                                                    <p class="cab-order__mi-col smalltext">Товары</p>
+                                                    <p class="cab-order__mi-col subtitle cab-prod-arrow">3 товара 
+                                                        <svg class ="cab-svg-arrow" width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M0.5 14.5L7.5 7.5L0.5 0.5" stroke="#457EAF"/>
+                                                        </svg>
+                                                    </p>
+                                                </div>
+                                                
+
+                                                <div class="cab-order__products-list">
+                                                    <div class="m-c-product">
+                                                        <div class="m-c-product__img-wrap">
+                                                            <img class="m-c-product__img" src="assets/img/products/product-mini-1.png" alt="product">
+                                                        </div>
+                                                        <div class="m-c-product__info">
+                                                            <div class="m-c-product__nums">
+                                                                <div class="m-c-product__left-p">
+                                                                    <p class="m-c-product__cost">35 890 Р</p>
+                                                                    <p class="m-c-product__qty m-c-product__blue-text">1 шт</p>
+                                                                </div>
+                                                                <p class="m-c-product__blue-text">+ 475 баллов</p>
+                                                            </div>
+                                                            <p class="m-c-product__view subtitle">Планшет Apple iPad Pro 12.9 (2020) 256Gb Wi-Fi + Cellular (серебристый)</p>
+                                                        </div>
+                                                    </div>
+    
+                                                    <div class="m-c-product">
+                                                        <div class="m-c-product__img-wrap">
+                                                            <img class="m-c-product__img" src="assets/img/products/product-mini-1.png" alt="product">
+                                                        </div>
+                                                        <div class="m-c-product__info">
+                                                            <div class="m-c-product__nums">
+                                                                <div class="m-c-product__left-p">
+                                                                    <p class="m-c-product__cost">35 890 Р</p>
+                                                                    <p class="m-c-product__qty m-c-product__blue-text">1 шт</p>
+                                                                </div>
+                                                                <p class="m-c-product__blue-text">+ 475 баллов</p>
+                                                            </div>
+                                                            <p class="m-c-product__view subtitle">Планшет Apple iPad Pro 12.9 (2020) 256Gb Wi-Fi + Cellular (серебристый)</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="m-c-product">
+                                                        <div class="m-c-product__img-wrap">
+                                                            <img class="m-c-product__img" src="assets/img/products/product-mini-1.png" alt="product">
+                                                        </div>
+                                                        <div class="m-c-product__info">
+                                                            <div class="m-c-product__nums">
+                                                                <div class="m-c-product__left-p">
+                                                                    <p class="m-c-product__cost">35 890 Р</p>
+                                                                    <p class="m-c-product__qty m-c-product__blue-text">1 шт</p>
+                                                                </div>
+                                                                <p class="m-c-product__blue-text">+ 475 баллов</p>
+                                                            </div>
+                                                            <p class="m-c-product__view subtitle">Планшет Apple iPad Pro 12.9 (2020) 256Gb Wi-Fi + Cellular (серебристый)</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="cab-order__state-info">
+                                            <p class="smalltext cab-order__si-title">Статус: </p>
+
+                                            <ul class="cab-os-list">
+                                                <li class="cab-os-list__item cab-os-list__item_active">
+                                                    <p class="subtitle">Передан в службу доставки</p>
+                                                    <p class="subtitle">18.12.2020  /  21:50:17</p>
+                                                </li>
+                                                <li class="cab-os-list__item">
+                                                    <p class="subtitle">Ожидает обработки</p>
+                                                    <p class="subtitle">18.12.2020  /  21:50:17</p>
+                                                </li>
+                                                <li class="cab-os-list__item">
+                                                    <p class="subtitle">Ожиждает обработки</p>
+                                                    <p class="subtitle">18.12.2020  /  21:50:17</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                            <div class="cab-cur-order">
+                                <div class="cab-order">
+                                    <div class="cab-order__header">
+                                        <p class="smalltext ">Заказ № 16578</p>
+                                        <p class="smalltext ">от 18.12.2020<span class="cab-order__delimetr">/</span>19:50:17</p>
+                                        <div class="cab-order__arrow">
+                                            <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0.5 15L7.5 8L0.5 1" stroke="#1E242E"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+
+                                    <div class="cab-order__body">
+                                        <div class="cab-order__main-info">
+                                            <div class="cab-order__row">
+                                                <p class="cab-order__mi-col smalltext">Способ оплаты:</p>
+                                                <p class="cab-order__mi-col subtitle">Наличными курьеру</p>
+                                            </div>
+                                            <div class="cab-order__row">
+                                                <p class="cab-order__mi-col smalltext">Доставка:</p>
+                                                <p class="cab-order__mi-col subtitle">Курьером, <br />Москва, ул. Баррикадная 27 стр 61,<br /> подъезд 1, кв 26</p>
+                                            </div>
+
+                                            <div class="cab-order__row">
+                                                <p class="cab-order__mi-col smalltext">Сумма:</p>
+                                                <p class="cab-order__mi-col subtitle">5365 Р</p>
+                                            </div>
+
+                                            <div class="cab-order__products">
+                                                <div class="cab-order__products-h">
+                                                    <p class="cab-order__mi-col smalltext">Товары</p>
+                                                    <p class="cab-order__mi-col subtitle cab-prod-arrow">3 товара 
+                                                        <svg class ="cab-svg-arrow" width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M0.5 14.5L7.5 7.5L0.5 0.5" stroke="#457EAF"/>
+                                                        </svg>
+                                                    </p>
+                                                </div>
+                                                
+
+                                                <div class="cab-order__products-list">
+                                                    <div class="m-c-product">
+                                                        <div class="m-c-product__img-wrap">
+                                                            <img class="m-c-product__img" src="assets/img/products/product-mini-1.png" alt="product">
+                                                        </div>
+                                                        <div class="m-c-product__info">
+                                                            <div class="m-c-product__nums">
+                                                                <div class="m-c-product__left-p">
+                                                                    <p class="m-c-product__cost">35 890 Р</p>
+                                                                    <p class="m-c-product__qty m-c-product__blue-text">1 шт</p>
+                                                                </div>
+                                                                <p class="m-c-product__blue-text">+ 475 баллов</p>
+                                                            </div>
+                                                            <p class="m-c-product__view subtitle">Планшет Apple iPad Pro 12.9 (2020) 256Gb Wi-Fi + Cellular (серебристый)</p>
+                                                        </div>
+                                                    </div>
+    
+                                                    <div class="m-c-product">
+                                                        <div class="m-c-product__img-wrap">
+                                                            <img class="m-c-product__img" src="assets/img/products/product-mini-1.png" alt="product">
+                                                        </div>
+                                                        <div class="m-c-product__info">
+                                                            <div class="m-c-product__nums">
+                                                                <div class="m-c-product__left-p">
+                                                                    <p class="m-c-product__cost">35 890 Р</p>
+                                                                    <p class="m-c-product__qty m-c-product__blue-text">1 шт</p>
+                                                                </div>
+                                                                <p class="m-c-product__blue-text">+ 475 баллов</p>
+                                                            </div>
+                                                            <p class="m-c-product__view subtitle">Планшет Apple iPad Pro 12.9 (2020) 256Gb Wi-Fi + Cellular (серебристый)</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="m-c-product">
+                                                        <div class="m-c-product__img-wrap">
+                                                            <img class="m-c-product__img" src="assets/img/products/product-mini-1.png" alt="product">
+                                                        </div>
+                                                        <div class="m-c-product__info">
+                                                            <div class="m-c-product__nums">
+                                                                <div class="m-c-product__left-p">
+                                                                    <p class="m-c-product__cost">35 890 Р</p>
+                                                                    <p class="m-c-product__qty m-c-product__blue-text">1 шт</p>
+                                                                </div>
+                                                                <p class="m-c-product__blue-text">+ 475 баллов</p>
+                                                            </div>
+                                                            <p class="m-c-product__view subtitle">Планшет Apple iPad Pro 12.9 (2020) 256Gb Wi-Fi + Cellular (серебристый)</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="cab-order__state-info">
+                                            <p class="smalltext cab-order__si-title">Статус: </p>
+
+                                            <ul class="cab-os-list">
+                                                <li class="cab-os-list__item cab-os-list__item_active">
+                                                    <p class="subtitle">Передан в службу доставки</p>
+                                                    <p class="subtitle">18.12.2020  /  21:50:17</p>
+                                                </li>
+                                                <li class="cab-os-list__item">
+                                                    <p class="subtitle">Ожидает обработки</p>
+                                                    <p class="subtitle">18.12.2020  /  21:50:17</p>
+                                                </li>
+                                                <li class="cab-os-list__item">
+                                                    <p class="subtitle">Ожиждает обработки</p>
+                                                    <p class="subtitle">18.12.2020  /  21:50:17</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                            <div class="cab-cur-order">
+                                <div class="cab-order">
+                                    <div class="cab-order__header">
+                                        <p class="smalltext ">Заказ № 16578</p>
+                                        <p class="smalltext ">от 18.12.2020<span class="cab-order__delimetr">/</span>19:50:17</p>
+                                        <div class="cab-order__arrow">
+                                            <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0.5 15L7.5 8L0.5 1" stroke="#1E242E"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+
+                                    <div class="cab-order__body">
+                                        <div class="cab-order__main-info">
+                                            <div class="cab-order__row">
+                                                <p class="cab-order__mi-col smalltext">Способ оплаты:</p>
+                                                <p class="cab-order__mi-col subtitle">Наличными курьеру</p>
+                                            </div>
+                                            <div class="cab-order__row">
+                                                <p class="cab-order__mi-col smalltext">Доставка:</p>
+                                                <p class="cab-order__mi-col subtitle">Курьером, <br />Москва, ул. Баррикадная 27 стр 61,<br /> подъезд 1, кв 26</p>
+                                            </div>
+
+                                            <div class="cab-order__row">
+                                                <p class="cab-order__mi-col smalltext">Сумма:</p>
+                                                <p class="cab-order__mi-col subtitle">5365 Р</p>
+                                            </div>
+
+                                            <div class="cab-order__products">
+                                                <div class="cab-order__products-h">
+                                                    <p class="cab-order__mi-col smalltext">Товары</p>
+                                                    <p class="cab-order__mi-col subtitle cab-prod-arrow">3 товара 
+                                                        <svg class ="cab-svg-arrow" width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M0.5 14.5L7.5 7.5L0.5 0.5" stroke="#457EAF"/>
+                                                        </svg>
+                                                    </p>
+                                                </div>
+                                                
+
+                                                <div class="cab-order__products-list">
+                                                    <div class="m-c-product">
+                                                        <div class="m-c-product__img-wrap">
+                                                            <img class="m-c-product__img" src="assets/img/products/product-mini-1.png" alt="product">
+                                                        </div>
+                                                        <div class="m-c-product__info">
+                                                            <div class="m-c-product__nums">
+                                                                <div class="m-c-product__left-p">
+                                                                    <p class="m-c-product__cost">35 890 Р</p>
+                                                                    <p class="m-c-product__qty m-c-product__blue-text">1 шт</p>
+                                                                </div>
+                                                                <p class="m-c-product__blue-text">+ 475 баллов</p>
+                                                            </div>
+                                                            <p class="m-c-product__view subtitle">Планшет Apple iPad Pro 12.9 (2020) 256Gb Wi-Fi + Cellular (серебристый)</p>
+                                                        </div>
+                                                    </div>
+    
+                                                    <div class="m-c-product">
+                                                        <div class="m-c-product__img-wrap">
+                                                            <img class="m-c-product__img" src="assets/img/products/product-mini-1.png" alt="product">
+                                                        </div>
+                                                        <div class="m-c-product__info">
+                                                            <div class="m-c-product__nums">
+                                                                <div class="m-c-product__left-p">
+                                                                    <p class="m-c-product__cost">35 890 Р</p>
+                                                                    <p class="m-c-product__qty m-c-product__blue-text">1 шт</p>
+                                                                </div>
+                                                                <p class="m-c-product__blue-text">+ 475 баллов</p>
+                                                            </div>
+                                                            <p class="m-c-product__view subtitle">Планшет Apple iPad Pro 12.9 (2020) 256Gb Wi-Fi + Cellular (серебристый)</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="m-c-product">
+                                                        <div class="m-c-product__img-wrap">
+                                                            <img class="m-c-product__img" src="assets/img/products/product-mini-1.png" alt="product">
+                                                        </div>
+                                                        <div class="m-c-product__info">
+                                                            <div class="m-c-product__nums">
+                                                                <div class="m-c-product__left-p">
+                                                                    <p class="m-c-product__cost">35 890 Р</p>
+                                                                    <p class="m-c-product__qty m-c-product__blue-text">1 шт</p>
+                                                                </div>
+                                                                <p class="m-c-product__blue-text">+ 475 баллов</p>
+                                                            </div>
+                                                            <p class="m-c-product__view subtitle">Планшет Apple iPad Pro 12.9 (2020) 256Gb Wi-Fi + Cellular (серебристый)</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="cab-order__state-info">
+                                            <p class="smalltext cab-order__si-title">Статус: </p>
+
+                                            <ul class="cab-os-list">
+                                                <li class="cab-os-list__item cab-os-list__item_active">
+                                                    <p class="subtitle">Передан в службу доставки</p>
+                                                    <p class="subtitle">18.12.2020  /  21:50:17</p>
+                                                </li>
+                                                <li class="cab-os-list__item">
+                                                    <p class="subtitle">Ожидает обработки</p>
+                                                    <p class="subtitle">18.12.2020  /  21:50:17</p>
+                                                </li>
+                                                <li class="cab-os-list__item">
+                                                    <p class="subtitle">Ожиждает обработки</p>
+                                                    <p class="subtitle">18.12.2020  /  21:50:17</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                
+                
+            </div>
     </main>
 <div class="modal write-us">
     <div class="modal__header">
@@ -106,8 +738,7 @@
             <div class="m-form__info-wrap">
                 <p class="m-form__info subtitle">Нажимая на кнопку, вы соглашаетесь с политикой защиты персональной информации.</p>
             </div>
-
-            <input type="submit" class ="m-form__btn text h4-md white" value="Оставить заявку">
+            <button class ="m-form__btn text h4-md white" >Оставить заявку</button>
         </form>
     </div>
 </div>
@@ -135,7 +766,7 @@
                 <p class="m-form__info subtitle">Нажимая на кнопку, вы соглашаетесь с политикой защиты персональной информации.</p>
             </div>
 
-            <input type="submit" class ="m-form__btn text h4-md white" value="Оставить заявку">
+            <button class ="m-form__btn text h4-md white" >Оставить заявку</button>
         </form>
     </div>
 </div>
@@ -172,8 +803,7 @@
                 <div class="m-form__info-wrap">
                     <a href ="#" class="m-form__info subtitle">Забыли пароль?</a>
                 </div>
-    
-                <input type="submit" class ="m-form__btn text h4-md white" value="Войти">
+                <button class ="m-form__btn text h4-md white" >Войти</button>
             </form>
             
 

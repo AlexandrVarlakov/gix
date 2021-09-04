@@ -2,6 +2,15 @@
   font-weight: 600;
   font-size: 42px;
   line-height: 1.14; }
+  @media (max-width: 1900px) {
+    .h1 {
+      font-size: calc(11.6px + 1.6vw); } }
+  @media (max-width: 1024px) {
+    .h1 {
+      font-size: 28px; } }
+  @media (max-width: 768px) {
+    .h1 {
+      font-size: 24px; } }
 
 .h2 {
   font-weight: 600;
@@ -70,6 +79,12 @@
   @media (max-width: 1238px) {
     .h5 {
       font-size: 14px; } }
+  @media (max-width: 992px) {
+    .h5 {
+      font-size: 13px; } }
+  @media (max-width: 768px) {
+    .h5 {
+      font-size: 12px; } }
 
 .smalltext {
   font-weight: 500;
@@ -84,6 +99,11 @@
   @media (max-width: 768px) {
     .smalltext {
       font-size: 11px; } }
+
+.smalltext-lg {
+  font-size: 14px;
+  line-height: 1.43;
+  font-weight: 500; }
 
 .button {
   font-weight: 600;
@@ -124,6 +144,11 @@
   @media (max-width: 768px) {
     .h4-md {
       font-size: 14px; } }
+
+@media (max-width: 768px) {
+  .h4-sm {
+    line-height: 1.33;
+    font-size: 14px; } }
 
 .h5-md-o {
   font-weight: 600;

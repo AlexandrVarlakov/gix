@@ -108,6 +108,7 @@
     @media (max-width: 768px){
         margin-top: 9px;
         padding: 0 20px 0;
+        
     }
 }
 .m-form__input{
@@ -122,10 +123,12 @@
     &::placeholder{
         color: #8E99AB;
     }
-
+    border-radius: 0px;
     @media (max-width: 1024px){
         padding: 8px 0;
     }
+
+    
 }
 .m-form__info-wrap{
     padding: 20px 68px 55px;
@@ -299,6 +302,10 @@
         border-radius: 9em;
         box-shadow: inset 1px 1px 10px #f3faf7;
     }
+
+    @media (max-width: 768px){
+        padding: 0 6px;
+    }
 }
 
 .m-c-product{
@@ -341,11 +348,19 @@
     flex-direction: column;
     flex-grow: 1;
     padding-left: 22px;
+
+    @media (max-width: 768px){
+        padding-left: 8px;
+    }
 }
 .m-c-product__nums{
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media (max-width: 768px){
+        flex-wrap: wrap;
+    }
 }
 .m-c-product__left-p{
     display: flex;
