@@ -331,7 +331,7 @@ $('.cp-small-slider').slick({
     variableWidth: false,
     variableHeight: false,
     dots: false,
-    arrows: true,
+    arrows: false,
     infinite: false,
     slidesToScroll: 1,
     slidesToShow: 5,
