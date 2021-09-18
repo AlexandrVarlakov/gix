@@ -24,6 +24,7 @@
         <nav class="h-nav">
             <ul class="h-menu">
                 <li class="h-menu__item open-drop"><a class="h-menu__link h5 " >Каталог</a></li>
+                <li class="h-menu__item close-drop close-item"><a class="h-menu__link h5 ">Закрыть</a></li>
                 <li class="h-menu__item"><a class="h-menu__link h5 white" href="#">Доставка</a></li>
                 <li class="h-menu__item"><a class="h-menu__link h5 white" href="#">Оплата</a></li>
                 <li class="h-menu__item"><a class="h-menu__link h5 white" href="#">Trade in</a></li>
@@ -31,12 +32,28 @@
             <form action="POST" class="h-nav__search">
                 <div class="h-nav__search-inp-wrap">
                     <input type="text" class="h-nav__search-inp text" placeholder="Поиск товаров">
-                    <img class="h-nav__search-ico" src="assets/img/icons/search.svg">
-                </div>                
+                    <svg class="h-nav__search-ico" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <ellipse cx="10.8333" cy="10" rx="5" ry="5" stroke="#8E99AB" stroke-width="2"/>
+                        <path d="M4.47916 16.6667L6.55313 14.5927" stroke="#8E99AB" stroke-width="2" stroke-linecap="square"/>
+                    </svg>
+                </div>   
+                <div class="h-nav__search-results">
+                    <div class="h-nav__search-results--inner">
+                        
+                       
+                    </div>
+                    
+                </div>             
             </form>
 
-            <div class="mob-menu open-drop">
-                <p class="mob-menu__text">Меню</p>
+            <div class="mob-menu open-drop_mob">
+                <p class="mob-menu__text ">Меню</p>
+                
+            </div>
+
+            <div class="mob-menu close-drop_mob">
+                <p class="mob-menu__text ">Закрыть</p>
+                
             </div>
         </nav>
 
@@ -58,9 +75,16 @@
                     <p class="nav-acc__link-text subtitle">сравнение</p>
                 </a>
             </li>
-            <li class="nav-acc__item">
-                <a class="nav-acc__link" href="#">
-                    <img src="assets/img/icons/favorites.svg" alt="">
+            <li class="nav-acc__item  nav-acc__item--favorites nav-acc__item--has-favorites">
+                <a class="nav-acc__link " href="#">
+                    <div class="nav-acc__ico-block">
+                        <p class="nav-acc__favorites-qty">3</p>
+                        <svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg" class="nav-acc__fav-ico">
+                            <path d="M19.0714 7.8313C17.3794 7.8313 15.8876 8.66961 15 9.94583C14.1124 8.66961 12.6206 7.8313 10.9286 7.8313C8.20671 7.8313 6 9.99888 6 12.6734C6 17.5934 15 23.8313 15 23.8313C15 23.8313 24 17.5934 24 12.6734C24 9.99888 21.7933 7.8313 19.0714 7.8313" stroke="white" stroke-width="2"/>
+                        </svg>
+                            
+                    </div>
+                    
                     <p class="nav-acc__link-text subtitle">избранное</p>
                 </a>
             </li>
@@ -153,8 +177,22 @@
 
 
                     <div class="appearance-group">
-                        <button class="appearance__btn " data-appearance="card"><img src="assets/img/buttons/card.png"></button>
-                        <button class="appearance__btn appearance__btn_active" data-appearance="line"><img src="assets/img/buttons/line.png"></button>
+                        <button class="appearance__btn " data-appearance="card">
+                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="5" height="5" fill="#CADCF8"/>
+                                <rect x="10" width="5" height="5" fill="#CADCF8"/>
+                                <rect y="10" width="5" height="5" fill="#CADCF8"/>
+                                <rect x="10" y="10" width="5" height="5" fill="#CADCF8"/>
+                            </svg>                                
+                        </button>
+                        <button class="appearance__btn appearance__btn_active" data-appearance="line">
+                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="5" height="5" fill="#CADCF8"/>
+                                <rect x="7" width="8" height="5" fill="#CADCF8"/>
+                                <rect y="10" width="5" height="5" fill="#CADCF8"/>
+                                <rect x="7" y="10" width="8" height="5" fill="#CADCF8"/>
+                            </svg>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -181,7 +219,7 @@
                                     </div>
 
                                     <div class="f-product__rating-right">
-                                        <div class="f-product__svg-icon">
+                                        <div class="c-product__svg-icon">
                                             <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <g opacity="0.5">
                                                 <rect x="15" y="8" width="2" height="16" fill="#8E99AB"/>
@@ -192,7 +230,7 @@
                                                 </g>
                                             </svg>
                                         </div>
-                                        <div class="f-product__svg-icon">
+                                        <div class="c-product__svg-icon">
                                             <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <g opacity="0.5">
                                                 <path d="M19.0714 6.91699C17.3794 6.91699 15.8876 7.75531 15 9.03152C14.1124 7.75531 12.6206 6.91699 10.9286 6.91699C8.20671 6.91699 6 9.08457 6 11.7591C6 16.6791 15 22.917 15 22.917C15 22.917 24 16.6791 24 11.7591C24 9.08457 21.7933 6.91699 19.0714 6.91699" stroke="#8E99AB" stroke-width="2"/>
@@ -252,7 +290,7 @@
                                     </div>
 
                                     <div class="f-product__rating-right">
-                                        <div class="f-product__svg-icon">
+                                        <div class="c-product__svg-icon">
                                             <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <g opacity="0.5">
                                                 <rect x="15" y="8" width="2" height="16" fill="#8E99AB"/>
@@ -263,7 +301,7 @@
                                                 </g>
                                             </svg>
                                         </div>
-                                        <div class="f-product__svg-icon">
+                                        <div class="c-product__svg-icon">
                                             <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <g opacity="0.5">
                                                 <path d="M19.0714 6.91699C17.3794 6.91699 15.8876 7.75531 15 9.03152C14.1124 7.75531 12.6206 6.91699 10.9286 6.91699C8.20671 6.91699 6 9.08457 6 11.7591C6 16.6791 15 22.917 15 22.917C15 22.917 24 16.6791 24 11.7591C24 9.08457 21.7933 6.91699 19.0714 6.91699" stroke="#8E99AB" stroke-width="2"/>
@@ -325,7 +363,7 @@
                                     </div>
 
                                     <div class="f-product__rating-right">
-                                        <div class="f-product__svg-icon">
+                                        <div class="c-product__svg-icon">
                                             <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <g opacity="0.5">
                                                 <rect x="15" y="8" width="2" height="16" fill="#8E99AB"/>
@@ -336,7 +374,7 @@
                                                 </g>
                                             </svg>
                                         </div>
-                                        <div class="f-product__svg-icon">
+                                        <div class="c-product__svg-icon">
                                             <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <g opacity="0.5">
                                                 <path d="M19.0714 6.91699C17.3794 6.91699 15.8876 7.75531 15 9.03152C14.1124 7.75531 12.6206 6.91699 10.9286 6.91699C8.20671 6.91699 6 9.08457 6 11.7591C6 16.6791 15 22.917 15 22.917C15 22.917 24 16.6791 24 11.7591C24 9.08457 21.7933 6.91699 19.0714 6.91699" stroke="#8E99AB" stroke-width="2"/>
@@ -397,7 +435,7 @@
                                     </div>
 
                                     <div class="f-product__rating-right">
-                                        <div class="f-product__svg-icon">
+                                        <div class="c-product__svg-icon">
                                             <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <g opacity="0.5">
                                                 <rect x="15" y="8" width="2" height="16" fill="#8E99AB"/>
@@ -408,7 +446,7 @@
                                                 </g>
                                             </svg>
                                         </div>
-                                        <div class="f-product__svg-icon">
+                                        <div class="c-product__svg-icon">
                                             <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <g opacity="0.5">
                                                 <path d="M19.0714 6.91699C17.3794 6.91699 15.8876 7.75531 15 9.03152C14.1124 7.75531 12.6206 6.91699 10.9286 6.91699C8.20671 6.91699 6 9.08457 6 11.7591C6 16.6791 15 22.917 15 22.917C15 22.917 24 16.6791 24 11.7591C24 9.08457 21.7933 6.91699 19.0714 6.91699" stroke="#8E99AB" stroke-width="2"/>
@@ -456,10 +494,16 @@
                             <div class="pagination__line"></div>
                             <div class="pagination__nav-btn-block">
                                 <button class="pagination__btn pagination__btn_prev pagination__btn_end">
-                                    <img src="assets/img/buttons/arrow.png">
+                                    <svg width="62" height="16" viewBox="0 0 62 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="black-arrow">
+                                        <path d="M60.2773 8.07104L3.29341 8.07104" stroke="#2A323E" stroke-width="2" stroke-linecap="square"/>
+                                        <path d="M9.07129 15.1421L2.00022 8.07102L9.07129 0.999954" stroke="#2A323E" stroke-width="2"/>
+                                    </svg>
                                 </button>
                                 <button class="pagination__btn pagination__btn_next">
-                                    <img src="assets/img/buttons/arrow.png">
+                                    <svg width="62" height="16" viewBox="0 0 62 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="black-arrow">
+                                        <path d="M1.59375 8.07104H58.5777" stroke="#2A323E" stroke-width="2" stroke-linecap="square"/>
+                                        <path d="M52.7998 1L59.8709 8.07107L52.7998 15.1421" stroke="#2A323E" stroke-width="2"/>
+                                    </svg>
                                 </button>
                             </div>
                         </div>
@@ -480,9 +524,12 @@
 
         <form action="post" class="ssc-form">
             <div class="ssc-form__input-wrap">
+                <p class="ssc-form__error">Некорректные ввод </p>
                 <input type="email" name="email" id="email" class="ssc-form__input h5" placeholder="E-mail">
                 <div class="ssc-form__cb-wrap">
+                   
                     <label for="i-agree" class="checkbox-l">
+                        
                         <input type="checkbox" checked="checked" name="i-agree" id="i-agree" class="checkbox-l__checkbox">
                         <label for="i-agree" class="checkbox-l__label button">Я согласен с  <a href="#">условиями подписки</a></label>
                     </label>
@@ -490,7 +537,7 @@
                 
             </div>
 
-            <button class="half-round">
+            <button class="half-round ssc-form__btn">
                 <img src="assets/img/buttons/oval.png" class="half-round__img">
                 <p class="half-round__text h4 white h5-sm">Подписаться</p>
             </button>
@@ -586,7 +633,7 @@
                 <div class="m-form__info-wrap">
                     <a href ="#" class="m-form__info subtitle">Забыли пароль?</a>
                 </div>
-                <button class ="m-form__btn text h4-md white" >Войти</button>
+                <button class ="m-form__btn m-form__btn_green text h4-md white" >Войти</button>
             </form>
             
 
@@ -603,7 +650,7 @@
                     <a href ="#" class="m-form__info subtitle">Не пришел код?</a>
                 </div>
     
-                <input type="submit" class ="m-form__btn text h4-md white" value="Получить пароль">
+                <input type="submit" class ="m-form__btn text h4-md white m-form__btn_green" value="Получить пароль">
             </form>
         </div>
         
@@ -674,70 +721,7 @@
 </div>
 
 <nav class="drop-box">
-    <header class="header header_dark">
-        <a class="logo" href="index.html">
-            <div class="logo__img-block">
-                <img class ="logo__img" src="assets/img/logo/light-logo.png" alt="GIX">
-            </div>
-            <p class="logo__text button">магазин <br />электроники</p>
-        </a>
-    
-        <nav class="h-nav">
-            <ul class="h-menu">
-                <li class="h-menu__item close-drop close-item"><a class="h-menu__link h5 ">Закрыть</a></li>
-                <li class="h-menu__item"><a class="h-menu__link h5 white" href="#">Доставка</a></li>
-                <li class="h-menu__item"><a class="h-menu__link h5 white" href="#">Оплата</a></li>
-                <li class="h-menu__item"><a class="h-menu__link h5 white" href="#">Trade in</a></li>
-            </ul>
-            <form action="POST" class="h-nav__search">
-                <div class="h-nav__search-inp-wrap">
-                    <input type="text" class="h-nav__search-inp text" placeholder="Поиск товаров">
-                    <img class="h-nav__search-ico" src="assets/img/icons/search.svg">
-                </div>                
-            </form>
-    
-            <div class="mob-menu close-drop">
-                <p class="mob-menu__text close-item">Закрыть</p>
-            </div>
-        </nav>
-    
-        <ul class="h-contacts">
-            <li class="h-contacts__item"><a class ="h5 white" href="tel:+74950555055">+7 495 055-50-55</a></li>
-            <li class="h-contacts__item"><a class ="h5 white" href="mailto:zakaz@gix.ru">zakaz@gix.ru</a></li>
-        </ul>
-    
-        <ul class="nav-acc">
-            <li class="nav-acc__item">
-                <a class="nav-acc__link auth-btn">
-                    <img src="assets/img/icons/sign.svg" alt="">
-                    <p class="nav-acc__link-text subtitle">войти</p>
-                </a>
-            </li>
-            <li class="nav-acc__item">
-                <a class="nav-acc__link" href="#">
-                    <img src="assets/img/icons/comprasion.svg" alt="">
-                    <p class="nav-acc__link-text subtitle">сравнение</p>
-                </a>
-            </li>
-            <li class="nav-acc__item">
-                <a class="nav-acc__link" href="#">
-                    <img src="assets/img/icons/favorites.svg" alt="">
-                    <p class="nav-acc__link-text subtitle">избранное</p>
-                </a>
-            </li>
-            <li class="nav-acc__item">
-                <a class="nav-acc__link cart-btn">
-                    <div class="nav-acc__ico-block">
-                        <p class="nav-acc__cart-qty">3</p>
-                        <img src="assets/img/icons/cart.svg" alt="">
-                    </div>
-                    
-                    <p class="nav-acc__link-text subtitle">корзина</p>
-                </a>
-            </li>
-        </ul>
-    </header>
-
+   
     <div class="drop-box__body">
         <ul class="drop-menu">
             
@@ -1150,5 +1134,8 @@
 <script src="assets/js/slick.min.js"></script>
 <script src="assets/js/jquery.bpopup.min.js"></script>
 <script src="assets/js/main.js"></script>
+<script src="assets/js/validate-form.js"></script>
+<script src="assets/js/send-form.js"></script>
+
 </body>
 </html>

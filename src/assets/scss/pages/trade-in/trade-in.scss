@@ -265,14 +265,22 @@
     border-radius: 9px;
     background-color: transparent;
     cursor: pointer;
-
+    transition: .3s;
     @media (max-width: 1024px){
         width: 28px;
         height: 28px;
     }
+
+    &:hover{
+        background-color: #EFF5FF;
+    }
 }
 .color-p__color_active{
     background-color: #CADCF8;
+
+    &:hover{
+        background-color: #CADCF8;
+    }
 }
 .color-p__color-block[data-state="none"]{
     

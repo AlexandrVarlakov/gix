@@ -45,4 +45,11 @@
 
 .f-menu__link{
     line-height: 2;
+
+    transition: .3s;
+
+    &:hover{
+        color: #C5FA2D;;
+    }
 }
+

@@ -4,7 +4,7 @@
 
 
     background-color: #1E242E;
-    border-radius: 10px;
+    
     width: 100%;
 }
 .subscribe__inner{
@@ -65,7 +65,7 @@
 .ssc-form__input-wrap{
     width: 365px;
     margin-right: 30px;
-
+    position: relative;
     @media (max-width: 1900px){
         width: calc(9.2vw + 190px);
     }
@@ -124,3 +124,27 @@
     }
 }
 
+.ssc-form_error{
+    .ssc-form__input{
+        border: 2px solid #EB5329;
+        color: #EB5329;
+
+        &::placeholder{
+            opacity: 1;
+            color: #EB5329;
+        }
+    }
+    
+}
+
+.ssc-form__error{
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 10px;
+    color: #EB5329;
+    position: absolute;
+
+    top: -20px;
+    left: 20px;
+    display: none;
+}

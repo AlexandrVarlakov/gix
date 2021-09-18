@@ -153,7 +153,7 @@
 }
 
 .appearance__btn{
-    opacity: .3;
+    transition: .3s;
     background-color: transparent;
     border: none;
     outline: none;
@@ -161,10 +161,35 @@
     &:first-of-type{
         margin-right: 15px;
     }
+    svg{
+        transition: .3s;
+    }
+
+    &:hover{
+        svg{
+            rect{
+                fill: #457EAF;
+            }
+        }
+    }
 }
 
 .appearance__btn_active{
     opacity: 1;
+
+    svg{
+        rect{
+            fill: #2A323E;;
+        }
+    }
+
+    &:hover{
+        svg{
+            rect{
+                fill: #2A323E;;
+            }
+        }    
+    }
 }
 
 .hidden-filter-btn{

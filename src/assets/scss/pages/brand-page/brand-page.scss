@@ -62,6 +62,12 @@
 .bp-products-list__link{
     text-decoration: none;
     color: #E5EFFE;
+
+    transition: .3s;
+
+    &:hover{
+        color: #C5FA2D;
+    }
 }
 
 .bp-brand-block{

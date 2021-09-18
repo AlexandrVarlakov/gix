@@ -6,6 +6,19 @@
     border: none;
     cursor: pointer;
     outline: none;
+
+    &:hover{
+        .half-round__text{
+            margin-left: -15px;
+        }
+        .half-round__text.black{
+            color: #000;
+        }
+    }
+    
+    &:active{
+        opacity: .7;
+    }
 }
 
 .half-round__img{
@@ -20,5 +33,6 @@
 }
 .half-round__text{
     margin-left: -20px;
+    transition: .3s;
 }
 

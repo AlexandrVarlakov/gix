@@ -112,6 +112,15 @@
       color: black;
       opacity: 0.75; }
 
+/*Классы для вставляемых svg-стрелок*/
+.black-arrow, .white-arrow {
+  max-width: 100%;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s; }
+  .black-arrow:hover path, .white-arrow:hover path {
+    stroke: #ACD637; }
+
 .b-filter-container .slick-slide {
   display: -webkit-box;
   display: -webkit-flex;
@@ -121,16 +130,12 @@
 .news-photo-slider .slick-prev {
   width: 58px;
   height: 14px;
-  background-image: url("../img/buttons/arrow.png");
-  background-size: 100% 100%;
+  background-image: none;
   top: initial;
   bottom: 25px;
   z-index: 55;
   left: initial;
-  right: 120px;
-  -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-          transform: rotate(180deg); }
+  right: 120px; }
   @media (max-width: 1024px) {
     .news-photo-slider .slick-prev {
       width: 42px;
@@ -143,8 +148,7 @@
 .news-photo-slider .slick-next {
   width: 58px;
   height: 14px;
-  background-image: url("../img/buttons/arrow.png");
-  background-size: 100% 100%;
+  background-image: none;
   top: initial;
   z-index: 55;
   bottom: 25px;
@@ -161,26 +165,21 @@
 .news-slider .slick-prev {
   width: 65px;
   height: 14px;
-  background-image: url("../img/buttons/arrow.png");
-  background-size: 100% 100%;
+  background-image: none;
   z-index: 55;
   left: 17.5px;
   right: initial;
   top: -50px;
-  bottom: initial;
-  -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-          transform: rotate(180deg); }
+  bottom: initial; }
   @media (max-width: 1024px) {
     .news-slider .slick-prev {
-      top: -35px;
+      top: -38px;
       left: -15px; } }
 
 .news-slider .slick-next {
   width: 65px;
   height: 14px;
-  background-image: url("../img/buttons/arrow.png");
-  background-size: 100% 100%;
+  background-image: none;
   top: -50px;
   left: 115px;
   z-index: 55;
@@ -205,16 +204,12 @@
 .company-catalog-col__inner .slick-prev {
   width: 65px;
   height: 14px;
-  background-image: url("../img/buttons/arrow.png");
-  background-size: 100% 100%;
+  background-image: none;
   z-index: 55;
   left: 17.5px;
   right: initial;
   top: -50px;
-  bottom: initial;
-  -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-          transform: rotate(180deg); }
+  bottom: initial; }
   @media (max-width: 1024px) {
     .company-catalog-col__inner .slick-prev {
       top: -35px;
@@ -228,8 +223,7 @@
 .company-catalog-col__inner .slick-next {
   width: 65px;
   height: 14px;
-  background-image: url("../img/buttons/arrow.png");
-  background-size: 100% 100%;
+  background-image: none;
   top: -50px;
   left: 115px;
   z-index: 55;
@@ -338,7 +332,7 @@
 .h-slider .slick-prev {
   width: 65px;
   height: 14px;
-  background-image: url("../img/buttons/w-arrow.png");
+  background-image: url("../img/buttons/w-arrow.svg");
   background-size: 100% 100%;
   z-index: 55;
   left: -2vw;
@@ -405,7 +399,7 @@
 .h-slider .slick-next {
   width: 65px;
   height: 14px;
-  background-image: url("../img/buttons/w-arrow.png");
+  background-image: url("../img/buttons/w-arrow.svg");
   background-size: 100% 100%;
   left: -2vw;
   z-index: 55;
@@ -530,16 +524,12 @@
 .hh-slider .slick-prev {
   width: 65px;
   height: 14px;
-  background-image: url("../img/buttons/w-arrow.png");
-  background-size: 100% 100%;
+  background-image: none;
   z-index: 55;
   right: initial;
   bottom: initial;
   bottom: 22.5%;
-  left: -15%;
-  -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-          transform: rotate(180deg); }
+  left: -15%; }
   @media (max-width: 1366px) {
     .hh-slider .slick-prev {
       bottom: 12%;
@@ -552,8 +542,7 @@
 .hh-slider .slick-next {
   width: 65px;
   height: 14px;
-  background-image: url("../img/buttons/w-arrow.png");
-  background-size: 100% 100%;
+  background-image: none;
   z-index: 55;
   bottom: initial;
   right: initial;
@@ -585,19 +574,15 @@
 .ac-reviews-list .slick-prev {
   width: 65px;
   height: 14px;
-  background-image: url("../img/buttons/arrow.png");
-  background-size: 100% 100%;
+  background-image: none;
   z-index: 55;
   left: 17.5px;
   right: initial;
   top: -60px;
-  bottom: initial;
-  -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-          transform: rotate(180deg); }
+  bottom: initial; }
   @media (max-width: 1024px) {
     .ac-reviews-list .slick-prev {
-      top: -35px;
+      top: -38px;
       left: 0px; } }
   @media (max-width: 768px) {
     .ac-reviews-list .slick-prev {
@@ -608,8 +593,7 @@
 .ac-reviews-list .slick-next {
   width: 65px;
   height: 14px;
-  background-image: url("../img/buttons/arrow.png");
-  background-size: 100% 100%;
+  background-image: none;
   top: -60px;
   left: 115px;
   z-index: 55;
@@ -637,19 +621,15 @@
 .c-p-i-products-list .slick-prev, .inx-novelty-list .slick-prev, .inx-hits-list .slick-prev {
   width: 65px;
   height: 14px;
-  background-image: url("../img/buttons/arrow.png");
-  background-size: 100% 100%;
+  background-image: none;
   z-index: 55;
   left: 5px;
   right: initial;
   top: -45px;
-  bottom: initial;
-  -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-          transform: rotate(180deg); }
+  bottom: initial; }
   @media (max-width: 1024px) {
     .c-p-i-products-list .slick-prev, .inx-novelty-list .slick-prev, .inx-hits-list .slick-prev {
-      top: -35px;
+      top: -38px;
       left: 0px; } }
   @media (max-width: 768px) {
     .c-p-i-products-list .slick-prev, .inx-novelty-list .slick-prev, .inx-hits-list .slick-prev {
@@ -660,8 +640,7 @@
 .c-p-i-products-list .slick-next, .inx-novelty-list .slick-next, .inx-hits-list .slick-next {
   width: 65px;
   height: 14px;
-  background-image: url("../img/buttons/arrow.png");
-  background-size: 100% 100%;
+  background-image: none;
   top: -45px;
   left: 105px;
   z-index: 55;
@@ -694,6 +673,14 @@
   .c-p-i-products-list .slick-current .c-product__buy-click-wrap, .inx-novelty-list .slick-current .c-product__buy-click-wrap, .inx-hits-list .slick-current .c-product__buy-click-wrap {
     display: block; } }
 
+/*Слайдер на главной странице "Новинки"*/
+.inx-novelty-list .slick-next, .inx-hits-list .slick-next {
+  background-image: none; }
+
+.inx-novelty-list .slick-prev, .inx-hits-list .slick-prev {
+  background-image: none; }
+
+/*КОНЕЦ: Слайдер на главной странице "Новинки"*/
 .comp-list-col .slick-slide {
   margin-right: 85px; }
   @media (max-width: 1024px) {
@@ -703,28 +690,23 @@
 .comp-list-col .slick-prev {
   width: 65px;
   height: 14px;
-  background-image: url("../img/buttons/arrow.png");
-  background-size: 100% 100%;
+  background-image: none;
   z-index: 55;
   left: -80px;
   right: initial;
   top: 50%;
-  bottom: initial;
-  -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-          transform: rotate(180deg); }
+  bottom: initial; }
   @media (max-width: 768px) {
     .comp-list-col .slick-prev {
       left: 0px;
-      -webkit-transform: translateY(30px) rotate(180deg);
-          -ms-transform: translateY(30px) rotate(180deg);
-              transform: translateY(30px) rotate(180deg); } }
+      -webkit-transform: translateY(30px);
+          -ms-transform: translateY(30px);
+              transform: translateY(30px); } }
 
 .comp-list-col .slick-next {
   width: 65px;
   height: 14px;
-  background-image: url("../img/buttons/arrow.png");
-  background-size: 100% 100%;
+  background-image: none;
   top: 50%;
   z-index: 55;
   bottom: initial;
@@ -741,16 +723,12 @@
 .ti-m-slider .slick-prev {
   width: 65px;
   height: 14px;
-  background-image: url("../img/buttons/arrow.png");
-  background-size: 100% 100%;
+  background-image: none;
   z-index: 55;
   left: -100px;
   right: initial;
   top: initial;
-  bottom: 22%;
-  -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-          transform: rotate(180deg); }
+  bottom: 22%; }
   @media (max-width: 1024px) {
     .ti-m-slider .slick-prev {
       width: 43px;
@@ -760,13 +738,12 @@
   @media (max-width: 768px) {
     .ti-m-slider .slick-prev {
       left: 22%;
-      top: -25px; } }
+      top: -30px; } }
 
 .ti-m-slider .slick-next {
   width: 65px;
   height: 14px;
-  background-image: url("../img/buttons/arrow.png");
-  background-size: 100% 100%;
+  background-image: none;
   top: 22%;
   z-index: 55;
   bottom: initial;
@@ -782,7 +759,7 @@
       left: initial;
       bottom: initial;
       right: 22%;
-      top: -25px; } }
+      top: -30px; } }
 
 .ti-m-slider .slick-disabled {
   opacity: .3; }
@@ -790,21 +767,16 @@
 .inx-adv-row .slick-prev {
   width: 65px;
   height: 14px;
-  background-image: url("../img/buttons/w-arrow.png");
-  background-size: 100% 100%;
+  background-image: none;
   z-index: 55;
   right: initial;
-  top: 50%;
-  -webkit-transform: rotate(180deg) translateY(50%);
-      -ms-transform: rotate(180deg) translateY(50%);
-          transform: rotate(180deg) translateY(50%);
+  top: 48%;
   left: 50px; }
 
 .inx-adv-row .slick-next {
   width: 65px;
   height: 14px;
-  background-image: url("../img/buttons/w-arrow.png");
-  background-size: 100% 100%;
+  background-image: none;
   z-index: 55;
   bottom: initial;
   right: initial;
@@ -820,29 +792,21 @@
 .cp-big-slider .slick-prev {
   width: 58px;
   height: 14px;
-  background-image: url("../img/buttons/arrow.png");
-  background-size: 100% 100%;
+  background-image: none;
   z-index: 55;
   right: initial;
-  bottom: -15px;
-  -webkit-transform: rotate(180deg) translateY(50%);
-      -ms-transform: rotate(180deg) translateY(50%);
-          transform: rotate(180deg) translateY(50%);
+  bottom: -3px;
   left: 0; }
 
 .cp-big-slider .slick-next {
   width: 58px;
   height: 14px;
-  background-image: url("../img/buttons/arrow.png");
-  background-size: 100% 100%;
+  background-image: none;
   z-index: 55;
   bottom: initial;
   right: 0;
-  bottom: -15px;
-  left: initial;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%); }
+  bottom: -3px;
+  left: initial; }
 
 .cp-big-slider .slick-disabled {
   opacity: .3; }
@@ -875,19 +839,15 @@
 .cp-set-right-col .slick-prev {
   width: 65px;
   height: 14px;
-  background-image: url("../img/buttons/arrow.png");
-  background-size: 100% 100%;
+  background-image: none;
   z-index: 55;
   left: 5px;
   right: initial;
   top: -45px;
-  bottom: initial;
-  -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-          transform: rotate(180deg); }
+  bottom: initial; }
   @media (max-width: 1024px) {
     .cp-set-right-col .slick-prev {
-      top: -35px;
+      top: -38px;
       left: 0px; } }
   @media (max-width: 768px) {
     .cp-set-right-col .slick-prev {
@@ -898,8 +858,7 @@
 .cp-set-right-col .slick-next {
   width: 65px;
   height: 14px;
-  background-image: url("../img/buttons/arrow.png");
-  background-size: 100% 100%;
+  background-image: none;
   top: -45px;
   left: 105px;
   z-index: 55;

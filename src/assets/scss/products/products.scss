@@ -268,6 +268,7 @@
     @media (max-width: 768px){
         width: 100%;
     }
+    position: relative;
 }
 
 .input-search-wrap{
@@ -281,8 +282,13 @@
     outline: none;
     font-weight: 500;
     font-family: $font-family;
-    font-style: italic;
+    
     padding-bottom: 15px;
+
+    &::placeholder{
+        opacity: 1;
+        color: #8E99AB;
+    }
 
     @media (max-width: 768px){
         &.h2{
@@ -371,7 +377,7 @@
         }
 
         .c-product__info-text{
-            text-decoration: underline;
+            color: #EB5329;
         }
 
         .c-product__btn-buy{
@@ -424,7 +430,7 @@
         }
 
         .c-product__info-text{
-            text-decoration: underline;
+            color: #EB5329;
         }
 
         .c-product__btn-buy{
@@ -455,7 +461,12 @@
     @media (max-width: 1300px){
         padding: 15px;
     }
-
+    &:hover{
+        
+        .c-product__info-text{
+            color: #EB5329;
+        }
+    }
 }
 
 .c-product__header{
@@ -468,10 +479,38 @@
     align-items: center;
 }
 
+.c-product__svg-icon[data-checked="checked"]{
+    svg{
+        g{
+            opacity: 1;
+        }
+        path{
+            stroke: #2A323E;
+        }
+
+        rect{
+            fill: #2A323E;
+        }
+    }
+}
+
+
 .c-product__svg-icon{
     width: 30px;
     height: 30px;
     cursor: pointer;
+
+    svg{
+        transition: .3s;
+    }
+
+    &:hover{
+        svg{
+            g{
+                opacity: 1;
+            }
+        }
+    }
 
     @media (max-width: 1024px){
         width: 25px;
@@ -512,6 +551,11 @@
 .c-product__view-posts-link{
     color: #8E99AB;
     text-decoration: none;
+    transition: .3s;
+
+    &:hover{
+        color: #2A323E;
+    }
 }
 
 .c-product__info-text{
@@ -519,6 +563,7 @@
     font-weight: 500;
     line-height: 22px;
     flex-grow: 1;
+    transition: .3s;
     @media (max-width: 1300px){
         font-size: 12px;
         line-height: 17px;
@@ -565,7 +610,7 @@
     font-size: 12px;
     line-height: 18px;
     color: #8E99AB;
-
+    text-decoration: line-through;
     @media (max-width: 1300px){
         font-size: 10px;
         line-height: 12px;
@@ -587,12 +632,17 @@
     color: #FFFFFF;
     width: 134px;
     height: 48px;
-    transition: .5s;
+    transition: .3s;
     @media (max-width: 1300px){
         font-size: 12px;
         font-weight: 500;
         width: 100px;
         height: 35px;
+    }
+
+    &:active{
+        background-color: #ACD637;
+        color: #000;
     }
 }
 
@@ -604,6 +654,18 @@
     height: 48px;
     cursor: pointer;
     background-color: #fff;
+
+    transition: .3s;
+    &:hover{
+        border-color: #EB5329;
+        color: #EB5329;;
+    }
+
+    &:active{
+        border-color: #000;
+        color: #000;
+    }
+    
     
 }
 

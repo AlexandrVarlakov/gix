@@ -29,3 +29,13 @@
 .header_blue-bg{
     background-color: #E9F1F9;
 }
+
+.header_open-drop{
+    z-index: 1000;
+    position: fixed;
+    
+
+    .logo__text{
+        color: #fff;
+    }
+}

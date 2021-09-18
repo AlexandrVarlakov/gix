@@ -25,6 +25,11 @@
     list-style: none;
     color: #8E99AB;
     cursor: pointer;
+    transition: .3s;
+
+    &:hover{
+        color: #EB5329;
+    }
 }
 
 .comp-list__item_active{
@@ -162,12 +167,17 @@
     font-family: $font-family;
     cursor: pointer;
     background-color: transparent;
-
+    transition: .3s;
     @media (max-width: 1024px){
         width: 170px;
         height: 40px;
         margin-top: 70px;
 
+    }
+
+    &:hover{
+        color: #fff;
+        background-color: #2A323E;
     }
 }
 

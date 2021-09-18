@@ -7,7 +7,9 @@
     border-radius: 0 0 10px 10px;
     justify-content: center;
     align-items: center;
-
+    @media (min-width: 681px){
+        display: none !important;
+    }
 
     @media (max-width: 680px){
         display: flex;
@@ -38,4 +40,20 @@
         
         
     }
+}
+
+.close-drop_mob{
+    display: none;
+    .mob-menu__text{
+        
+        &::after{
+            top: 50%;
+            transform: translateY(-50%) rotate(45deg);
+        }
+        &::before{
+            bottom: 50%;
+            transform: translateY(50%) rotate(-45deg);
+        }   
+    }
+    
 }

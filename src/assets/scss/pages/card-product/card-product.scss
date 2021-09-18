@@ -183,6 +183,7 @@
     align-items: center;
     background-color: transparent;
     padding: 3px 10px 3px 3px;
+    transition: .3s;
     &:first-of-type{
         border-right: none;
         border-radius: 6px 0 0 6px;
@@ -194,7 +195,45 @@
         padding: 3px 6px 3px 10px;
     }
 
+    cursor: pointer;
+    &:hover{
+        border: 1px solid #798FB4;
+        color: #2A323E;
+
+        svg{
+            rect{
+                fill: #2A323E;
+            }
+            g{
+                opacity: 1;
+            }
+            path{
+                
+                stroke: #2A323E;
+            }
+        }
+    }
+
+    &:active{
+        background: #E5EFFE;
+        border-color: transparent;
+    }
+    .cp-btn-prod-m {
+
+    }
+
 }
+
+
+.c-p__svg-icon{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    svg{
+        transition: .3s;
+    }
+}
+
 
 .cp-social-btn-group{
     border: 1px solid #CADCF8;
@@ -297,12 +336,19 @@
     &:not(:last-of-type){
         border-right: 1px solid #CADCF8;
     }
+    transition: .3s;
+    &:hover{
+        background-color: #EFF5FF;;
+    }
 }
 
 .memory-p__memory-block_active{
     background: #2A323E;
     border-radius: 5px;
     color: #fff;
+    &:hover{
+        background: #2A323E;
+    }
 }
 
 .memory-p__memory-block[data-state="none"]{
@@ -322,6 +368,7 @@
     background: #2A323E;
     border-radius: 6px;
     margin-top: 10px;
+    
 }
 
 .cp-buy-block--price-group{
@@ -407,11 +454,33 @@
     background-color: transparent;
     border-top: 1px solid #fff;
     color: #fff;
+
+    transition: .3s;
+    border-radius: 0 0 0 6px;
+    &:hover{
+        background-color: #39475D;
+    }
+
+    &:active{
+        background-color: #1E242E;;
+        color: #C5FA2D;
+    }
 }
 
 .cp-add-cart{
     background-color: #C5FA2D;
     border-radius: 0 0 6px 0;
+    transition: .3s;
+
+    &:hover{
+        background-color: #ACD637;
+        color: #0D1014;
+    }
+
+    &:active{
+        background-color: #0D1014;
+        color: #C5FA2D;
+    }
 }
 .cp-buy-block--btn{
     cursor: pointer;
@@ -419,6 +488,7 @@
 
 .cp-buy-block--btn-group{
     display: flex;
+    overflow: hidden;
     
 }
 
@@ -591,6 +661,12 @@
     width: 49%;
     cursor: pointer;
     margin: 2.5px 0;
+
+    transition: .3s;
+    &:hover{
+        background-color: #E5EFFE;
+        color: #2A323E;
+    }
     
 }
 
@@ -598,6 +674,11 @@
     color: #000;
     border: 1px solid #457EAF;
     background-color: #fff;
+
+    &:hover{
+        background-color: #fff;
+        color: #000;
+    }
 
     .cp-cb-square{
         border: 1px solid #000;    
@@ -1406,7 +1487,21 @@
     border: none;
     height: 60px;
     outline: none;
+    cursor: pointer;
+    transition: .3s;
+
+    &:hover{
+        background-color:  #ACD637;
+
+        color: #0D1014;
+    }
+
+    &:active{
+        background-color: #0D1014;
+        color: #C5FA2D;
+    }
 }
+
 
 .cp-type-set__tabs{
     display: flex;
@@ -1420,6 +1515,8 @@
     background-color: #1E242E;
     cursor: pointer;
     position: relative;
+
+    transition: .3s;
     &:not(:last-of-type){
         &::before{
             content: "";
@@ -1432,10 +1529,18 @@
             opacity: .25;
         }
     }
+
+    &:hover{
+        background-color: #39475D;
+    }
 }
 .cp-type-set__tab_active{
     background: #2A323E;
     color: #fff;
+
+    &:hover{
+        background: #2A323E;
+    }
     
 }
 

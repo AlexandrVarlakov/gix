@@ -16,4 +16,9 @@
 .breadcrumbs__link{
     text-decoration: none;
     color: #8E99AB;
+
+    transition: .3s;
+    &:hover{
+        color: #2A323E;
+    }
 }

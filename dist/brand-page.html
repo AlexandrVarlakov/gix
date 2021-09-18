@@ -24,6 +24,7 @@
         <nav class="h-nav">
             <ul class="h-menu">
                 <li class="h-menu__item open-drop"><a class="h-menu__link h5 ">Каталог</a></li>
+                <li class="h-menu__item close-drop close-item"><a class="h-menu__link h5 ">Закрыть</a></li>
                 <li class="h-menu__item"><a class="h-menu__link h5 white" href="#">Доставка</a></li>
                 <li class="h-menu__item"><a class="h-menu__link h5 white" href="#">Оплата</a></li>
                 <li class="h-menu__item"><a class="h-menu__link h5 white" href="#">Trade in</a></li>
@@ -31,13 +32,33 @@
             <form action="POST" class="h-nav__search">
                 <div class="h-nav__search-inp-wrap">
                     <input type="text" class="h-nav__search-inp text" placeholder="Поиск товаров">
-                    <img class="h-nav__search-ico" src="assets/img/icons/search.svg">
-                </div>                
+                    
+                    <svg class="h-nav__search-ico" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <ellipse cx="10.8333" cy="10" rx="5" ry="5" stroke="#8E99AB" stroke-width="2"/>
+                        <path d="M4.47916 16.6667L6.55313 14.5927" stroke="#8E99AB" stroke-width="2" stroke-linecap="square"/>
+                    </svg>
+                        
+                </div>   
+                
+                <div class="h-nav__search-results">
+                    <div class="h-nav__search-results--inner">
+                        
+                       
+                    </div>
+                    
+                </div>
             </form>
-
-            <div class="mob-menu open-drop">
+            
+            <div class="mob-menu open-drop_mob">
                 <p class="mob-menu__text ">Меню</p>
+                
             </div>
+
+            <div class="mob-menu close-drop_mob">
+                <p class="mob-menu__text ">Закрыть</p>
+                
+            </div>
+            
         </nav>
 
         <ul class="h-contacts">
@@ -58,9 +79,16 @@
                     <p class="nav-acc__link-text subtitle">сравнение</p>
                 </a>
             </li>
-            <li class="nav-acc__item">
-                <a class="nav-acc__link" href="#">
-                    <img src="assets/img/icons/favorites.svg" alt="">
+            <li class="nav-acc__item  nav-acc__item--favorites nav-acc__item--has-favorites">
+                <a class="nav-acc__link " href="#">
+                    <div class="nav-acc__ico-block">
+                        <p class="nav-acc__favorites-qty">3</p>
+                        <svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg" class="nav-acc__fav-ico">
+                            <path d="M19.0714 7.8313C17.3794 7.8313 15.8876 8.66961 15 9.94583C14.1124 8.66961 12.6206 7.8313 10.9286 7.8313C8.20671 7.8313 6 9.99888 6 12.6734C6 17.5934 15 23.8313 15 23.8313C15 23.8313 24 17.5934 24 12.6734C24 9.99888 21.7933 7.8313 19.0714 7.8313" stroke="white" stroke-width="2"/>
+                        </svg>
+                            
+                    </div>
+                    
                     <p class="nav-acc__link-text subtitle">избранное</p>
                 </a>
             </li>
@@ -83,6 +111,9 @@
     <main class="content">
         <div class="content__inner content__inner_inx">
             <div class="m-slider-block bp-slider-block">
+
+
+
                 <div class="m-slider-block__text bp-m-slider--text-block">
                     
                     <div class="flex-row-container breadcrumbs">
@@ -90,7 +121,7 @@
                         <a href="#" class="smalltext breadcrumbs__link">Apple</a>
                     </div>
 
-                    <div class="m-slider-block__text-content">
+                    <div class="m-slider-block__text-content" style="display: block;" data-sheet="0">
                         <div class="bp-text">
                             <h1 class="h1 white">Технология <br />будущего. Apple <br />Watch 6 Series</h1>
                             <h4 class="h4 white mt-35 mb-35 mt-sm-10 mb-sm-10">Теперь ближе</h4>
@@ -102,6 +133,44 @@
 
                         
                     </div>
+                    <div class="m-slider-block__text-content"  data-sheet="1">
+                        <div class="bp-text">
+                            <h1 class="h1 white">Технология <br />будущего. Apple <br />Watch 7 Series</h1>
+                            <h4 class="h4 white mt-35 mb-35 mt-sm-10 mb-sm-10">Теперь ближе</h4>
+                            <a class="half-round" href="#">
+                                <img src="assets/img/buttons/oval.png" class="half-round__img">
+                                <p class="half-round__text h4 white h5-sm">Подробнее</p>
+                            </a>
+                        </div>
+
+                        
+                    </div>
+                    <div class="m-slider-block__text-content"  data-sheet="2">
+                        <div class="bp-text">
+                            <h1 class="h1 white">Технология <br />будущего. Apple <br />Watch 8 Series</h1>
+                            <h4 class="h4 white mt-35 mb-35 mt-sm-10 mb-sm-10">Теперь ближе</h4>
+                            <a class="half-round" href="#">
+                                <img src="assets/img/buttons/oval.png" class="half-round__img">
+                                <p class="half-round__text h4 white h5-sm">Подробнее</p>
+                            </a>
+                        </div>
+
+                        
+                    </div>
+
+                    <div class="m-slider-block__text-content"  data-sheet="3">
+                        <div class="bp-text">
+                            <h1 class="h1 white">Технология <br />будущего. Apple <br />Watch 9 Series</h1>
+                            <h4 class="h4 white mt-35 mb-35 mt-sm-10 mb-sm-10">Теперь ближе</h4>
+                            <a class="half-round" href="#">
+                                <img src="assets/img/buttons/oval.png" class="half-round__img">
+                                <p class="half-round__text h4 white h5-sm">Подробнее</p>
+                            </a>
+                        </div>
+
+                        
+                    </div>
+
                     <div class="flex-row-container breadcrumbs bp-brand-container">
                         <div class="bp-brand-logo">
                             <img src="assets/img/brand-label/brand-label.png" alt="">
@@ -163,9 +232,8 @@
                                 <img class="catalog-card-fs__img" src="assets/img/catalog/phone.png">
     
                                 <div class="catalog-card-fs__btn-wrap hidden-o">
-                                    <a href="#" class="round ">
-                                        <img src="assets/img/buttons/round.png" class="round__img">
-                                        <p class="round__text smalltext black">все</p>
+                                    <a href="#" class="round black smalltext">
+                                        все
                                     </a>
                                 </div>
                             </div>
@@ -177,9 +245,8 @@
                                 <h3 class="catalog-card-fs__title h3 black">Ноутбуки</h3>
                                 <img class="catalog-card-fs__img" src="assets/img/catalog/laptop.png">
                                 <div class="catalog-card-fs__btn-wrap hidden-o">
-                                    <a href="#" class="round ">
-                                        <img src="assets/img/buttons/round.png" class="round__img">
-                                        <p class="round__text smalltext black">все</p>
+                                    <a href="#" class="round black smalltext">
+                                        все
                                     </a>
                                 </div>
                             </div>
@@ -190,9 +257,8 @@
                                 <h3 class="catalog-card-fs__title h3 black">Планшеты</h3>
                                 <img class="catalog-card-fs__img" src="assets/img/catalog/tablet.png">
                                 <div class="catalog-card-fs__btn-wrap hidden-o">
-                                    <a href="#" class="round ">
-                                        <img src="assets/img/buttons/round.png" class="round__img">
-                                        <p class="round__text smalltext black">все</p>
+                                    <a href="#" class="round black smalltext">
+                                        все
                                     </a>
                                 </div>
                             </div>
@@ -203,9 +269,8 @@
                                 <h3 class="catalog-card-fs__title h3 black">Носимые <br />устройства</h3>
                                 <img class="catalog-card-fs__img" src="assets/img/catalog/watch.png">
                                 <div class="catalog-card-fs__btn-wrap hidden-o">
-                                    <a href="#" class="round ">
-                                        <img src="assets/img/buttons/round.png" class="round__img">
-                                        <p class="round__text smalltext black">все</p>
+                                    <a href="#" class="round black smalltext">
+                                        все
                                     </a>
                                 </div>
                             </div>
@@ -261,9 +326,8 @@
                                 <img class="catalog-card-fs__img" src="assets/img/catalog/phone.png">
     
                                 <div class="catalog-card-fs__btn-wrap hidden-o">
-                                    <a href="#" class="round ">
-                                        <img src="assets/img/buttons/round.png" class="round__img">
-                                        <p class="round__text smalltext black">все</p>
+                                    <a href="#" class="round black smalltext">
+                                        все
                                     </a>
                                 </div>
                             </div>
@@ -275,9 +339,8 @@
                                 <h3 class="catalog-card-fs__title h3 black">Ноутбуки</h3>
                                 <img class="catalog-card-fs__img" src="assets/img/catalog/laptop.png">
                                 <div class="catalog-card-fs__btn-wrap hidden-o">
-                                    <a href="#" class="round ">
-                                        <img src="assets/img/buttons/round.png" class="round__img">
-                                        <p class="round__text smalltext black">все</p>
+                                    <a href="#" class="round black smalltext">
+                                        все
                                     </a>
                                 </div>
                             </div>
@@ -288,9 +351,8 @@
                                 <h3 class="catalog-card-fs__title h3 black">Планшеты</h3>
                                 <img class="catalog-card-fs__img" src="assets/img/catalog/tablet.png">
                                 <div class="catalog-card-fs__btn-wrap hidden-o">
-                                    <a href="#" class="round ">
-                                        <img src="assets/img/buttons/round.png" class="round__img">
-                                        <p class="round__text smalltext black">все</p>
+                                    <a href="#" class="round black smalltext">
+                                        все
                                     </a>
                                 </div>
                             </div>
@@ -356,9 +418,8 @@
                     <div class="col-3">
                         <h3 class="h2 inx-novetly-title">Популярные <br />продукты Apple</h3>
                         <div class="inx-round-btn mt-50">
-                            <a href="#" class="round ">
-                                <img src="assets/img/buttons/round.png" class="round__img">
-                                <p class="round__text smalltext black">еще</p>
+                            <a href="#" class="round black smalltext">
+                                все
                             </a>
                         </div>
                         
@@ -881,7 +942,7 @@
                 <div class="m-form__info-wrap">
                     <a href ="#" class="m-form__info subtitle">Забыли пароль?</a>
                 </div>
-                <button class ="m-form__btn text h4-md white" >Войти</button>
+                <button class ="m-form__btn m-form__btn_green text h4-md white" >Войти</button>
             </form>
             
 
@@ -898,7 +959,7 @@
                     <a href ="#" class="m-form__info subtitle">Не пришел код?</a>
                 </div>
     
-                <input type="submit" class ="m-form__btn text h4-md white" value="Получить пароль">
+                <input type="submit" class ="m-form__btn text h4-md white m-form__btn_green" value="Получить пароль">
             </form>
         </div>
         
@@ -969,70 +1030,7 @@
 </div>
 
 <nav class="drop-box">
-    <header class="header header_dark">
-        <a class="logo" href="index.html">
-            <div class="logo__img-block">
-                <img class ="logo__img" src="assets/img/logo/light-logo.png" alt="GIX">
-            </div>
-            <p class="logo__text button">магазин <br />электроники</p>
-        </a>
-    
-        <nav class="h-nav">
-            <ul class="h-menu">
-                <li class="h-menu__item close-drop close-item"><a class="h-menu__link h5 ">Закрыть</a></li>
-                <li class="h-menu__item"><a class="h-menu__link h5 white" href="#">Доставка</a></li>
-                <li class="h-menu__item"><a class="h-menu__link h5 white" href="#">Оплата</a></li>
-                <li class="h-menu__item"><a class="h-menu__link h5 white" href="#">Trade in</a></li>
-            </ul>
-            <form action="POST" class="h-nav__search">
-                <div class="h-nav__search-inp-wrap">
-                    <input type="text" class="h-nav__search-inp text" placeholder="Поиск товаров">
-                    <img class="h-nav__search-ico" src="assets/img/icons/search.svg">
-                </div>                
-            </form>
-    
-            <div class="mob-menu close-drop">
-                <p class="mob-menu__text close-item">Закрыть</p>
-            </div>
-        </nav>
-    
-        <ul class="h-contacts">
-            <li class="h-contacts__item"><a class ="h5 white" href="tel:+74950555055">+7 495 055-50-55</a></li>
-            <li class="h-contacts__item"><a class ="h5 white" href="mailto:zakaz@gix.ru">zakaz@gix.ru</a></li>
-        </ul>
-    
-        <ul class="nav-acc">
-            <li class="nav-acc__item">
-                <a class="nav-acc__link auth-btn">
-                    <img src="assets/img/icons/sign.svg" alt="">
-                    <p class="nav-acc__link-text subtitle">войти</p>
-                </a>
-            </li>
-            <li class="nav-acc__item">
-                <a class="nav-acc__link" href="#">
-                    <img src="assets/img/icons/comprasion.svg" alt="">
-                    <p class="nav-acc__link-text subtitle">сравнение</p>
-                </a>
-            </li>
-            <li class="nav-acc__item">
-                <a class="nav-acc__link" href="#">
-                    <img src="assets/img/icons/favorites.svg" alt="">
-                    <p class="nav-acc__link-text subtitle">избранное</p>
-                </a>
-            </li>
-            <li class="nav-acc__item">
-                <a class="nav-acc__link cart-btn">
-                    <div class="nav-acc__ico-block">
-                        <p class="nav-acc__cart-qty">3</p>
-                        <img src="assets/img/icons/cart.svg" alt="">
-                    </div>
-                    
-                    <p class="nav-acc__link-text subtitle">корзина</p>
-                </a>
-            </li>
-        </ul>
-    </header>
-
+   
     <div class="drop-box__body">
         <ul class="drop-menu">
             
@@ -1445,5 +1443,8 @@
 <script src="assets/js/slick.min.js"></script>
 <script src="assets/js/jquery.bpopup.min.js"></script>
 <script src="assets/js/main.js"></script>
+<script src="assets/js/validate-form.js"></script>
+<script src="assets/js/send-form.js"></script>
+
 </body>
 </html>

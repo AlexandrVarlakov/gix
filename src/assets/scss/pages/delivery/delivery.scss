@@ -26,10 +26,19 @@
 .delivery-menu__item{
     color: #8E99AB;
     cursor: pointer;
+    transition: .3s;
+
+    &:hover{
+        color: #EB5329;;
+    }
+
 }
 
 .delivery-menu__item_active{
     color: #000;
+    &:hover{
+        color: #000;
+    }
 }
 .d-payment-row{
     display: flex;

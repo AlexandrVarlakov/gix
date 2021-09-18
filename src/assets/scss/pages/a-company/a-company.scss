@@ -189,6 +189,15 @@
     display: flex !important;
     flex-direction: column;
     margin-left: 50px;
+
+    transition: .3s;
+    &:hover{
+        box-shadow: 0px 14px 21px rgba(69, 126, 175, 0.2);
+
+        .ac-reviews__link{
+            color: #EB5329;
+        }
+    }
     
     @media (max-width: 1024px){
         width: 440px !important;
@@ -241,6 +250,9 @@
 .ac-reviews__link{
     
     color:#457EAF;
+    transition: .3s;
+
+    
 }
 
 .ac-reviews__title{
@@ -385,5 +397,17 @@
     }
     @media (max-width: 1024px){
         height: 50px;
+    }
+
+    transition: .3s;
+
+
+    &:hover{
+        background-color:  #ACD637;
+    }
+
+    &:active{
+        color: #C5FA2D;
+        background-color: #2A323E;
     }
 }

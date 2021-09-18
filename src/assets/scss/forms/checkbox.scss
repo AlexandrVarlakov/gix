@@ -53,7 +53,7 @@
     display: flex;
     position: relative;
     
-
+    transition: .3s;
 
     &::after{
         content: "";
@@ -67,6 +67,16 @@
         border: 1px solid #CADCF8;
         background-color: #fff;
         cursor: pointer;
+    }
+
+
+    &:hover{
+        .checkbox-d__label{
+            color: #457EAF;
+        }
+        &::after{
+            border: 1px solid #457EAF;
+        }
     }
 }
 .checkbox-d__checkbox{
@@ -103,6 +113,18 @@
 
     .checkbox-d__label{
         color: #000;
+    }
+
+    &:hover{
+        &::after{
+            background-color: #2A323E;
+            border: 1px solid #2A323E !important;
+            z-index: 1;
+        }
+    
+        .checkbox-d__label{
+            color: #000;
+        }    
     }
 }
 

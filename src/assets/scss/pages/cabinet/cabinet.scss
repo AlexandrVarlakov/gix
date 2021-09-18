@@ -34,13 +34,21 @@
     &:not(:last-of-type){
         border-bottom: 1px solid #CADCF8;
     }
-
+    transition: .3s;
     @media (max-width: 1024px){
         padding: 11px 18px;
+    }
+
+    &:hover{
+        background-color: rgba($color: #E5EFFE, $alpha: .5);
+        
     }
 }
 .cab-menu__item_active{
     background: #E5EFFE;
+    &:hover{
+        background: #E5EFFE;
+    }
 }
 
 .cab-logout-btn{
@@ -53,9 +61,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
+    transition: .3s;
     @media (max-width: 1024px){
         display: none;
+    }
+
+
+    &:hover{
+        color: #fff;
+        background-color: #2A323E;
     }
 }
 
@@ -170,6 +184,14 @@
     margin-top: 70px;
     border: none;
     cursor: pointer;
+    transition: .3s;
+    &:hover{
+        background-color: #39475D;
+    }
+    &:active{
+        background-color: #ACD637;
+        color: #2A323E;
+    }
 }
 
 .cab-bonus-block{

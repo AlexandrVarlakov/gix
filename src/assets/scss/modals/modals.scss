@@ -93,6 +93,7 @@
 .m-form{
     display: flex;
     flex-direction: column;
+    
 }
 
 .m-form__input-wrap{
@@ -156,7 +157,9 @@
         height: 60px;
     }
 }
-
+.m-form__btn_green{
+    border-radius:  0;
+}
 .m-form__label{
     font-family: 'Montserrat';
     font-weight: 500;
@@ -182,7 +185,8 @@
 
 
 .modal_dark{
-
+    border-radius: 0 0 15px 15px;
+    overflow: hidden;
     .m-form{
         min-width: 100%;
     }
@@ -311,8 +315,16 @@
 .m-c-product{
     display: flex;
 
+    transition: .3s;
+
     &:not(:first-of-type){
         margin-top: 35px;
+    }
+
+    padding: 3px 4px;
+    border-radius: 5px;
+    &:hover{
+        background-color: #E5EFFE;
     }
 }
 

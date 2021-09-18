@@ -4,9 +4,12 @@
 
         <form action="post" class="ssc-form">
             <div class="ssc-form__input-wrap">
+                <p class="ssc-form__error">Некорректные ввод </p>
                 <input type="email" name="email" id="email" class="ssc-form__input h5" placeholder="E-mail">
                 <div class="ssc-form__cb-wrap">
+                   
                     <label for="i-agree" class="checkbox-l">
+                        
                         <input type="checkbox" checked="checked" name="i-agree" id="i-agree" class="checkbox-l__checkbox">
                         <label for="i-agree" class="checkbox-l__label button">Я согласен с  <a href="#">условиями подписки</a></label>
                     </label>
@@ -14,7 +17,7 @@
                 
             </div>
 
-            <button class="half-round">
+            <button class="half-round ssc-form__btn">
                 <img src="assets/img/buttons/oval.png" class="half-round__img">
                 <p class="half-round__text h4 white h5-sm">Подписаться</p>
             </button>
