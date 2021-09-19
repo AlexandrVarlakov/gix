@@ -13,6 +13,12 @@
 
     margin-top: -10px;
     margin-bottom: 15px;
+
+    transition: .3s;
+
+    &:hover{
+        color: #457EAF;
+    }
 }
 
 .show-all-filter-btn-wrap{

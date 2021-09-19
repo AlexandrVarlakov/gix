@@ -21,6 +21,29 @@
     }
 }
 
+.filter-btn_hidden{
+    display: none;
+
+    animation: fadeInLeft .3s;
+
+
+    @media (max-width: 768px){
+        display: flex;
+    }
+}
+
+@keyframes fadeInLeft{
+    from{
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+
 .filter-btn[data-checked="checked"]{
     background-color: #CADCF8;
     position: relative;

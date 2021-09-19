@@ -131,11 +131,32 @@ cart_btn.forEach((item)=>{
     item.onclick = function(){
         $('.modalcart').bPopup({
             closeClass: 'modal__close',
+           
         });
     }
 })
 
 
+let complectModal;
+$('.cp-set-add-cart').on('click', function(){
+
+    $('.cp-set-right-col_visible').clone().appendTo('.cp-set-container_modal-conainer');
+
+
+    complectModal = $('.modal-complect').bPopup({
+        closeClass: 'modal-complect__close',
+        onClose: function(){
+            $('.cp-set-container_modal-conainer').find('.cp-set-right-col_visible').remove();
+        }
+    });
+})
+
+$('.complect-btn__apply').on('click', function(){
+    complectModal.close();
+})
+$('.complect-btn__cancel').on('click', function(){
+    complectModal.close();
+})
 
 
 
@@ -516,15 +537,7 @@ $('.type-sort').on('click', function(){
 })
 
 
-//Клик по выбору внешнего вида карточек товара
-$('.appearance__btn').on('click', function(){
 
-    if ( $(this).hasClass('appearance__btn_active') === false ) {
-        $('.appearance__btn').removeClass('appearance__btn_active');
-        $(this).addClass('appearance__btn_active');
-    }
-
-})
 
 $('.drop-sort').on('click', function(){
     if ( $(this).attr('data-state') == 'rolled' ){
@@ -582,31 +595,27 @@ $('.f-panel__reset-btn').on('click', function(){
     panel.find('.filter-block__input-range').val('');
 })
 
-$('.c-product-wrap').hover(
-    function(
-    ){
+$('body').on('mouseover', '.c-product-wrap', function(){
+    
         let h = $(this).height();
         let textH = $(this).find('.c-product__info-text').height();
         $(this).css('height', h + 'px');
-        
-        
         $(this).find('.c-product__info-text').css('height', textH + 'px');
         $(this).children('.c-product').css('position', 'absolute');
         $(this).children('.c-product').css('height', 'auto');
         $(this).children('.c-product').css('min-height', '100%');
         
-
         $(this).find('.c-product__buy-click-wrap').css('display', 'block');
-    },
-    function(){
-        $(this).css('height', '');
+});
+
+$('body').on('mouseleave', '.c-product-wrap', function(){
+    $(this).css('height', '');
         $(this).children('.c-product').css('position', '');
         $(this).find('.c-product__buy-click-wrap').css('display', '');
         $(this).find('.c-product__info-text').css('height', '');
         $(this).children('.c-product').css('height', '');
         $(this).children('.c-product').css('min-height', '');
-    }
-)
+});
 
 
 
@@ -745,9 +754,9 @@ $('.inx-hits-list').slick({
 
 /* Страница карточка продукта. Слайдер "Комплектом будет дешевле"*/
 
-insertBlackArrow('.cp-set-right-col');
+insertBlackArrow('.cp-set-right-col__inner');
 
-$('.cp-set-right-col').slick({
+$('.cp-set-right-col__inner').slick({
     variableWidth: true,
     variableHeight: true,
     dots: false,
@@ -1360,6 +1369,11 @@ $('.cp-type-set__tab').on('click', function(){
         $('.cp-type-set__sheet').removeClass('cp-type-set__sheet_active');
 
         $(".cp-type-set__sheet[data-sheet='"+sheet+"']").addClass('cp-type-set__sheet_active');
+
+        $('.cp-set-right-col').removeClass('cp-set-right-col_visible')
+        $(".cp-set-right-col[data-sheet='"+sheet+"']").addClass('cp-set-right-col_visible')
+       
+        
     }
 })
 
@@ -1550,7 +1564,7 @@ let productsList = [
 ];
 
 //Обработка клика по svg иконкам
-$('.c-product__svg-icon').on('click', function(){
+$('body').on('click', '.c-product__svg-icon', function(){
     if (  $(this).attr('data-checked') == 'checked' ){
         $(this).removeAttr('data-checked');
     } else {
@@ -1578,3 +1592,198 @@ $('.filter-btn').on('click', function(){
         $(this).attr('data-checked', 'checked');
     }
 })
+
+//*************ТРАНСФОРМАЦИЯ КАРТОЧЕК ТОВАРА*********************************** */
+//Клик по выбору внешнего вида карточек товара
+$('.appearance__btn').on('click', function(){
+
+    if ( $(this).hasClass('appearance__btn_active') === false ) {
+        //переключаем кнопку
+        $('.appearance__btn').removeClass('appearance__btn_active');
+        $(this).addClass('appearance__btn_active');
+
+
+        if ( $('.products-list').hasClass('f-products-list') ){
+            $('.products-list').removeClass('f-products-list');
+            $('.products-list').addClass('c-product-list');
+
+
+            $('.f-product').each(function(){
+                let prop = '';
+                $(this).find('.product-prop__item').each(function(){
+                    prop += '<span class="product-prop-item"><span class="product-prop-name">' + $(this).find('.product-prop__name').html() + '</span> <span class="product-prop-value">' + $(this).find('.product-prop__value').html() + '</span>, </span>';
+                })
+
+                
+                let cProduct = '<div class="c-product-wrap" data-views="'+$(this).attr('data-views')+'" data-vlink ="'+$(this).attr('data-vlink')+'" data-bonuses = "'+$(this).attr('data-bonuses')+'">' +
+                                    '<div class="c-product">'+
+                                        '<div class="c-product__header">' +
+                                            '<div class="promo-state '+ $(this).find('.promo-state').attr('data-promo') + '  promo-state_no subtitle" data-promo ="'+$(this).find('.promo-state').attr('data-promo')+'" data-tpromo ="'+$(this).find('.promo-state').attr('data-tpromo')+'">'+
+                                                $(this).find('.promo-state').attr('data-tpromo')+
+                                            '</div>'+
+                                            '<div class="c-product__rating-right">'+
+                                                '<div class="c-product__svg-icon">'+
+                                                    '<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">'+
+                                                        '<g opacity="0.5">'+
+                                                            '<rect x="15" y="8" width="2" height="16" fill="#8E99AB"></rect>'+
+                                                            '<rect x="21" y="12" width="2" height="12" fill="#8E99AB"></rect>'+
+                                                            '<rect x="9" y="16" width="2" height="8" fill="#8E99AB"></rect>'+
+                                                            '<rect x="9" y="6" width="2" height="6" fill="#8E99AB"></rect>'+
+                                                            '<rect x="13" y="8.13574" width="2" height="6" transform="rotate(90 13 8.13574)" fill="#8E99AB"></rect>'+
+                                                        '</g>'+
+                                                    '</svg>'+
+                                                '</div>'+
+                                                '<div class="c-product__svg-icon">'+
+                                                    '<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">'+
+                                                        '<g opacity="0.5">'+
+                                                            '<path d="M19.0714 6.91699C17.3794 6.91699 15.8876 7.75531 15 9.03152C14.1124 7.75531 12.6206 6.91699 10.9286 6.91699C8.20671 6.91699 6 9.08457 6 11.7591C6 16.6791 15 22.917 15 22.917C15 22.917 24 16.6791 24 11.7591C24 9.08457 21.7933 6.91699 19.0714 6.91699" stroke="#8E99AB" stroke-width="2"></path>'+
+                                                        '</g>'+
+                                                    '</svg>'+
+                                                '</div>'+
+                                            '</div>'+
+                                        '</div>'+
+                                    '<div class="c-product__img-wrap">'+
+                                        '<img class ="c-product__img" src="'+$(this).find('.f-product__img').attr('src')+'" alt="'+$(this).find('.f-product__img').attr('alt')+'">'+
+                                    '</div>'+
+                                    '<div class="c-product__views">'+
+                                        '<div class="c-product__rating ">'+
+                                            '<img src="assets/img/icons/star.png">'+ 
+                                            '<span class="small-text product-rating">'+$(this).find('.product-rating').html()+'</span>'+
+                                        '</div>'+ 
+                                        '<div class="c-product__view-posts">'+
+                                            '<a class="c-product__view-posts-link subtitle" href="'+$(this).attr('data-vlink')+'">'+$(this).attr('data-views')+' отзывов</a>'+ 
+                                        '</div>'+
+                                    '</div>'+ 
+                                    '<p class="c-product__info-text">'+ '<span class="product-name">' + $(this).find('.f-product__name').html() +' </span>'+ 
+                                        prop +
+                                    '</p>'+
+
+                                    '<div class="c-product__buy">'+
+                                        '<div class="c-product__price">'+
+                                            '<p class="c-product__old-price">'+$(this).find('.f-product__old-price').html()+'</p>'+
+                                            '<p class="c-product__current-price">'+$(this).find('.f-product__price-value').html()+'</p>'+
+                                        '</div>'+
+                                        '<button class="c-product__btn-buy">+ В корзину</button>'+
+                                    '</div>'+
+
+
+                                    '<div class="c-product__buy-click-wrap">'+
+                                        '<button class="c-product__buy-click button">Купить в 1 клик</button>'+
+                                    '</div>'+
+                                '</div>'+
+                            '</div>';
+
+                
+                $(this).remove();
+                $('.products-list').append(cProduct);
+
+            })            
+
+        } else {
+
+            $('.products-list').addClass('f-products-list');
+            $('.products-list').removeClass('c-product-list');
+
+            $('.c-product-wrap').each(function(){
+                
+                let prop = '<ul class="product-prop">';
+
+                $(this).find('.product-prop-item').each(function(){
+                    prop += '<li class="product-prop__item"><span class="product-prop__name">'+$(this).find('.product-prop-name').html() +'</span><span class="product-prop__value">'+$(this).find('.product-prop-value').html()+'</span></li>';
+                });
+                prop += '</ul>';
+
+                let fProduct =  '<div class="f-product" data-views="'+$(this).attr('data-views')+'" data-vlink="'+$(this).attr('data-vlink')+ '" data-bonuses="'+ $(this).attr('data-bonuses') +'">' +
+                                    '<div class="f-product__about">'+
+                                        '<div class="f-product__img-wrap">'+
+                                            '<img class="f-product__img" src="'+$(this).find('.c-product__img').attr('src')+'" alt="'+$(this).find('.c-product__img').attr('alt')+'">'+
+                                        '</div>'+
+                                        '<div class="f-product__info-block">'+
+                                            '<div class="f-product__rating-block">'+
+                                                '<div class="f-product__rating-left">'+
+                                                    '<div class="f-product__rating ">'+
+                                                        '<img src="assets/img/icons/star.png" >'+
+                                                        '<span class="small-text product-rating">'+$(this).find('.product-rating').html()+'</span>'+
+                                                    '</div>'+
+                                                    '<div class="promo-state '+ $(this).find('.promo-state').attr('data-promo')+ ' subtitle" data-promo ="'+$(this).find('.promo-state').attr('data-promo')+'" data-tpromo="'+$(this).find('.promo-state').attr('data-tpromo')+'">' +
+                                                        'акция' +
+                                                    '</div>'+
+                                                '</div>'+
+                                
+                                                '<div class="f-product__rating-right">'+
+                                                    '<div class="c-product__svg-icon">'+
+                                                        '<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">'+
+                                                            '<g opacity="0.5">'+
+                                                                '<rect x="15" y="8" width="2" height="16" fill="#8E99AB"></rect>'+
+                                                                '<rect x="21" y="12" width="2" height="12" fill="#8E99AB"></rect>'+
+                                                                '<rect x="9" y="16" width="2" height="8" fill="#8E99AB"></rect>'+
+                                                                '<rect x="9" y="6" width="2" height="6" fill="#8E99AB"></rect>'+
+                                                                '<rect x="13" y="8.13574" width="2" height="6" transform="rotate(90 13 8.13574)" fill="#8E99AB"></rect>'+
+                                                            '</g>'+
+                                                        '</svg>'+
+                                                    '</div>'+
+                                                    '<div class="c-product__svg-icon">'+
+                                                        '<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">'+
+                                                            '<g opacity="0.5">'+
+                                                                '<path d="M19.0714 6.91699C17.3794 6.91699 15.8876 7.75531 15 9.03152C14.1124 7.75531 12.6206 6.91699 10.9286 6.91699C8.20671 6.91699 6 9.08457 6 11.7591C6 16.6791 15 22.917 15 22.917C15 22.917 24 16.6791 24 11.7591C24 9.08457 21.7933 6.91699 19.0714 6.91699" stroke="#8E99AB" stroke-width="2"></path>'+
+                                                            '</g>'+
+                                                        '</svg>'+
+                                                    '</div>'+
+                                                '</div>'+
+                                            '</div>'+
+                                        '<h4 class="text f-product__name">'+$(this).find('.product-name').html()+'</h4>'+
+                                        prop +
+                                    '</div>'+
+                                '</div>'+
+                            '<div class="f-product__buy">'+
+                                '<div class="f-product__price">'+
+                                    '<p class="f-product__old-price subtitle">'+$(this).find('.c-product__old-price').html()+'</p>'+
+                                    '<p class="f-product__price-value h3">'+$(this).find('.c-product__current-price').html()+'</p>'+
+                                    '<p class="f-product__bonus subtitle">'+$(this).attr('data-bonuses')+'</p>'+
+                                '</div>'+
+                            '<button class="f-product__buy-btn button white">+ В корзину</button>'+
+                        '</div>'+
+                    '</div>';
+                    
+                            
+                                
+                                    
+                                    
+                                    
+                                
+                $(this).remove();
+                $('.products-list').append(fProduct);
+    
+                                
+    
+                            
+                        
+
+            })
+
+        }
+
+
+          
+
+    }
+
+})
+
+
+
+//Показываем скрытые категории
+
+$('.show-all-filter-btn').on('click', function(){
+    if ( $(this).attr('data-state') == 'hidden'){
+        $('.filter-btn_hidden').css('display', 'flex');
+        $(this).removeAttr('data-state');
+        $(this).html('Основные');
+    } else {
+        $('.filter-btn_hidden').css('display', 'none');
+        $(this).attr('data-state', 'hidden');
+        $(this).html('Посмотреть все');
+    }
+        
+})
+

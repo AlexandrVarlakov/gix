@@ -333,7 +333,9 @@
 
 
 .c-product-list{
-    
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
 }
 .c-product-wrap{
     display: flex;
@@ -784,4 +786,8 @@
             width: 2px;
         }
     }
+}
+
+.f-products-container{
+    width: 100%;
 }

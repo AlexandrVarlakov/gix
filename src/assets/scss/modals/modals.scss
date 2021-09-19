@@ -153,9 +153,13 @@
     margin-bottom: -1px;
     cursor: pointer;
     font-family: $font-family;
+
+    transition: .3s;
     @media (max-width: 1024px){
         height: 60px;
     }
+
+    
 }
 .m-form__btn_green{
     border-radius:  0;
@@ -216,6 +220,15 @@
         background: #C5FA2D;
         color: #2A323E;
         height: 60px;
+
+        &:hover{
+            background-color: #ACD637;
+        }
+    
+        &:active{
+            background-color: #0D1014;
+            color: #C5FA2D;
+        }
     }
 
     .m-form__input-wrap{
@@ -398,3 +411,66 @@
     overflow: hidden;
 }
 
+.modal-complect{
+    display: none;
+    width: 100%;
+    background-color: #fff;
+    position: relative;
+    .cp-set-container{
+        margin-top: 0;
+        padding-top: 90px;
+        padding-bottom: 130px;
+    }
+}
+
+.complect-btn-group{
+    width: 287px;
+    margin-top: 30px;
+
+    @media (max-height: 1240px){
+        max-width: 100%;
+    }
+}
+
+.complect-btn{
+    width: 100%;
+    height: 60px;
+    color: #2A323E;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.complect-btn__apply{
+    border-radius: 7px 7px 0 0;
+    background-color: #C5FA2D;
+    transition: .3s;
+
+    &:hover{
+        background-color: #ACD637;
+    }
+
+    &:active{
+        background-color: #0D1014;
+        color: #C5FA2D;;
+    }
+}
+
+.complect-btn__cancel{
+    border: 1px solid #979797;
+    border-top: none;
+    border-radius: 0 0 7px 7px;
+
+    &:hover{
+        color: #EB5329;
+        border-color: #EB5329;
+    }
+}
+
+.modal-complect__close{
+    position: absolute;
+    top: 50px;
+    right: 100px;
+    cursor: pointer;
+}
