@@ -1,3 +1,21 @@
+var timer = 4000;
+    var curTime = 0;
+    var percentageProgress = 0;
+    var circle = document.querySelector('.progress');
+    if (circle !== null){
+        var radius = circle.getAttribute('r');
+        var circleLength = 2 * Math.PI * radius;
+
+        var moveDerection = 'forward';
+        circle.setAttribute('stroke-dashoffset', circleLength);
+    }
+    
+
+    
+
+
+
+
 /*Функция вставляет черные стрелки в кнопки навигации slick
 
 Важно!!! Функция вешается на событие инициализации слайдера, поэтому ее необходимо объявить до инициализации слайдера
@@ -313,6 +331,8 @@ $('.ac-reviews-list').slick({
 
 /*КОНЕЦ: Слайдер комметариев*/
 
+
+
 $(document).ready(function(){
 
     
@@ -329,8 +349,43 @@ $(document).ready(function(){
         });
     } 
 
+        if ( circle !== null ){
+            circle.setAttribute('stroke-dasharray', circleLength);
 
-
+    
+            let btn = $('.hh-slider').find('li.slick-active');
+            $('.circle-anim').css('opacity', '1');
+            let top = $(btn).offset().top;
+            let left = $(btn).offset().left;
+    
+            $('.circle-anim').css('top', +top + ( 0 )+ 'px');
+            $('.circle-anim').css('left', +left + (0) +'px');
+        
+    
+    
+            let circleInterval = setInterval(()=>{
+                curTime += 10;
+                percentageProgress = curTime / timer;
+                
+                if ( percentageProgress >= 1) { 
+                    $('.circle-anim').css('opacity', '1');
+                    circle.setAttribute('stroke-dashoffset', circleLength);
+        
+                    if ( moveDerection == 'forward' ) {
+                        $('.hh-slider').slick('slickNext');
+                    } else {
+                        $('.hh-slider').slick('slickPrev');
+                    }
+                    
+                    curTime = 0;
+                } else {
+                    
+                    circle.setAttribute('stroke-dashoffset', circleLength - circleLength * percentageProgress);
+                }
+            }, 10)
+    
+        }
+        
 
 
     if (  $(window).width() <= 640) {
@@ -403,8 +458,12 @@ $(document).ready(function(){
     }
 })
 
+
+
+
+
 insertWhiteArrow('.hh-slider');
-$('.hh-slider').slick({
+var hh = $('.hh-slider').slick({
     variableWidth: false,
     variableHeight: false,
     dots: true,
@@ -412,15 +471,29 @@ $('.hh-slider').slick({
     infinite: false,
     slidesToScroll: 1,
     slidesToShow: 1,
-    autoplay: true,
-    autoplaySpeed: 4000,
+    
     
 });
+
+
+
+
+
+
+
+
+
 
 $('.hh-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
     $('.m-slider-block__text-content').css('display', 'none');
     $('.m-slider-block__text-content').removeClass('slideTextShowRight_s');
     $('.m-slider-block__text-content').removeClass('slideTextShowLeft_s');
+
+
+    $('.circle-anim').css('opacity', 0);
+
+    curTime = 0 ;
+
 
     if (nextSlide > currentSlide){
         $('.m-slider-block__text-content[data-sheet="'+nextSlide+'"]').addClass('slideTextShowRight_s');
@@ -433,6 +506,26 @@ $('.hh-slider').on('beforeChange', function(event, slick, currentSlide, nextSlid
     $('.m-slider-block__text-content[data-sheet="'+nextSlide+'"]').css('display', 'block');
 })
 
+
+
+$('.hh-slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
+        let btn = $('.hh-slider').find('li.slick-active');
+        circle.setAttribute('stroke-dashoffset', circleLength);
+        $('.circle-anim').css('opacity', '1');
+        let top = $(btn).offset().top;
+        let left = $(btn).offset().left;
+
+        $('.circle-anim').css('top', +top + ( 0 )+ 'px');
+        $('.circle-anim').css('left', +left + (0) +'px');
+        curTime = 0;
+
+       if ( currentSlide >= slick.slideCount - 1 ){
+           moveDerection = 'back'
+       } 
+       if ( currentSlide == 0 ){
+            moveDerection = 'forward';
+       }
+})
 
 /*Слайдер фото со страницы blog-news*/
 
@@ -758,7 +851,7 @@ insertBlackArrow('.cp-set-right-col__inner');
 
 $('.cp-set-right-col__inner').slick({
     variableWidth: true,
-    variableHeight: true,
+    variableHeight: false,
     dots: false,
     arrows: true,
     infinite: false,
@@ -1642,9 +1735,9 @@ $('.appearance__btn').on('click', function(){
                                                 '</div>'+
                                             '</div>'+
                                         '</div>'+
-                                    '<div class="c-product__img-wrap">'+
+                                    '<a class="c-product__img-wrap" href="'+$(this).find('.f-product__img-wrap').attr('href') +'">'+
                                         '<img class ="c-product__img" src="'+$(this).find('.f-product__img').attr('src')+'" alt="'+$(this).find('.f-product__img').attr('alt')+'">'+
-                                    '</div>'+
+                                    '</a>'+
                                     '<div class="c-product__views">'+
                                         '<div class="c-product__rating ">'+
                                             '<img src="assets/img/icons/star.png">'+ 
@@ -1654,9 +1747,9 @@ $('.appearance__btn').on('click', function(){
                                             '<a class="c-product__view-posts-link subtitle" href="'+$(this).attr('data-vlink')+'">'+$(this).attr('data-views')+' отзывов</a>'+ 
                                         '</div>'+
                                     '</div>'+ 
-                                    '<p class="c-product__info-text">'+ '<span class="product-name">' + $(this).find('.f-product__name').html() +' </span>'+ 
+                                    '<a class="c-product__info-text" href="'+$(this).find('.f-product__img-wrap').attr('href') +'">'+ '<span class="product-name">' + $(this).find('.f-product__name').html() +' </span>'+ 
                                         prop +
-                                    '</p>'+
+                                    '</a>'+
 
                                     '<div class="c-product__buy">'+
                                         '<div class="c-product__price">'+
@@ -1695,9 +1788,9 @@ $('.appearance__btn').on('click', function(){
 
                 let fProduct =  '<div class="f-product" data-views="'+$(this).attr('data-views')+'" data-vlink="'+$(this).attr('data-vlink')+ '" data-bonuses="'+ $(this).attr('data-bonuses') +'">' +
                                     '<div class="f-product__about">'+
-                                        '<div class="f-product__img-wrap">'+
+                                        '<a class="f-product__img-wrap" href="'+$(this).find('.c-product__img-wrap').attr('href')+'">'+
                                             '<img class="f-product__img" src="'+$(this).find('.c-product__img').attr('src')+'" alt="'+$(this).find('.c-product__img').attr('alt')+'">'+
-                                        '</div>'+
+                                        '</a>'+
                                         '<div class="f-product__info-block">'+
                                             '<div class="f-product__rating-block">'+
                                                 '<div class="f-product__rating-left">'+
@@ -1731,7 +1824,7 @@ $('.appearance__btn').on('click', function(){
                                                     '</div>'+
                                                 '</div>'+
                                             '</div>'+
-                                        '<h4 class="text f-product__name">'+$(this).find('.product-name').html()+'</h4>'+
+                                        '<a class="text f-product__name" href="'+$(this).find('.c-product__img-wrap').attr('href')+'">'+$(this).find('.product-name').html()+'</a>'+
                                         prop +
                                     '</div>'+
                                 '</div>'+

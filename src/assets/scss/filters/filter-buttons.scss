@@ -34,7 +34,7 @@
 
 .filter-btn-wrap{
     border-bottom: 1px solid #8E99AB;
-
+    transition: .3s;
     @media (max-width: 1300px){
         border-bottom: none;
     }

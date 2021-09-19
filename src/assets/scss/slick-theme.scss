@@ -668,7 +668,7 @@ $slick-opacity-not-active: 0.25 !default;
 
         li.slick-active{
             button::before{
-                background-image: url('../img/buttons/dotted.png');
+                //background-image: url('../img/buttons/dotted.png');
                 background-size: 100% 100%;
                 top: 50%;
                 transform: translateY(-50%);
@@ -807,16 +807,30 @@ $slick-opacity-not-active: 0.25 !default;
 
     
 }
+.cp-set-right-col__inner{
+    .slick-track{
+       
 
+        display: flex !important;
+    }
+
+    .slick-slide.slides{
+        height:auto;
+        flex:0 0 auto;
+    }
+    .c-product-wrap-p{
+        height: auto;
+    }
+}
 .c-p-i-products-list, .inx-novelty-list, .inx-hits-list{
     .slick-list{
-        padding-bottom: 100px;
+        padding-bottom: 120px;
 
         @media (max-width: 768px){
             padding-bottom: 0px;
         }
     }
-
+    
     .slick-prev{
         width: 65px;
         height: 14px;

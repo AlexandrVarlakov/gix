@@ -501,7 +501,6 @@
       .hh-slider .slick-dots li button::before {
         font-size: 4px; } }
   .hh-slider .slick-dots li.slick-active button::before {
-    background-image: url("../img/buttons/dotted.png");
     background-size: 100% 100%;
     top: 50%;
     -webkit-transform: translateY(-50%);
@@ -612,8 +611,24 @@
 .ac-reviews-list .slick-disabled {
   opacity: .3; }
 
+.cp-set-right-col__inner .slick-track {
+  display: -webkit-box !important;
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important; }
+
+.cp-set-right-col__inner .slick-slide.slides {
+  height: auto;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto; }
+
+.cp-set-right-col__inner .c-product-wrap-p {
+  height: auto; }
+
 .c-p-i-products-list .slick-list, .inx-novelty-list .slick-list, .inx-hits-list .slick-list {
-  padding-bottom: 100px; }
+  padding-bottom: 120px; }
   @media (max-width: 768px) {
     .c-p-i-products-list .slick-list, .inx-novelty-list .slick-list, .inx-hits-list .slick-list {
       padding-bottom: 0px; } }
