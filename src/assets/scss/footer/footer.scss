@@ -6,6 +6,10 @@
     display: flex;
 
     
+    .logo{
+        color: #fff;
+    }
+
     @media (max-width: 1024px){
         
     }
@@ -25,6 +29,8 @@
     width: 50%;
     height: 100%;
 }
+
+
 
 .footer__left-bar{
     border-right: 2px solid #000;

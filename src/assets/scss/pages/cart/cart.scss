@@ -329,6 +329,7 @@
         height: 140px;
     }
     &:hover{
+        
         .c-product__buy-click-wrap{
           
             
@@ -336,10 +337,12 @@
         }
         
         .c-product{
+            border-top: 1px solid transparent !important;
             
             z-index: 99;
             box-shadow: 0px 29px 20px -14px rgba(145, 178, 241, 0.25), 0px 5px 20px rgba(145, 178, 241, 0.25);
-            border-radius: 11px 0px 11px 11px;
+           
+            
         }
 
         .c-product__info-text{

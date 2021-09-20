@@ -37,6 +37,9 @@
 }
 .header_dark{
     background-color: #1E242E;
+    .logo__text{ 
+        color : #fff;
+    }
 }
 .header_blue-bg{
     background-color: #E9F1F9;
@@ -50,4 +53,12 @@
     .logo__text{
         color: #fff;
     }
+}
+
+.header_open-drop{
+    background-color: #1E242E !important;;
+    .logo__company-name{
+        fill: white !important;
+    }
+    
 }

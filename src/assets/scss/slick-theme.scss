@@ -448,6 +448,7 @@ $slick-opacity-not-active: 0.25 !default;
 
         li.slick-active{
             button::before{
+                
                 background-image: url('../img/buttons/dotted.png');
                 background-size: 100% 100%;
                 top: 50%;
@@ -670,11 +671,11 @@ $slick-opacity-not-active: 0.25 !default;
             button::before{
                 //background-image: url('../img/buttons/dotted.png');
                 background-size: 100% 100%;
-                top: 50%;
-                transform: translateY(-50%);
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                //top: 50%;
+                //transform: translateY(-50%);
+                //display: flex;
+                //justify-content: center;
+                //align-items: center;
                 opacity: 1;
             }
         }
@@ -822,6 +823,34 @@ $slick-opacity-not-active: 0.25 !default;
         height: auto;
     }
 }
+
+.c-p-i-products-list, .inx-novelty-list, .inx-hits-list{
+    .c-p-i-product__wrap{
+        &:hover{
+            border-color: transparent;
+            .c-product{
+                border-color: transparent;
+            }
+        }
+
+
+    }
+    .c-p-i-product__wrap{
+        &:first-of-type{
+            .c-product{
+                border-radius: 11px 0 0 11px;
+            }
+        }
+
+        &:last-of-type{
+            .c-product{
+                border-radius: 0 11px 11px 0;
+            }
+        }
+    }
+}
+
+
 .c-p-i-products-list, .inx-novelty-list, .inx-hits-list{
     .slick-list{
         padding-bottom: 120px;
@@ -831,6 +860,10 @@ $slick-opacity-not-active: 0.25 !default;
         }
     }
     
+
+
+
+
     .slick-prev{
         width: 65px;
         height: 14px;
@@ -889,11 +922,12 @@ $slick-opacity-not-active: 0.25 !default;
             
                 z-index: 99;
                 box-shadow: 0px 29px 20px -14px rgba(145, 178, 241, 0.25), 0px 5px 20px rgba(145, 178, 241, 0.25);
-                border-radius: 11px 0px 11px 11px;
+
+                border: none !important;                
             }
     
             .c-product__info-text{
-                text-decoration: underline;
+                color: #EB5329;
             }
     
             .c-product__btn-buy{
@@ -909,12 +943,16 @@ $slick-opacity-not-active: 0.25 !default;
 }
 
 /*Слайдер на главной странице "Новинки"*/
-.inx-novelty-list, .inx-hits-list{
+.inx-novelty-list, .inx-hits-list, .news-slider, .news-photo-slider{
     .slick-next{
         background-image: none;
+        display: flex !important;
+        align-items: center;
     }
     .slick-prev{
         background-image: none;
+        display: flex !important;
+        align-items: center;
     }
 }
 /*КОНЕЦ: Слайдер на главной странице "Новинки"*/

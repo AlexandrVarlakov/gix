@@ -1,7 +1,8 @@
 .logo{
     display: flex;
     text-decoration: none;
-    color: #fff;
+    color:#1E242E;
+
     align-items: center;
 }
 
@@ -9,13 +10,27 @@
     margin-right: 16px;
 }
 
-.logo__img{
+.logo__img-block{
+    
     @media (max-width: 1100px){
-        width: 81px;
-        height: 27px;
+        svg{
+            width: 81px;
+            height: 27px;
+        }
+        
     }
     @media (max-width: 680px){
-        width: 55px;
-        height: 17px;
+        svg{
+            width: 55px;
+            height: 17px;
+        }
+        
     }
+}
+
+.logo-dark{
+    .logo__company-name{
+        fill: #0D1014;
+    }
+    
 }

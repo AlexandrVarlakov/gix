@@ -71,9 +71,13 @@
 }
 
 .blog-title-col{
+    
     @media (max-width: 400px){
         width: 100% !important;
+        min-width: 100%;
     }
+
+   
 }
 
 .filter-btn__qty{
@@ -217,6 +221,10 @@
 .blog-title-col{
     width: 27.5%;
     min-width: 345px;
+
+    @media(max-width: 400px){
+        min-width: initial !important;
+    }
 }
 
 .blog-news-col{

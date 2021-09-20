@@ -581,6 +581,30 @@
     }
 }
 
+
+
+.c-sb-product{
+    width: 100%;
+    height: 100%;
+    border: 1px solid #E5EFFE;
+    padding: 20px;
+    
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    transition: .5s;
+
+    @media (max-width: 1300px){
+        padding: 15px;
+    }
+    &:hover{
+        
+        .c-product__info-text{
+            color: #EB5329;
+        }
+    }
+}
+
 .c-product__header{
     display: flex;
     justify-content: space-between;

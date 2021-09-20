@@ -271,9 +271,7 @@ $('.close-drop').on('click', function(){
     $('.header').removeClass('header_open-drop');
     $(this).css('display', 'none');
     $('.open-drop').css('display', 'inline-block');
-    if ( $('.header').hasClass('header_dark') === false ){
-        $('.header').find('.logo__img').attr('src', 'assets/img/logo/dark-logo.png');
-    }
+    
 }) ; 
 $('.open-drop').on('click', function(){
     $('.drop-box').show(300);
@@ -284,9 +282,7 @@ $('.open-drop').on('click', function(){
     $('.close-drop').css('display', 'inline-block');
 
 
-    if ( $('.header').hasClass('header_dark') === false ){
-        $('.header').find('.logo__img').attr('src', 'assets/img/logo/light-logo.png');
-    }
+    
 }) ; 
 
 $('.open-drop_mob').on('click', function(){
@@ -358,7 +354,7 @@ $(document).ready(function(){
             let top = $(btn).offset().top;
             let left = $(btn).offset().left;
     
-            $('.circle-anim').css('top', +top + ( 0 )+ 'px');
+            $('.circle-anim').css('top', +top + ( -2 )+ 'px');
             $('.circle-anim').css('left', +left + (0) +'px');
         
     
@@ -515,7 +511,7 @@ $('.hh-slider').on('afterChange', function(event, slick, currentSlide, nextSlide
         let top = $(btn).offset().top;
         let left = $(btn).offset().left;
 
-        $('.circle-anim').css('top', +top + ( 0 )+ 'px');
+        $('.circle-anim').css('top', +top + ( -2 )+ 'px');
         $('.circle-anim').css('left', +left + (0) +'px');
         curTime = 0;
 
