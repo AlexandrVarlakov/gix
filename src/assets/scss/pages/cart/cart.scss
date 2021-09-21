@@ -324,9 +324,15 @@
 .c-p-i-product__wrap{
     width: 310px;
     position: relative;
+
+    color: rgba($color: #fff, $alpha: 0);
     .c-product__img{
         width: 185px;
         height: 140px;
+    }
+
+    .c-product{
+        
     }
     &:hover{
         

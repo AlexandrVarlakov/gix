@@ -988,7 +988,53 @@
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
-          flex-direction: column; }
+          flex-direction: column;
+  -webkit-animation: showDrop .3s linear;
+          animation: showDrop .3s linear; }
+
+@-webkit-keyframes showDrop {
+  from {
+    opacity: .5;
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%); }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%); } }
+
+@keyframes showDrop {
+  from {
+    opacity: .5;
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%); }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%); } }
+
+.hideDrop {
+  -webkit-animation: hideDrop .3s forwards;
+          animation: hideDrop .3s forwards; }
+
+@-webkit-keyframes hideDrop {
+  from {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%); }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%); } }
+
+@keyframes hideDrop {
+  from {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%); }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%); } }
 
 .drop-box__body {
   padding: 15vh 100px;
@@ -1036,6 +1082,9 @@
       -webkit-flex-direction: column;
           -ms-flex-direction: column;
               flex-direction: column; } }
+  @media (max-width: 768px) {
+    .drop-box__body {
+      padding: 12.5vh 20px; } }
 
 .drop-menu {
   width: 360px;
@@ -3702,7 +3751,8 @@
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  color: #0D1014; }
 
 .promo-state_promo {
   background: #FFC1A7; }
@@ -5747,6 +5797,14 @@
 .inx-round-btn {
   width: 65px;
   height: 65px; }
+  @media (max-width: 1024px) {
+    .inx-round-btn {
+      width: 50px;
+      height: 50px; } }
+  @media (max-width: 768px) {
+    .inx-round-btn {
+      width: 40px;
+      height: 40px; } }
 
 .inx-novelty-conteiner {
   margin-top: 200px;
@@ -7005,7 +7063,8 @@
 
 .c-p-i-product__wrap {
   width: 310px;
-  position: relative; }
+  position: relative;
+  color: rgba(255, 255, 255, 0); }
   .c-p-i-product__wrap .c-product__img {
     width: 185px;
     height: 140px; }

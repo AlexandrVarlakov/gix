@@ -121,6 +121,17 @@
   .black-arrow:hover path, .white-arrow:hover path {
     stroke: #ACD637; }
 
+.slick-slide {
+  outline: none !important;
+  border: none !important; }
+
+.slick-slide:active, .slick-slide:focus {
+  outline: none !important;
+  border: none !important; }
+
+.slick-slider {
+  outline: none !important; }
+
 .b-filter-container .slick-slide {
   display: -webkit-box;
   display: -webkit-flex;
@@ -613,7 +624,7 @@
 
 .c-p-i-products-list .c-p-i-product__wrap:hover, .inx-novelty-list .c-p-i-product__wrap:hover, .inx-hits-list .c-p-i-product__wrap:hover {
   border-color: transparent; }
-  .c-p-i-products-list .c-p-i-product__wrap:hover .c-product, .inx-novelty-list .c-p-i-product__wrap:hover .c-product, .inx-hits-list .c-p-i-product__wrap:hover .c-product {
+  .c-p-i-products-list .c-p-i-product__wrap:hover .c-sb-product, .inx-novelty-list .c-p-i-product__wrap:hover .c-sb-product, .inx-hits-list .c-p-i-product__wrap:hover .c-sb-product {
     border-color: transparent; }
 
 .c-p-i-products-list .c-p-i-product__wrap:first-of-type .c-product, .inx-novelty-list .c-p-i-product__wrap:first-of-type .c-product, .inx-hits-list .c-p-i-product__wrap:first-of-type .c-product {

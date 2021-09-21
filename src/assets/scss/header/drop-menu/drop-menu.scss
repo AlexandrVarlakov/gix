@@ -9,6 +9,36 @@
     z-index: 999;
     display: none;
     flex-direction: column;
+
+    animation: showDrop .3s linear;
+
+}
+
+@keyframes showDrop {
+    from{
+        opacity: .5;
+        transform: translateY(-100%);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+
+.hideDrop{
+    animation: hideDrop .3s forwards;
+}
+
+@keyframes hideDrop {
+    from{
+        opacity: 1;
+        transform: translateY(0%);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(-100%);
+    }
 }
 
 .drop-box__body{
@@ -33,6 +63,8 @@
         box-shadow: inset 1px 1px 10px #f3faf7;
     }
 
+    
+
     @media (max-width: 1900px){
         padding: 15vh calc(10vw - 90px);
     }
@@ -46,6 +78,9 @@
 
     @media (max-width: 900px){
         flex-direction: column;
+    }
+    @media (max-width: 768px){
+        padding: 12.5vh 20px;
     }
 }
 

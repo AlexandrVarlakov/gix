@@ -58,6 +58,7 @@ $slick-opacity-not-active: 0.25 !default;
     }
 }
 
+
 /* Arrows */
 
 .slick-prev,
@@ -208,8 +209,18 @@ $slick-opacity-not-active: 0.25 !default;
 }
 
 
+.slick-slide{
+    outline: none !important;
+    border: none !important;
+}
 
-
+.slick-slide:active, .slick-slide:focus {
+    outline: none !important;
+    border: none !important;
+} 
+.slick-slider{
+    outline: none !important;
+}
 .b-filter-container{
     .slick-slide{
         display: flex;
@@ -828,9 +839,11 @@ $slick-opacity-not-active: 0.25 !default;
     .c-p-i-product__wrap{
         &:hover{
             border-color: transparent;
-            .c-product{
+            .c-sb-product{
                 border-color: transparent;
+                
             }
+            
         }
 
 
