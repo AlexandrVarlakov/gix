@@ -29,6 +29,10 @@
     @media (max-width: 600px){
         flex-direction: column;
     }
+
+    @media (min-width: 1921px){
+        padding: 85px 0 85px 45vw;
+    }
 }
 .subscribe__title{
     margin-right: 75px;

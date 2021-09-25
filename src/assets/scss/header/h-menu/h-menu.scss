@@ -10,6 +10,10 @@
     @media (max-width: 680px){
         display: none;
     }
+
+    @media (min-width: 1921px){
+        width: 32vw;
+    }
 }
 
 
@@ -91,7 +95,7 @@
 }
 
 .close-drop{
-    display: none;
+    
 
     background-color: #C5FA2D;
 

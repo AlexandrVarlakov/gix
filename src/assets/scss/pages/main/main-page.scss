@@ -1,10 +1,18 @@
 
+.m-slider-block--outer{
+    background-color: #1E242E;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+
 .m-slider-block{
     //padding: 250px 0 0;
     background-color: #1E242E;
     display: flex;
     min-height: 470px;
-
+    width: 100%;
     @media ( max-width: 1366px){
         
         
@@ -14,6 +22,11 @@
         flex-direction: column;
         padding-top: 50px;
         //max-height: initial;
+    }
+
+    @media ( min-width: 1921px){
+        max-width: calc(1920px + 8vw);
+        margin: 0  0 0 auto;
     }
 }
 
@@ -66,6 +79,10 @@
 
     @media (max-width: 440px){
         width: calc(100% - 80px);
+    }
+
+    @media ( min-width: 1921px){
+        padding: 0 100px 0 0;
     }
 }
 
@@ -133,7 +150,9 @@
     @media (max-width: 992px){
         margin-left: 20px;
     }
-
+    @media (min-width: 2100px){
+        margin-left: 0px;
+    }
     display: none;
     
 }
@@ -256,12 +275,22 @@
 }
 .hh-slider__slide-img{
     width: 100%;
-    max-width: 100%;
+    max-width: 660px;
+    max-height: 680px;
+    @media (min-width: 1921px){
+        margin: 0 auto;
+    }
+
+    
 }
 .m-slider-block__slider-content{
     width: 100%;
 
     max-width: 660px;
+
+    @media (min-width: 1921px){
+        max-width: 95%;
+    }
 }
 
 .inx-search-block{
@@ -470,6 +499,12 @@
         height: 360px;
         
     }
+
+    @media (min-width: 1921px){
+        .h2{
+            width: 100%;
+        }
+    }
 }
 
 .inx-about__text-inner{
@@ -485,6 +520,10 @@
 
     @media (max-width: 800px){
         padding: 50px 20px;
+    }
+
+    @media (min-width: 2000px){
+        padding: 5vw 100px 5vw 5vw;
     }
 }
 
@@ -555,6 +594,12 @@
             margin-top: 20px;
         }
     }
+
+    @media (min-width: 1921px){
+        .col-3{
+            max-width: 540px;
+        }
+    }
 }
 
 .inx-hits-container{
@@ -587,6 +632,12 @@
 
         .inx-round-btn.mt-50{
             margin-top: 20px;
+        }
+    }
+
+    @media (min-width: 1921px){
+        .col-3{
+            max-width: 540px;
         }
     }
 }
@@ -627,6 +678,11 @@
 
     @media (max-width: 992px){
         padding: 40px;
+    }
+
+    @media ( min-width: 2000px ){
+        padding-left: 5vw;
+        padding-right: 5vw;
     }
 }
 

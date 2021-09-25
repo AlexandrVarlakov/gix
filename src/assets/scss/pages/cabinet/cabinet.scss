@@ -83,6 +83,10 @@
         min-width: 200px;
         width: 200px;
     }
+
+    @media (min-width: 1921px){
+        max-width: 540px;
+    }
 }
 
 .cab-right-col{

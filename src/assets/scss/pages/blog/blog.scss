@@ -71,12 +71,17 @@
 }
 
 .blog-title-col{
-    
+    padding-right: 6vw;
     @media (max-width: 400px){
         width: 100% !important;
         min-width: 100%;
     }
-
+    @media (max-width: 992px){
+        padding-right: 0;
+    }
+    @media (min-width: 1921px){
+       padding-right: 5vw;
+    }
    
 }
 
@@ -224,6 +229,11 @@
 
     @media(max-width: 400px){
         min-width: initial !important;
+    }
+
+
+    @media (min-width: 1921px){
+        max-width: 540px;
     }
 }
 

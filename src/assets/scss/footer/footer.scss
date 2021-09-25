@@ -77,6 +77,10 @@
     @media(max-width: 600px){
         flex-direction: column;
     }
+
+    @media (min-width: 1921px){
+        padding: 85px  0 0 4.5vw;
+    }
 }
 .footer__right-bar{
     
@@ -101,6 +105,10 @@
 
     @media (max-width: 600px){
         flex-direction: column;
+    }
+
+    @media (min-width: 1921px){
+        padding: 85px 5vw 0 4.5vw;
     }
 }
 .footer__logo-col{
@@ -138,6 +146,10 @@
     @media(max-width: 600px){
         margin-top: 25px;
         justify-content: flex-start;
+    }
+
+    @media(min-width: 1921px){
+        padding-left: 7vw;
     }
 }
 

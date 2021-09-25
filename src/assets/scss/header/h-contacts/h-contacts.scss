@@ -15,6 +15,10 @@
         margin: 0;
         justify-content: center;
     }
+
+    @media (min-width: 1921px){
+        justify-content: center;
+    }
 }
 
 .h-contacts__item{

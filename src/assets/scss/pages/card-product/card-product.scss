@@ -29,6 +29,10 @@
 
 .cp-centre-col{
     width: 34.88%;
+
+    @media (min-width: 1921px){
+        max-width: 610px;
+    }
 }
 .cp-right-col{
     width: 25.8%;
@@ -43,6 +47,10 @@
 
     @media (max-width: 992px){
         flex-wrap: wrap;
+    }
+
+    @media (min-width: 1921px){
+        padding-top: 4.5vw;
     }
 }
 
@@ -566,6 +574,13 @@
             width: 100%;
         }
     }
+
+    @media (min-width: 1921px){
+        .col-3{
+            max-width: 540px;
+        }
+        
+    }
     
 }
 
@@ -812,6 +827,10 @@
         
 
         
+    }
+
+    @media (min-width: 1921px){
+        max-width: 540px;
     }
 }
 
@@ -1446,6 +1465,10 @@
     @media (max-width: 768px){
         width: 100%;
         padding-right: 0;
+    }
+
+    @media (min-width: 1921px){
+        max-width: 540px;
     }
 }
 

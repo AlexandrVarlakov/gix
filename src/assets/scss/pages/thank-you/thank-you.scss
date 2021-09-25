@@ -16,5 +16,16 @@
         }
     }
 
-    
+    .col-28p{
+        @media (min-width: 1921px){
+            max-width: 540px;
+        }
+    }
+
+
+    @media (min-width: 1921px){
+        .col-40p{
+            max-width: 540px;
+        }
+    }
 }

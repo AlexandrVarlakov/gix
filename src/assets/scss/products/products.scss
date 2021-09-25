@@ -339,6 +339,10 @@
         margin-right: 0 !important;
         margin-bottom: 23px !important;
     }
+
+    @media (min-width: 1921px){
+        max-width: 540px;
+    }
 }
 
 
@@ -373,6 +377,10 @@
     @media (max-width: 360px){
         width: 100%;
         margin: 0 auto;
+    }
+
+    @media (min-width: 2100px){
+        width: 20%;
     }
 
     &:first-of-type{

@@ -55,5 +55,7 @@
             transform: translateY(50%) rotate(-45deg);
         }   
     }
-    
+    @media (max-width: 680px){
+        display: flex;
+    }
 }

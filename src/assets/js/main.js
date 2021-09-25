@@ -22,16 +22,13 @@ var timer = 4000;
 
 */
 function insertBlackArrow(slider){
-    $(slider).on('init', function(){
+    $(slider).on('setPosition', function(){
         $(this).find('.slick-next').html(
             '<svg width="62" height="16" viewBox="0 0 62 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="black-arrow">'+ 
                 '<path d="M1.59375 8.07104H58.5777" stroke="#2A323E" stroke-width="2" stroke-linecap="square"/>'+
                 '<path d="M52.7998 1L59.8709 8.07107L52.7998 15.1421" stroke="#2A323E" stroke-width="2"/>'+
             '</svg>'
         );
-    });
-    
-    $(slider).on('init', function(){
         $(this).find('.slick-prev').html(
             '<svg width="62" height="16" viewBox="0 0 62 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="black-arrow">'+
                 '<path d="M60.2773 8.07104L3.29341 8.07104" stroke="#2A323E" stroke-width="2" stroke-linecap="square"/>'+
@@ -39,7 +36,9 @@ function insertBlackArrow(slider){
             '</svg>'
     
         )
-    })
+    });
+    
+      
     
 }
 
@@ -267,58 +266,37 @@ openDrop.onclick = function(){
 /*Открываем закрываем drop*/
 
 $('.close-drop').on('click', function(){
-    $('.drop-box').addClass('hideDrop');
     $('.header').removeClass('header_open-drop');
-    $(this).css('display', 'none');
-    $('.open-drop').css('display', 'inline-block');
-
+    $('.drop-box').addClass('hideDrop');
+    
     setTimeout( ()=>{
         $('.drop-box').css('display', 'none');
         $('.drop-box').removeClass('hideDrop');
-    }, 300);
+    }, 700);
     
 }) ; 
 $('.open-drop').on('click', function(){
     
     $('.drop-box').css('display', 'flex');
-
-    $('.header').addClass('header_open-drop');
-    $(this).css('display', 'none');
-    $('.close-drop').css('display', 'inline-block');
-
-
-    
 }) ; 
 
 $('.open-drop_mob').on('click', function(){
     
     $('.drop-box').css('display', 'flex');
 
-    $('.header').addClass('header_open-drop');
-    $(this).css('display', 'none');
-    $('.close-drop_mob').css('display', 'flex');
-
-
-    /*if ( $('.header').hasClass('header_dark') === false ){
-        $('.header').find('.logo__img').attr('src', 'assets/img/logo/light-logo.png');
-    }*/
+    
 }) ; 
 
 $('.close-drop_mob').on('click', function(){
     $('.drop-box').addClass('hideDrop');
-    $('.header').removeClass('header_open-drop');
-    $(this).css('display', 'none');
-    $('.open-drop_mob').css('display', 'flex');
+   
 
     setTimeout( ()=>{
         $('.drop-box').css('display', 'none');
         $('.drop-box').removeClass('hideDrop');
-    }, 300);
+    }, 700);
 
-    /*
-    if ( $('.header').hasClass('header_dark') === false ){
-        $('.header').find('.logo__img').attr('src', 'assets/img/logo/dark-logo.png');
-    }*/
+    
 }) ; 
 
 /*КОНЕЦ: Открываем закрываем drop*/
@@ -366,7 +344,7 @@ $(document).ready(function(){
             let top = $(btn).offset().top;
             let left = $(btn).offset().left;
     
-            $('.circle-anim').css('top', +top + ( -2 )+ 'px');
+            $('.circle-anim').css('top', +top + ( -3 )+ 'px');
             $('.circle-anim').css('left', +left + (0) +'px');
         
     
@@ -523,7 +501,7 @@ $('.hh-slider').on('afterChange', function(event, slick, currentSlide, nextSlide
         let top = $(btn).offset().top;
         let left = $(btn).offset().left;
 
-        $('.circle-anim').css('top', +top + ( -2 )+ 'px');
+        $('.circle-anim').css('top', +top + ( -3 )+ 'px');
         $('.circle-anim').css('left', +left + (0) +'px');
         curTime = 0;
 
@@ -809,6 +787,7 @@ $('.inx-novelty-list').slick({
         },
     ]
 });
+
 
 
 /*КОНЕЦ: Слайдер на главной странице "Новинки"*/

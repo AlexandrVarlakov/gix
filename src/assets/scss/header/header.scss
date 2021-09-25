@@ -21,6 +21,10 @@
         height: 40px;
         padding-left: 20px;
     }
+
+    @media (min-width: 1921px){
+        padding-left: 3vw;
+    }
 }
 
 .header--outer{
@@ -44,7 +48,7 @@
 .header_blue-bg{
     background-color: #E9F1F9;
 }
-
+/*
 .header_open-drop{
     z-index: 1000;
     position: fixed;
@@ -53,12 +57,12 @@
     .logo__text{
         color: #fff;
     }
-}
-
+}*/
+/*
 .header_open-drop{
     background-color: #1E242E !important;;
     .logo__company-name{
         fill: white !important;
     }
     
-}
+}*/

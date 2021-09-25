@@ -146,6 +146,11 @@ address{
         padding-left: 20px;
         padding-right: 20px;
     }
+
+    @media ( min-width: 2000px ){
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
 }
 
 .page-content-wrap{
@@ -183,7 +188,11 @@ address{
     }
 }
 
-
+.fav-title-block{
+    @media (min-width: 1921px){
+        max-width: 540px;
+    }
+}
 
 .empty-33{
     margin-right: 40px;
