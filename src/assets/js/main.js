@@ -642,10 +642,10 @@ $('.filter-block__title-block').on('click', function(){
     if (  $(this).hasClass('filter-block__list-rolled')  ){
         $(this).removeClass('filter-block__list-rolled');
 
-        $(this).siblings(".filter-block__list").show(300);
+        $(this).siblings(".filter-block__list").show(500);
     } else {
         $(this).addClass('filter-block__list-rolled');
-        $(this).siblings(".filter-block__list").hide(300);
+        $(this).siblings(".filter-block__list").hide(500);
     }
 })
 
@@ -654,11 +654,11 @@ $('.filter-block__show-all').on('click', function(){
     let itemWrap = $(this).parent();
 
     if (  $(this).hasClass('filter-block__show-all-clicked')  ){
-        itemWrap.siblings(".filter-block__hidden-item").hide(50);
+        itemWrap.siblings(".filter-block__hidden-item").hide(700);
         $(this).removeClass('filter-block__show-all-clicked');
         $(this).html('Посмотреть все');
     } else {
-        itemWrap.siblings(".filter-block__hidden-item").show(50);
+        itemWrap.siblings(".filter-block__hidden-item").show(700);
         $(this).addClass('filter-block__show-all-clicked');
         $(this).html('Основные');
     }
