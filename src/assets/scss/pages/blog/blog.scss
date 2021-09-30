@@ -324,13 +324,18 @@
 }
 
 .news-social-btn{
-
+    color: #1E242E;
     font-family: $font-family;
     background-color: transparent;
     border: none;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
     outline: none;
     padding: 0 15px;
     position: relative;
+
+    transition: .3s;
     &:not(:last-of-type){
         &::after{
             content: "";
@@ -343,6 +348,12 @@
             right: -0px
         }
     }
+
+
+    &:hover{
+        color: #EB5329;
+    }
+
 }
 
 .news-slider-block{

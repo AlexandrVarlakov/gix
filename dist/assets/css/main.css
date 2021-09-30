@@ -4798,12 +4798,25 @@
   padding: 20px 0; }
 
 .news-social-btn {
+  color: #1E242E;
   font-family: "Montserrat";
   background-color: transparent;
   border: none;
+  text-decoration: none;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   outline: none;
   padding: 0 15px;
-  position: relative; }
+  position: relative;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s; }
   .news-social-btn:not(:last-of-type)::after {
     content: "";
     position: absolute;
@@ -4815,6 +4828,8 @@
         -ms-transform: translateY(-50%);
             transform: translateY(-50%);
     right: -0px; }
+  .news-social-btn:hover {
+    color: #EB5329; }
 
 .news-delimetr {
   border-bottom: 1px solid #CADCF8;
@@ -7063,7 +7078,8 @@
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0 0 0 20px; }
+  padding: 0 0 0 20px;
+  width: 62px; }
   @media (max-width: 640px) {
     .c-p-cart__qty-wrap {
       width: 72px; } }
@@ -7098,7 +7114,8 @@
 
 .c-p-cart__qty-cur-value {
   margin-right: 12px;
-  padding-left: 5px; }
+  padding-left: 5px;
+  width: 16px; }
 
 .c-p-cart__qty-list {
   list-style: none;

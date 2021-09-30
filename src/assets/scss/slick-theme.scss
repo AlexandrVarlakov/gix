@@ -634,6 +634,7 @@ $slick-opacity-not-active: 0.25 !default;
     .slick-dots{
         display: flex;
         flex-direction: column;
+       
         right: -12%;
         left: initial;
 
@@ -665,6 +666,7 @@ $slick-opacity-not-active: 0.25 !default;
         li button{
             width: 24px;
             height: 24px;
+            
         }
 
         li button::before{
@@ -672,7 +674,9 @@ $slick-opacity-not-active: 0.25 !default;
             width: 24px;
             height: 24px;
             opacity: 1;
-
+            display: flex;
+            justify-content: center;
+            align-items: center;
             @media (max-width: 1024px){
                 font-size: 4px;
             }

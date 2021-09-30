@@ -344,8 +344,8 @@ $(document).ready(function(){
             let top = $(btn).offset().top;
             let left = $(btn).offset().left;
     
-            $('.circle-anim').css('top', +top + ( -3 )+ 'px');
-            $('.circle-anim').css('left', +left + (0) +'px');
+            $('.circle-anim').css('top', +top + ( -1 )+ 'px');
+            $('.circle-anim').css('left', +left + (-1) +'px');
         
     
     
@@ -501,8 +501,8 @@ $('.hh-slider').on('afterChange', function(event, slick, currentSlide, nextSlide
         let top = $(btn).offset().top;
         let left = $(btn).offset().left;
 
-        $('.circle-anim').css('top', +top + ( -3 )+ 'px');
-        $('.circle-anim').css('left', +left + (0) +'px');
+        $('.circle-anim').css('top', +top + ( -1 )+ 'px');
+        $('.circle-anim').css('left', +left + (-1) +'px');
         curTime = 0;
 
        if ( currentSlide >= slick.slideCount - 1 ){
