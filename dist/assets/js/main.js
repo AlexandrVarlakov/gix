@@ -263,38 +263,67 @@ openDrop.onclick = function(){
 /*КОНЕЦ: Открываем выпадающее меню*/
 
 
-/*Открываем закрываем drop*/
+/*Открываем закрываем drop ОЧЕРЕДНОЙ ЧЕРНОВИК*/
 
 $('.close-drop').on('click', function(){
-    $('.header').removeClass('header_open-drop');
+    $(this).css('display', 'none');
+    $('.drop-box').css('z-index', '9999');
+    $('.open-drop').css('display', 'block');
     $('.drop-box').addClass('hideDrop');
-    
+    $('.header').removeClass('l-to-d-header');
+    $('.header').removeAttr('style');
+    $('body').css('overflow', 'auto');
     setTimeout( ()=>{
         $('.drop-box').css('display', 'none');
         $('.drop-box').removeClass('hideDrop');
-    }, 700);
+        $('.drop-box').removeAttr('style');
+        
+    }, 800);
     
 }) ; 
 $('.open-drop').on('click', function(){
-    
+    $(this).css('display', 'none');
+    $('.close-drop').css('display', 'block');
+    $('.header').css('position', 'fixed');
+    $('.header').css('z-index', '1000');
     $('.drop-box').css('display', 'flex');
+    $('body').css('overflow', 'hidden');
+    if ( $('.header').hasClass('header_dark') === false ){
+        $('.header').addClass('l-to-d-header');
+    }
+
 }) ; 
 
 $('.open-drop_mob').on('click', function(){
     
     $('.drop-box').css('display', 'flex');
+    $(this).css('display', 'none');
 
-    
+    $('.close-drop_mob').css('display', 'flex');
+
+    $('.header').css('position', 'fixed');
+    $('.header').css('z-index', '1000');
+    $('.drop-box').css('display', 'flex');
+    $('body').css('overflow', 'hidden');
+    if ( $('.header').hasClass('header_dark') === false ){
+        $('.header').addClass('l-to-d-header');
+    }
 }) ; 
 
 $('.close-drop_mob').on('click', function(){
+    $('.drop-box').css('z-index', '9999');
     $('.drop-box').addClass('hideDrop');
-   
-
+    $(this).css('display', 'none');
+    $('.open-drop_mob').css('display', 'flex');
+    $('.header').removeClass('l-to-d-header');
+    $('.header').removeAttr('style');
+    $('body').css('overflow', 'auto');
     setTimeout( ()=>{
         $('.drop-box').css('display', 'none');
         $('.drop-box').removeClass('hideDrop');
-    }, 700);
+        $('.drop-box').removeAttr('style');
+        
+    }, 800);
 
     
 }) ; 

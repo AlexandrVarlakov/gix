@@ -44,6 +44,8 @@
 
 .close-drop_mob{
     display: none;
+    z-index: 1000;
+    position: fixed;
     .mob-menu__text{
         
         &::after{
@@ -56,6 +58,6 @@
         }   
     }
     @media (max-width: 680px){
-        display: flex;
+        //display: flex;
     }
 }

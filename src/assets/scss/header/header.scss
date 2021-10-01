@@ -3,6 +3,8 @@
     height: 90px;
     padding-left: 48px;
     display: flex;
+
+    transition: .5s;
     .logo{
         height: 100%;
     }
@@ -58,11 +60,13 @@
         color: #fff;
     }
 }*/
-/*
-.header_open-drop{
+
+.l-to-d-header{
     background-color: #1E242E !important;;
     .logo__company-name{
         fill: white !important;
     }
-    
-}*/
+    .logo{
+        color: #fff;
+    }
+}
