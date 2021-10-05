@@ -399,7 +399,8 @@
     color: #8E99AB;
     position: absolute;
     width: 200%;
-    top: -100%;
+    top: -120%;
+    
 }
 
 .cp-price-product{
@@ -622,7 +623,7 @@
     border-radius: 6px;
     padding: 10px 20px;
     color: #8E99AB;
-
+    cursor: pointer;
     @media (max-width: 480px){
         padding: 10px;
     }
@@ -697,7 +698,7 @@
 
     .cp-cb-square{
         border: 1px solid #000;    
-        background-image: url('../img/buttons/checkbox-l.png');
+        background-image: url('../img/buttons/checkbox-l.svg');
         background-repeat: no-repeat;
         background-position: center;
     }
@@ -937,6 +938,7 @@
     color: #8E99AB;
     margin-top: 25px;
     cursor: pointer;
+    background-color: #fff;
 }
 .cp-btn-roller__arrow{
     display: inline-flex;
@@ -1486,10 +1488,10 @@
     }
 }
 
-.cp-set-right-col_visible{
+.cp-set-right-col_visible, .cp-set-right-col_mod-visible{
     display: block !important;
 
-    animation: show-char-list .2s ease-in-out;
+    
     @media (max-width: 768px){
         display: none !important;
     }

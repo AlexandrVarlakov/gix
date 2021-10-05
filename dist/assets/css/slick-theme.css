@@ -729,6 +729,9 @@
       -ms-flex-align: center;
           align-items: center; }
 
+.inx-novelty-list .slick-track, .inx-hits-list .slick-track, .news-slider .slick-track, .news-photo-slider .slick-track {
+  padding-bottom: 29px; }
+
 /*КОНЕЦ: Слайдер на главной странице "Новинки"*/
 .comp-list-col .slick-slide {
   margin-right: 85px; }

@@ -73,3 +73,15 @@
 
     
 }
+
+.ti-option-list{
+    background-color: rgb(237,243,250);
+    margin-left: -1px;
+    width: calc(100% + 2px);
+    border-color: #457EAF;;
+}
+
+.ti-select[data-state='deploy']{
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}

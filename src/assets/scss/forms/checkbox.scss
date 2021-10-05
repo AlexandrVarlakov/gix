@@ -1,3 +1,163 @@
+.checkbox-l-c{
+    display: flex;
+    position: relative;
+    
+
+    &::after{
+        content: "";
+        position: absolute;
+        left: -30px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 20px;
+        border-radius: 3px;
+        
+        cursor: pointer;
+
+        background-color: transparent;
+        border: 1px solid #8E99AB;
+    }
+
+    &::before{
+        content: "";
+        position: absolute;
+        display: block;
+        width: 14px;
+        height: 11px;
+        background-image: url('../img/buttons/checkbox-g.svg');
+        background-repeat: no-repeat;
+        left: -27px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 5;
+        cursor: pointer;
+    }
+}
+
+.checkbox-l-c__checked{
+    
+}
+
+.checkbox-l-c__checkbox{
+    display: block;
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+}
+
+.checkbox-l-c__label{
+
+    color: #8E99AB;
+    width: 50%;
+    margin-right: 45px;
+
+
+    
+    cursor: pointer;
+    a{
+        color: #CADCF8;
+    }
+}
+
+
+
+
+
+
+.checkbox-l-m{
+    display: flex;
+    position: relative;
+    
+
+    &::after{
+        content: "";
+        position: absolute;
+        left: -30px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 20px;
+        border-radius: 3px;
+        
+        cursor: pointer;
+
+        background-color: transparent;
+        border: 1px solid #8E99AB;
+    }
+
+    
+}
+
+.checkbox-l-m_checked{
+    &::before{
+        content: "";
+        position: absolute;
+        display: block;
+        width: 14px;
+        height: 11px;
+        background-image: url('../img/buttons/checkbox-g.svg');
+        background-repeat: no-repeat;
+        left: -27px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 5;
+        cursor: pointer;
+    }
+}
+
+.checkbox-l-m__checkbox{
+    display: block;
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+}
+
+.checkbox-l-m__label{
+
+    color: #8E99AB;
+    width: 50%;
+    margin-right: 45px;
+
+
+    
+    cursor: pointer;
+    a{
+        color: #CADCF8;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .checkbox-l{
     display: flex;
     position: relative;

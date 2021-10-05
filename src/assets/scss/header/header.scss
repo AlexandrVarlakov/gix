@@ -60,7 +60,10 @@
         color: #fff;
     }
 }*/
-
+.logo__company-name{
+    
+    transition: .3s;
+}
 .l-to-d-header{
     background-color: #1E242E !important;;
     .logo__company-name{
@@ -69,4 +72,22 @@
     .logo{
         color: #fff;
     }
+
+    .h-contacts__item a{
+        color: #fff;
+
+        
+    }
+
+    .h-contacts__item::before{
+        background-color: #fff !important;
+    }
+
+    svg{
+        path{
+            color: #fff;
+        }
+    }
+
 }
+

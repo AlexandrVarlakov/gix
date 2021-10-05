@@ -18,6 +18,12 @@
         svg{
             width: 81px;
             height: 27px;
+
+            transition: .3s;
+
+            path{
+                transition: .3s;
+            }
         }
         
     }
@@ -30,6 +36,10 @@
     }
 }
 
+
+.logo__company-name{
+    transition: .3s;
+}
 .logo-dark{
     .logo__company-name{
         fill: #0D1014;
