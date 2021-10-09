@@ -54,8 +54,8 @@
 
 .company-catalog-row{
     padding: 110px 0;
-    background: linear-gradient(179.38deg, #FFFFFF -84.46%, rgba(255, 255, 255, 0) 124.71%, rgba(255, 255, 255, 0.204014) 124.71%), #E9F1F9;
-
+    //background: linear-gradient(179.38deg, #FFFFFF -84.46%, rgba(255, 255, 255, 0) 124.71%, rgba(255, 255, 255, 0.204014) 124.71%), #E9F1F9;
+    background-color: #E9F1F9;
     @media (max-width: 1320px){
         padding: 60px 0;
     }

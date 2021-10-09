@@ -1,7 +1,84 @@
-.select{
+.select, .select-buy{
     position: relative;
 }
 
+.select-buy{
+    width: 80px;
+    height: 40px;
+    
+}
+
+.select-buy[data-state="deploy"]{
+    background-color: #121212;
+    border-radius: 5px 5px 0 0;
+
+
+    .select-buy__cur-value{
+        border-bottom: 1px solid #fff;
+
+        img{
+            transform: rotate(180deg);
+            margin-top: -5px;
+        }
+    }
+    
+}
+
+.select-buy__value{
+    width: 36px;
+    margin-right: 12px;
+    font-weight: 500;
+}
+
+.select-buy__cur-value{
+    display: flex;
+    align-items: center;
+    padding-left: 18px;
+    width: 80px;
+    height: 40px;
+    cursor: pointer;
+
+    transition: .3s;
+
+    img{
+        transition: .3s;
+    }
+}
+
+
+
+
+
+@keyframes select-buy-show {
+    from{
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+.select-buy-hide{
+    animation: .3s select-buy-hide forwards !important;
+}
+
+@keyframes select-buy-hide{
+    from{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+
+    to{
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
 .select__cur-value{
     
 }
@@ -17,6 +94,11 @@
     top: 50%;
     transform: translateY(-50%);
 }
+.select-buy__option-list{
+    list-style: none;
+    animation: .3s select-buy-show;
+}
+
 
 .select__option-list{
     list-style: none;
@@ -37,6 +119,38 @@
 .select__option{
     padding: 5px;
     cursor: pointer;
+}
+
+.select-buy__option-list{
+    border-radius: 0 0 5px 5px;
+    overflow: hidden;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.select-buy__option{
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    &:not(:first-of-type){
+        border-top: 1px solid rgba($color: #C4C4C4, $alpha: .5);
+        
+        
+    }
+
+    &:hover{
+        background-color: #fff;
+        color: #2A323E;
+    }
+
+    &:last-of-type{
+        border-radius: 0 0 5px 5px;
+    }
+}
+
+.select-buy__option_cur{
+    display: none;
 }
 
 .ti-input-label{

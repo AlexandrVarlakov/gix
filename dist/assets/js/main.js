@@ -155,12 +155,14 @@ cart_btn.forEach((item)=>{
 
 
 let complectModal;
+
+/*
 $('.checkbox-l-c').on('click', function(){
     complectModal = $('.modal-complect').bPopup({
         closeClass: 'modal-complect__close',
         
     });
-})
+})*/
 /*
 $('.cp-set-add-cart').on('click', function(){
 
@@ -1959,4 +1961,99 @@ $('.show-all-filter-btn').on('click', function(){
     }
         
 })
+
+
+
+$('.select-buy').on('click', function(){
+    if ( $(this).attr('data-state') == 'rolled' ){
+        $(this).attr('data-state', 'deploy');
+
+        $('.select-buy__option-list').css('display', 'block');
+    } else{
+        $(this).attr('data-state', 'rolled');
+        $('.select-buy__option-list').addClass('select-buy-hide');
+
+        setTimeout(()=>{
+            $('.select-buy__option-list').css('display','none');
+            $('.select-buy__option-list').removeClass('select-buy-hide');
+            
+            
+            if ( $('.select-buy__option[data-state=marked]').length > 0 ){
+                $('.select-buy__option').removeClass('select-buy__option_cur');
+                $('.select-buy__option[data-state=marked]').addClass('select-buy__option_cur');
+                $('.select-buy__option[data-state=marked]').attr('data-state', '');
+            }
+
+
+        }, 300);
+        
+    }
+})
+
+$('.select-buy__option').on('click', function(){
+    let val = $(this).html();
+    $(this).attr('data-state', 'marked');
+    $('.select-buy__value').html(val);
+})
+
+
+
+$(window).on('click', function(e){
+
+	let t = e.target;
+	
+	if ( $(t).hasClass('select-buy__cur-value') == false && $(t).hasClass('select-buy__value') == false && $(t).hasClass('select-buy') == false && $(t).hasClass('select-buy__option') == false &&  $(t).hasClass('select-buy__option') == false && $(t).hasClass('select__arrow') == false ){
+	
+            $('.select-buy').attr('data-state', 'rolled');
+            $('.select-buy__option-list').addClass('select-buy-hide');
+
+            setTimeout(()=>{
+                $('.select-buy__option-list').css('display','none');
+                $('.select-buy__option-list').removeClass('select-buy-hide');
+                
+                
+                if ( $('.select-buy__option[data-state=marked]').length > 0 ){
+                    $('.select-buy__option').removeClass('select-buy__option_cur');
+                    $('.select-buy__option[data-state=marked]').addClass('select-buy__option_cur');
+                    $('.select-buy__option[data-state=marked]').attr('data-state', '');
+                }
+
+
+            }, 300);
+        
+	}
+	
+
+	
+
+	
+})
+
+
+let options = {
+    //zIndex: 1000, 
+    //background: 'rgba(12, 130, 121, 0.5)', 
+    //displayFog: 'block', //Значение по умолчанию flex
+    //displayModal: 'flex', //Значение по умолчанию block
+    modalShowAnimation: 'fadeInTop', 
+    modalHideAnimation: 'hideToTop', 
+    closeClasses: ['modal-complect__close'], 
+    //closeModalOnFogClick: false, 
+    //documentScrolled: false, 
+    //onModalClose: function(){console.log('modal close');},
+    //onModalOpen: function(){console.log('modal open');}
+
+}
+
+    $('.checkbox-l-c__label').on('click', function(){
+        let m = new easyModal('.modal-complect', options);
+
+        $('.modal-complect__close').on('click', function(){
+            m.closeModal();
+        })
+    })
+
+    
+        
+    
 

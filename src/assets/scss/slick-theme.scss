@@ -869,16 +869,43 @@ $slick-opacity-not-active: 0.25 !default;
 
 
 .c-p-i-products-list, .inx-novelty-list, .inx-hits-list{
+
+   
+
+
+    .slick-slide{
+       opacity: 0;
+    }
+    .slick-active{
+        opacity: 1;
+    }
+
+
+
+    .slick-track{
+        padding: 0 0 30px 25px;
+        
+        
+        
+        
+    }
     .slick-list{
         padding-bottom: 120px;
+
+
+       
 
         @media (max-width: 768px){
             padding-bottom: 0px;
         }
+
+       
     }
     
 
-    
+    .slick-current{
+        z-index: 20;
+    }
     .slick-prev{
         width: 65px;
         height: 14px;
@@ -886,12 +913,14 @@ $slick-opacity-not-active: 0.25 !default;
         
         
         z-index: 55;
-        left: 5px;
+        left: 25px;
         right: initial;
         top: -45px;
         bottom: initial;
         
-
+        @media (max-width: 1600px){
+            left: 0px;
+        }
         @media (max-width: 1024px){
             top: -38px;
             left: 0px;
@@ -910,11 +939,13 @@ $slick-opacity-not-active: 0.25 !default;
         background-image: none;
         
         top: -45px;
-        left: 105px;
+        left: 125px;
         z-index: 55;
         bottom: initial;
         right: initial;
-
+        @media (max-width: 1600px){
+            left: 100px;
+        }
         @media (max-width: 1024px){
             top: -38px;
             left: 80px;

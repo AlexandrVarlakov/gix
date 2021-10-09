@@ -547,17 +547,8 @@
         margin: 0 auto;
     }
     &:hover{
-        .c-product__buy-click-wrap{
-          
-            
-           
-        }
+              
         
-        .c-product{
-            
-           
-            border-radius: 11px 0px 11px 11px;
-        }
 
         .c-product__info-text{
             color: #EB5329;
@@ -895,6 +886,7 @@
 
 .delete-product-btn{
     cursor: pointer;
+    margin-left: 45px;
 }
 
 .product-btn-complect{
@@ -909,7 +901,7 @@
     justify-content: center;
     align-items: center;
 
-    right: -7%;
+    right: -9%;
     top: 40%;
 
     @media (max-width: 768px){

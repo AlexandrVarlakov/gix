@@ -645,21 +645,36 @@
 .c-p-i-products-list .c-p-i-product__wrap:last-of-type .c-product, .inx-novelty-list .c-p-i-product__wrap:last-of-type .c-product, .inx-hits-list .c-p-i-product__wrap:last-of-type .c-product {
   border-radius: 0 11px 11px 0; }
 
+.c-p-i-products-list .slick-slide, .inx-novelty-list .slick-slide, .inx-hits-list .slick-slide {
+  opacity: 0; }
+
+.c-p-i-products-list .slick-active, .inx-novelty-list .slick-active, .inx-hits-list .slick-active {
+  opacity: 1; }
+
+.c-p-i-products-list .slick-track, .inx-novelty-list .slick-track, .inx-hits-list .slick-track {
+  padding: 0 0 30px 25px; }
+
 .c-p-i-products-list .slick-list, .inx-novelty-list .slick-list, .inx-hits-list .slick-list {
   padding-bottom: 120px; }
   @media (max-width: 768px) {
     .c-p-i-products-list .slick-list, .inx-novelty-list .slick-list, .inx-hits-list .slick-list {
       padding-bottom: 0px; } }
 
+.c-p-i-products-list .slick-current, .inx-novelty-list .slick-current, .inx-hits-list .slick-current {
+  z-index: 20; }
+
 .c-p-i-products-list .slick-prev, .inx-novelty-list .slick-prev, .inx-hits-list .slick-prev {
   width: 65px;
   height: 14px;
   background-image: none;
   z-index: 55;
-  left: 5px;
+  left: 25px;
   right: initial;
   top: -45px;
   bottom: initial; }
+  @media (max-width: 1600px) {
+    .c-p-i-products-list .slick-prev, .inx-novelty-list .slick-prev, .inx-hits-list .slick-prev {
+      left: 0px; } }
   @media (max-width: 1024px) {
     .c-p-i-products-list .slick-prev, .inx-novelty-list .slick-prev, .inx-hits-list .slick-prev {
       top: -38px;
@@ -675,10 +690,13 @@
   height: 14px;
   background-image: none;
   top: -45px;
-  left: 105px;
+  left: 125px;
   z-index: 55;
   bottom: initial;
   right: initial; }
+  @media (max-width: 1600px) {
+    .c-p-i-products-list .slick-next, .inx-novelty-list .slick-next, .inx-hits-list .slick-next {
+      left: 100px; } }
   @media (max-width: 1024px) {
     .c-p-i-products-list .slick-next, .inx-novelty-list .slick-next, .inx-hits-list .slick-next {
       top: -38px;

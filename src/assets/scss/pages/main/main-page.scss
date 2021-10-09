@@ -723,3 +723,64 @@
         order: 1;
     }
 }
+
+.c-inx-card-wrap{
+
+    transition: .3s;
+    position: relative;
+
+    &:hover{
+        &:not(:last-of-type){
+
+            &::after{
+                content: "";
+                display: block;
+                position: absolute;
+                width: 3px;
+                height: 100%;
+                background-color: #fff;
+                
+                top: 0;
+                z-index: 10;
+
+                animation: showLine .3s;
+            }
+            
+        }
+    }
+    
+    
+}
+
+@keyframes showLine{
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+}
+
+
+.c-inx-card-wrap:first-of-type{
+    &:hover{
+        border-radius: 10px 0 0 10px;
+
+        .catalog-card-fs{
+            border-radius: 10px 0 0 10px;
+        }
+    }
+}
+
+
+
+.c-inx-card-wrap:last-of-type{
+    &:hover{
+        border-radius: 0 10px 10px 0;
+
+        .catalog-card-fs{
+            border-radius: 0 10px 10px 0;
+        }
+    }
+}

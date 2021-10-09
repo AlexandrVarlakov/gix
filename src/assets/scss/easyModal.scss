@@ -1,0 +1,174 @@
+.modal-fog{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(7, 12, 19, 0.3);
+    z-index: 999;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    animation: fadeInFog .7s;
+}
+
+
+@keyframes fadeInFog{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.fadeInLeft{
+    animation: fadeInLeft .5s;
+}
+
+@keyframes fadeInLeft{
+    from{
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+.fadeInRight{
+    animation: fadeInRight .5s;
+}
+
+@keyframes fadeInRight{
+    from{
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
+.fadeInBottom{
+    animation: fadeInBottom .7s;
+}
+
+@keyframes fadeInBottom{
+    from{
+        opacity: 0;
+        transform: translateY(100%);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.fadeInTop{
+    animation: fadeInTop 1s;
+}
+
+@keyframes fadeInTop{
+    from{
+        
+        transform: translateY(-100%);
+    }
+
+    to{
+        
+        transform: translateY(0);
+    }
+}
+
+.hideToTop{
+    animation: hideToTop 1s forwards;
+}
+
+@keyframes hideToTop{
+    from{
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(-110%);
+    }
+}
+
+
+.hideToBottom{
+    animation: hideToBottom .5s forwards;
+}
+@keyframes hideToBottom{
+    from{
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to{
+        opacity: 0;
+        transform: translateY(100%);
+    }
+}
+
+
+.hideToLeft{
+    animation: hideToLeft .5s forwards;
+}
+@keyframes hideToLeft{
+    from{
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    to{
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+}
+
+
+.hideToRight{
+    animation: hideToRight .5s forwards;
+}
+@keyframes hideToRight{
+    from{
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    to{
+        opacity: 0;
+        transform: translateX(100%);
+    }
+}
+
+.fadeOutFog{
+    
+    animation: fadeOutFog 1s forwards;
+
+}
+
+@keyframes fadeOutFog{
+    from{
+
+    }
+
+    to{
+        
+    }
+}
+
+.hide-scroll{
+    overflow: hidden;
+}
