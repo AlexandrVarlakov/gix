@@ -275,73 +275,112 @@ openDrop.onclick = function(){
 /*Открываем закрываем drop ОЧЕРЕДНОЙ ЧЕРНОВИК*/
 
 $('.close-drop').on('click', function(){
-    $(this).css('display', 'none');
+
+    if ( $('.drop-box').attr('data-state') != 'animated'){
+        $(this).css('display', 'none');
     
-    if ( $('.header').hasClass('header_dark') === false ){
-        $('.drop-box').css('z-index', '9999');
+        if ( $('.header').hasClass('header_dark') === false ){
+            $('.drop-box').css('z-index', '9999');
+        }
+        
+        
+        
+        $('.open-drop').css('display', 'block');
+        $('.drop-box').addClass('hideDrop');
+        $('.header').removeClass('l-to-d-header');
+        
+        $('.drop-box').attr('data-state', 'animated');
+    
+        
+        setTimeout( ()=>{
+            $('.drop-box').css('display', 'none');
+            $('.drop-box').removeClass('hideDrop');
+            $('.drop-box').removeAttr('style');
+            $('.header').removeAttr('style');
+            $('.drop-box').attr('data-state', '');
+        }, 800);
+    
+    } else {
+        return false;
     }
+
     
+
     
-    
-    $('.open-drop').css('display', 'block');
-    $('.drop-box').addClass('hideDrop');
-    $('.header').removeClass('l-to-d-header');
-    
-    
-    setTimeout( ()=>{
-        $('.drop-box').css('display', 'none');
-        $('.drop-box').removeClass('hideDrop');
-        $('.drop-box').removeAttr('style');
-        $('.header').removeAttr('style');
-    }, 800);
     
 }) ; 
 $('.open-drop').on('click', function(){
-    $(this).css('display', 'none');
-    $('.close-drop').css('display', 'block');
-    $('.header').css('position', 'fixed');
-    $('.header').css('z-index', '1000');
-    $('.drop-box').css('display', 'flex');
-    
-    if ( $('.header').hasClass('header_dark') === false ){
-        $('.header').addClass('l-to-d-header');
+    if ( $('.drop-box').attr('data-state') != 'animated'){
+
+        $('.drop-box').attr('data-state', 'animated');
+
+        $(this).css('display', 'none');
+        $('.close-drop').css('display', 'block');
+        $('.header').css('position', 'fixed');
+        $('.header').css('z-index', '1000');
+        $('.drop-box').css('display', 'flex');
+        
+        if ( $('.header').hasClass('header_dark') === false ){
+            $('.header').addClass('l-to-d-header');
+        }
+
+        setTimeout( ()=>{
+            $('.drop-box').attr('data-state', '');
+        }, 800)
+    } else {
+        return false;
     }
+
+
+    
 
 }) ; 
 
 $('.open-drop_mob').on('click', function(){
-    
-    $('.drop-box').css('display', 'flex');
-    $(this).css('display', 'none');
+    if ( $('.drop-box').attr('data-state') != 'animated'){
+        $('.drop-box').attr('data-state', 'animated');
+        $('.drop-box').css('display', 'flex');
+        $(this).css('display', 'none');
 
-    $('.close-drop_mob').css('display', 'flex');
+        $('.close-drop_mob').css('display', 'flex');
 
-    $('.header').css('position', 'fixed');
-    $('.header').css('z-index', '1000');
-    $('.drop-box').css('display', 'flex');
-    if ( $('.header').hasClass('header_dark') === false ){
-        $('.header').addClass('l-to-d-header');
+        $('.header').css('position', 'fixed');
+        $('.header').css('z-index', '1000');
+        $('.drop-box').css('display', 'flex');
+        if ( $('.header').hasClass('header_dark') === false ){
+            $('.header').addClass('l-to-d-header');
+        }
+        setTimeout( ()=>{
+            $('.drop-box').attr('data-state', '');
+        }, 800)
+    } else {
+        return false;
     }
 }) ; 
 
 $('.close-drop_mob').on('click', function(){
+    if ( $('.drop-box').attr('data-state') != 'animated'){
+        $('.drop-box').attr('data-state', 'animated');
+        if ( $('.header').hasClass('header_dark') === false ){
+            $('.drop-box').css('z-index', '9999');
+        }
 
-    if ( $('.header').hasClass('header_dark') === false ){
-        $('.drop-box').css('z-index', '9999');
+        $('.drop-box').addClass('hideDrop');
+        $(this).css('display', 'none');
+        $('.open-drop_mob').css('display', 'flex');
+        $('.header').removeClass('l-to-d-header');
+        
+        
+        setTimeout( ()=>{
+            $('.drop-box').css('display', 'none');
+            $('.drop-box').removeClass('hideDrop');
+            $('.drop-box').removeAttr('style');
+            $('.header').removeAttr('style');
+            $('.drop-box').attr('data-state', '');
+        }, 800);
+    } else {
+        return false;
     }
-
-    $('.drop-box').addClass('hideDrop');
-    $(this).css('display', 'none');
-    $('.open-drop_mob').css('display', 'flex');
-    $('.header').removeClass('l-to-d-header');
-    
-    
-    setTimeout( ()=>{
-        $('.drop-box').css('display', 'none');
-        $('.drop-box').removeClass('hideDrop');
-        $('.drop-box').removeAttr('style');
-        $('.header').removeAttr('style');
-    }, 800);
 
     
 }) ; 
@@ -837,7 +876,7 @@ $('.c-p-i-products-list').slick({
 
 /*Слайдер на главной странице "Новинки"*/
 
-
+/*
 
 insertBlackArrow('.inx-novelty-list');
 
@@ -873,7 +912,7 @@ $('.inx-novelty-list').slick({
         },
     ]
 });
-
+*/
 $('.inx-search-tag').on('click', function(){
     
     $('.inx-input-search').focus();
@@ -888,41 +927,7 @@ $('.inx-search-tag').on('click', function(){
 /*Слайдер на главной странице "Хиты продаж"*/
 
 
-
-insertBlackArrow('.inx-hits-list');
-
-$('.inx-hits-list').slick({
-    variableWidth: false,
-    variableHeight: true,
-    dots: false,
-    arrows: true,
-    infinite: false,
-    slidesToScroll: 1,
-    slidesToShow: 4,
-
-    responsive: [
-        {
-            breakpoint: 1601,
-            settings: {
-              variableWidth: true,
-              
-              
-            }
-          },
-        
-        {
-          breakpoint: 769,
-          settings: {
-            variableWidth: true,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            
-          }
-        },
-    ]
-});
-
-/*КОНЕЦ: Слайдер на главной странице "Хиты продаж"*/
+/
 
 /* Страница карточка продукта. Слайдер "Комплектом будет дешевле"*/
 

@@ -557,7 +557,7 @@
 }
 
 .inx-novelty-conteiner{
-    margin-top: 200px;
+    margin-top: 150px;
     width: 100%;
 
     @media (max-width: 1024px){
@@ -572,10 +572,12 @@
     display: flex;
     width: 100%;
     border-bottom: 1px solid #E5EFFE;;
-    padding-bottom: 50px;
-
+    //padding-bottom: 50px;
+    .col-3{
+        padding-top: 50px;
+    }
     @media (max-width: 1024px){
-        padding-bottom: 20px;
+        //padding-bottom: 20px;
     }
 
     @media (max-width: 992px){
@@ -584,6 +586,7 @@
         .col-3{
             width: 100%;
             margin-bottom: 50px;
+            padding-top: 0;
         }
 
         .col-9{
@@ -603,9 +606,9 @@
 }
 
 .inx-hits-container{
-    margin-top: 165px;
+    margin-top: 110px;
     width: 100%;
-    margin-bottom: 50px;
+   // margin-bottom: 50px;
 
     @media (max-width: 1024px){
         margin-top: 55px;
@@ -617,13 +620,19 @@
     width: 100%;
     display: flex;
     
-
+    .col-3{
+        padding-top: 50px;
+    }
     @media (max-width: 992px){
         flex-direction: column;
 
         .col-3{
             width: 100%;
             margin-bottom: 50px;
+
+            padding-top: 0px;
+
+            
         }
 
         .col-9{

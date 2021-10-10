@@ -24,6 +24,14 @@
     
 }
 
+.select-buy[data-state="rolled"]{
+    .select-buy__option{
+        &:hover{
+            background-color: #0D1014;
+        }
+    }
+}
+
 .select-buy__value{
     width: 36px;
     margin-right: 12px;

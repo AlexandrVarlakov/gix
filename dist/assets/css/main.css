@@ -2369,6 +2369,9 @@
               transform: rotate(180deg);
       margin-top: -5px; }
 
+.select-buy[data-state="rolled"] .select-buy__option:hover {
+  background-color: #0D1014; }
+
 .select-buy__value {
   width: 36px;
   margin-right: 12px;
@@ -6349,7 +6352,7 @@
       height: 40px; } }
 
 .inx-novelty-conteiner {
-  margin-top: 200px;
+  margin-top: 150px;
   width: 100%; }
   @media (max-width: 1024px) {
     .inx-novelty-conteiner {
@@ -6364,11 +6367,9 @@
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  border-bottom: 1px solid #E5EFFE;
-  padding-bottom: 50px; }
-  @media (max-width: 1024px) {
-    .inx-novelty-conteiner__inner {
-      padding-bottom: 20px; } }
+  border-bottom: 1px solid #E5EFFE; }
+  .inx-novelty-conteiner__inner .col-3 {
+    padding-top: 50px; }
   @media (max-width: 992px) {
     .inx-novelty-conteiner__inner {
       -webkit-box-orient: vertical;
@@ -6378,7 +6379,8 @@
               flex-direction: column; }
       .inx-novelty-conteiner__inner .col-3 {
         width: 100%;
-        margin-bottom: 50px; }
+        margin-bottom: 50px;
+        padding-top: 0; }
       .inx-novelty-conteiner__inner .col-9 {
         width: 100%; }
       .inx-novelty-conteiner__inner .inx-round-btn.mt-50 {
@@ -6388,9 +6390,8 @@
       max-width: 540px; } }
 
 .inx-hits-container {
-  margin-top: 165px;
-  width: 100%;
-  margin-bottom: 50px; }
+  margin-top: 110px;
+  width: 100%; }
   @media (max-width: 1024px) {
     .inx-hits-container {
       margin-top: 55px;
@@ -6402,6 +6403,8 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex; }
+  .inx-hits-container__inner .col-3 {
+    padding-top: 50px; }
   @media (max-width: 992px) {
     .inx-hits-container__inner {
       -webkit-box-orient: vertical;
@@ -6411,7 +6414,8 @@
               flex-direction: column; }
       .inx-hits-container__inner .col-3 {
         width: 100%;
-        margin-bottom: 50px; }
+        margin-bottom: 50px;
+        padding-top: 0px; }
       .inx-hits-container__inner .col-9 {
         width: 100%; }
       .inx-hits-container__inner .inx-round-btn.mt-50 {
