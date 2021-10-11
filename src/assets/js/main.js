@@ -820,99 +820,7 @@ $('.c-p-i-product__wrap').hover(
 )
 
 
-/*
 
-$('.c-p-i-product__wrap').hover(
-    function(
-    ){
-        let h = $(this).height();
-        let textH = $(this).find('.c-product__info-text').height();
-        $(this).css('height', h + 'px');
-        
-        
-        $(this).find('.c-product__info-text').css('height', textH + 'px');
-        $(this).children('.c-product').css('position', 'absolute');
-        $(this).children('.c-product').css('height', 'auto');
-        $(this).children('.c-product').css('min-height', '100%');
-        
-
-        $(this).find('.c-product__buy-click-wrap').css('display', 'block');
-    },
-    function(){
-        $(this).css('height', '');
-        $(this).children('.c-product').css('position', '');
-        $(this).find('.c-product__buy-click-wrap').css('display', '');
-        $(this).find('.c-product__info-text').css('height', '');
-        $(this).children('.c-product').css('height', '');
-        $(this).children('.c-product').css('min-height', '');
-    }
-)
-*/
-
-
-
-insertBlackArrow('.c-p-i-products-list');
-$('.c-p-i-products-list').slick({
-    variableWidth: true,
-    variableHeight: true,
-    dots: false,
-    arrows: true,
-    infinite: false,
-    slidesToScroll: 1,
-    slidesToShow: 3,
-
-    responsive: [
-        {
-          breakpoint: 769,
-          settings: {
-            variableWidth: true,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            
-          }
-        },
-    ]
-});
-
-/*Слайдер на главной странице "Новинки"*/
-
-/*
-
-insertBlackArrow('.inx-novelty-list');
-
-
-
-$('.inx-novelty-list').slick({
-    variableWidth: false,
-    variableHeight: true,
-    dots: false,
-    arrows: true,
-    infinite: false,
-    slidesToScroll: 1,
-    slidesToShow: 4,
-
-    responsive: [
-        {
-            breakpoint: 1601,
-            settings: {
-              variableWidth: true,
-              
-              
-            }
-          },
-        
-        {
-          breakpoint: 769,
-          settings: {
-            variableWidth: true,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            
-          }
-        },
-    ]
-});
-*/
 $('.inx-search-tag').on('click', function(){
     
     $('.inx-input-search').focus();
@@ -923,26 +831,6 @@ $('.inx-search-tag').on('click', function(){
 
 /*КОНЕЦ: Слайдер на главной странице "Новинки"*/
 
-
-/*Слайдер на главной странице "Хиты продаж"*/
-
-
-/
-
-/* Страница карточка продукта. Слайдер "Комплектом будет дешевле"*/
-
-insertBlackArrow('.cp-set-right-col__inner');
-
-$('.cp-set-right-col__inner').slick({
-    variableWidth: true,
-    variableHeight: false,
-    dots: false,
-    arrows: true,
-    infinite: false,
-    slidesToScroll: 1,
-    
-})
-/* КОНЕЦ: Страница карточка продукта. Слайдер "Комплектом будет дешевле"*/
 
 
 
