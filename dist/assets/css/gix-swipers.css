@@ -31,10 +31,13 @@
     opacity: 0; } }
 
 .swiper-products-container {
-  padding: 0 0 150px 30px; }
+  padding: 0px 0 150px 30px; }
   @media (max-width: 992px) {
     .swiper-products-container {
       padding: 0 0 150px 0px; } }
+
+.products-swiper-wrapper {
+  padding-top: 10px; }
 
 .swiper-btn-navs {
   border: none;
