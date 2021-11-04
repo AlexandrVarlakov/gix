@@ -10187,19 +10187,22 @@
   -webkit-transition: .3s;
   -o-transition: .3s;
   transition: .3s;
+  position: relative;
+  z-index: 1;
   cursor: pointer; }
   .cp-btn-prod-m:first-of-type {
-    border-right: none;
     border-radius: 6px 0 0 6px;
     padding: 3px 10px 3px 3px; }
   .cp-btn-prod-m:last-of-type {
     border-radius: 0  6px 6px 0;
-    padding: 3px 6px 3px 10px; }
+    padding: 3px 6px 3px 10px;
+    -webkit-transform: translateX(-1px);
+        -ms-transform: translateX(-1px);
+            transform: translateX(-1px); }
   .cp-btn-prod-m:hover {
     border: 1px solid #798FB4;
-    color: #2A323E; }
-    .cp-btn-prod-m:hover:first-of-type {
-      border-right: 0; }
+    color: #2A323E;
+    z-index: 2; }
     .cp-btn-prod-m:hover svg rect {
       fill: #2A323E; }
     .cp-btn-prod-m:hover svg g {
@@ -10220,7 +10223,6 @@
     transition: .3s; }
 
 .cp-social-btn-group {
-  border: 1px solid #CADCF8;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 6px;
@@ -10235,7 +10237,9 @@
 
 .cp-social-btn-group__link {
   text-decoration: none;
-  width: 20%;
+  width: 40px;
+  height: 40px;
+  width: 40px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -10247,9 +10251,28 @@
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
-          align-items: center; }
-  .cp-social-btn-group__link:not(:last-of-type) {
-    border-right: 1px solid #CADCF8; }
+          align-items: center;
+  border: 1px solid #CADCF8;
+  position: relative;
+  z-index: 1;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s; }
+  .cp-social-btn-group__link:not(:first-of-type) {
+    margin-left: -1px; }
+  .cp-social-btn-group__link:first-of-type {
+    border-radius: 6px 0 0 6px; }
+  .cp-social-btn-group__link:last-of-type {
+    border-radius: 0 6px 6px 0; }
+  .cp-social-btn-group__link svg {
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s; }
+  .cp-social-btn-group__link:hover {
+    border: 1px solid #798FB4;
+    z-index: 2; }
+    .cp-social-btn-group__link:hover path {
+      fill: #2A323E; }
 
 .cp-big-slider {
   width: 100%; }
